@@ -596,7 +596,9 @@
           .then(function(){savedtxt.textContent="Suas escolhas e comentários foram guardados. O Mateus já vai receber tudo. 🙌";})
           .catch(function(){savedtxt.textContent="Salvamos aqui no seu aparelho. Se tiver internet, recarregue e salve de novo pra chegar pro Mateus. 🙂";});
       } else {
-        savedtxt.textContent="Suas escolhas foram guardadas neste aparelho. 🙌";
+        var msg=montarResumo();
+        window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
+        savedtxt.textContent="Tudo pronto! Abrimos o WhatsApp do Mateus com suas escolhas — é só tocar em ENVIAR pra ele receber. 🙌";
         lay.style.display="flex";
       }
     });
