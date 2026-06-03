@@ -50,6 +50,11 @@
   .cmt{width:100%;box-sizing:border-box;border:1.5px solid #e1e6ec;border-radius:8px;padding:8px;font:inherit;font-size:13px;resize:vertical;margin:0 0 10px;color:#1d2733}
   .cmt:focus{outline:none;border-color:var(--ouro)}
   .cmt.has{border-color:#25d366;background:#f3fbf5}
+  .extras-box{background:var(--card);border:1px solid #eef1f4;border-radius:14px;padding:14px 16px;box-shadow:0 2px 10px rgba(13,42,74,.06)}
+  .extras-box p{margin:0 0 10px;font-size:13.5px;color:#445;line-height:1.5}
+  #extras{width:100%;box-sizing:border-box;border:1.5px solid #e1e6ec;border-radius:10px;padding:11px;font:inherit;font-size:14px;resize:vertical;color:#1d2733}
+  #extras:focus{outline:none;border-color:var(--ouro)}
+  #extras.has{border-color:#25d366;background:#f3fbf5}
   .hint{background:#fff;border:1px solid #eef1f4;border-left:4px solid var(--ouro);border-radius:0 10px 10px 0;padding:12px 14px;margin:18px 0 0;font-size:13.5px;color:#445;line-height:1.5}
   .fab{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;border:none;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:800;box-shadow:0 6px 22px rgba(0,0,0,.28);cursor:pointer;z-index:50}
   .fab .badge{background:rgba(255,255,255,.28);border-radius:999px;padding:1px 9px;font-size:13px}
@@ -421,6 +426,11 @@
       <a class="btn" href="https://www.associadas.com.br/imovel/linda-casa-na-petropolis/12517" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article></div>
+    <h2 class="sec">🔎 Acharam outro imóvel que gostaram?</h2>
+    <div class="extras-box">
+      <p>Viram algo legal em qualquer lugar (outra imobiliária, ZAP, OLX, Instagram, uma placa na rua)? Colem o link aqui — <b>um por linha</b>. Eu analiso, vejo a documentação e organizo a visita. 👑</p>
+      <textarea id="extras" rows="4" placeholder="Cole os links aqui (um por linha)... e o que acharam, se quiserem 🙂"></textarea>
+    </div>
     
   <h2 class="sec">🗂️ Já descartados <span>(1)</span></h2>
   <div class="grid">
@@ -456,9 +466,10 @@
     var fab=document.getElementById("fab"), fabn=document.getElementById("fabn");
     var rows=[].slice.call(document.querySelectorAll(".prio"));
     var cmts=[].slice.call(document.querySelectorAll(".cmt"));
+    var extras=document.getElementById("extras"), EKEY=KEY+"-x";
     var titleOf={}; rows.forEach(function(r){titleOf[r.getAttribute("data-id")]=r.getAttribute("data-title");});
     function clean(id){var s=st[id]; if(s&&!s.prio&&!s.visit&&!(s.cmt&&s.cmt.trim())){delete st[id];}}
-    function count(){var n=Object.keys(st).length; fab.style.display=n?"inline-flex":"none"; fabn.textContent=n;}
+    function count(){var hasX=!!(extras&&extras.value.trim()); var n=Object.keys(st).length+(hasX?1:0); fab.style.display=n?"inline-flex":"none"; fabn.textContent=n;}
     function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}render();}
     rows.forEach(function(row){
       var id=row.getAttribute("data-id");
@@ -479,6 +490,15 @@
         clean(id); try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){} count();
       });
     });
+    if(extras){
+      extras.value=localStorage.getItem(EKEY)||"";
+      if(extras.value.trim()){extras.classList.add("has");}
+      extras.addEventListener("input",function(){
+        try{localStorage.setItem(EKEY,extras.value);}catch(e){}
+        if(extras.value.trim()){extras.classList.add("has");}else{extras.classList.remove("has");}
+        count();
+      });
+    }
     function render(){
       rows.forEach(function(row){
         var s=st[row.getAttribute("data-id")]||{};
@@ -498,6 +518,7 @@
       var b=group(function(s){return s.prio==="bronze";}); if(b){msg+="\n🥉 BRONZE:\n"+b+"\n";}
       var v=group(function(s){return s.visit;}); if(v){msg+="\n📅 QUEREMOS VISITAR:\n"+v+"\n";}
       var co=group(function(s){return (s.cmt&&s.cmt.trim())&&!s.prio&&!s.visit;}); if(co){msg+="\n💬 COMENTARIOS:\n"+co+"\n";}
+      var ex=extras&&extras.value.trim(); if(ex){msg+="\n🔎 IMOVEIS QUE ACHAMOS:\n"+ex+"\n";}
       window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
     });
     render();
