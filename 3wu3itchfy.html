@@ -1,0 +1,425 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seleção de imóveis — Natan &amp; Cheila | Gregório Imóveis</title>
+<style>
+  :root{--azul:#0d2a4a;--ouro:#c8a24a;--bg:#f6f7f9;--card:#fff;--txt:#1d2733;--mut:#6b7785}
+  *{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+  .hero{background:linear-gradient(135deg,var(--azul),#16365c);color:#fff;padding:38px 22px 30px;text-align:center}
+  .hero .kicker{letter-spacing:3px;font-size:12px;text-transform:uppercase;color:var(--ouro);font-weight:700}
+  .hero h1{margin:8px 0 4px;font-size:26px}.hero p{margin:0;color:#cdd8e6;font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:12.5px}
+  .wrap{max-width:1080px;margin:0 auto;padding:8px 16px 40px}
+  .sec{font-size:19px;margin:30px 4px 12px;border-left:4px solid var(--ouro);padding-left:10px}.sec span{color:var(--mut);font-weight:400;font-size:15px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(13,42,74,.08);display:flex;flex-direction:column;border:1px solid #eef1f4}
+  .card.alto{border:1px solid var(--ouro)}
+  .thumb{height:170px;background:#dde3ea center/cover no-repeat;position:relative}
+  .tag{position:absolute;top:10px;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;color:#fff;backdrop-filter:blur(2px)}
+  .tag-alto{left:10px;background:var(--ouro)}.tag-like{right:10px;background:#e0395e}
+  .tag-ok{left:10px;top:auto;bottom:10px;background:#1f9d55}.tag-cal{left:10px;top:auto;bottom:10px;background:var(--azul)}
+  .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .body h3{margin:0;font-size:15.5px;line-height:1.25}
+  .loc{margin:0;color:var(--mut);font-size:13px}
+  .price{margin:2px 0 4px;font-size:18px;font-weight:800;color:var(--azul)}
+  .specs{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 8px;font-size:12.5px;color:#445}
+  .specs li{background:#f0f3f7;padding:3px 8px;border-radius:7px}
+  .btn{margin-top:auto;display:block;text-align:center;background:var(--azul);color:#fff;text-decoration:none;padding:9px;border-radius:9px;font-weight:600;font-size:13.5px}
+  .btn:hover{background:#16365c}
+  .agenda{display:flex;flex-direction:column;gap:10px}
+  .ag-item{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid #eef1f4;border-left:4px solid var(--ouro);border-radius:12px;padding:12px 14px}
+  .ag-item.done{border-left-color:#1f9d55;opacity:.85}
+  .ag-date{min-width:64px;text-align:center;line-height:1.2}.ag-date strong{display:block;font-size:15px;color:var(--azul)}.ag-date span{font-size:12px;color:var(--mut)}
+  .ag-info{flex:1}.ag-im{margin:0;font-weight:600;font-size:14.5px}.ag-loc{margin:2px 0 0;color:var(--mut);font-size:12.5px}
+  .ag-badge{font-size:11.5px;font-weight:700;color:#fff;background:var(--azul);padding:4px 10px;border-radius:999px}.ag-item.done .ag-badge{background:#1f9d55}
+  .foot{text-align:center;padding:28px 16px;color:var(--mut);font-size:13px}
+  .foot .wa{display:inline-block;margin-top:8px;background:#25d366;color:#fff;text-decoration:none;padding:11px 20px;border-radius:999px;font-weight:700;font-size:14px}
+  .empty{color:var(--mut);text-align:center;padding:30px}
+  .obs{font-size:12.5px;color:#56697b;margin:0 0 10px;line-height:1.4;background:#f7f9fb;border-left:3px solid var(--ouro);padding:7px 9px;border-radius:0 7px 7px 0}
+  .price-sc{color:#6b7785;font-size:14px;font-weight:600}
+  .tag-desc{left:10px;background:#8a94a0}
+  .card.desc{opacity:.62;filter:grayscale(.3)}
+</style></head><body>
+  <div class="hero">
+    <div class="kicker">Gregório Imóveis</div>
+    <h1>Olá, Natan &amp; Cheila 👋</h1>
+    <p>Sua seleção personalizada de imóveis — preparada pelo corretor Mateus Gregório</p>
+    <div class="chips"><span class="chip">Comprar</span><span class="chip">Casa OU Apto (transição)</span><span class="chip">Passo Fundo</span><span class="chip">Até R$ 600–650 mil</span><span class="chip">Entrada R$ 150–200 mil</span></div>
+  </div>
+  <div class="wrap">
+    
+    
+  <h2 class="sec">Apartamentos <span>(9)</span></h2>
+  <div class="grid">
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/verdiimo/vista.imobi/fotos/13354/i167mp5866r914665862V_1335469e2a69be854f.jpg')">
+      
+      <span class="tag tag-like">❤ Vocês gostaram</span>
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento 3 quartos — Centurion (Centro)</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Cheila gostou da localização; só o valor é mais alto.</p>
+      <a class="btn" href="https://verdiimoveis.com.br/imovel/VE9367/apartamento-3-quartos-centurion-centro-passo-fundo/" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/zanata/img_vendas/m1_5227_86566_1116_071025.jpg')">
+      
+      
+      <span class="tag tag-cal">📍 A visitar</span>
+    </div>
+    <div class="body">
+      <h3>Apartamento 3 dorm — Dreams</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Natan quer ver. Mateus tem amigos que moram lá e não reclamam.</p>
+      <a class="btn" href="https://www.zanataimoveis.com/imovel/venda-apartamentos-03-dorm-em-passo-fundo/dreams/5227" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/fragomeni/img_vendas/m1_3949_71225_0919_060326.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento 3 dormitórios c/ suíte</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Opção de apto perto do Marista (indicação do Mateus).</p>
+      <a class="btn" href="https://www.fragomeniimoveis.com.br/imovel/venda-apartamentos-03-dorm-em-passo-fundo/apartamento-03-dormitorios-com-suite/3949" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/amilton/img_vendas/m1_7432_179720_1745_050326.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento Duplex 3 dorm — Centro</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Indicação do Mateus.</p>
+      <a class="btn" href="https://www.amiltonnazariimoveis.com.br/imovel/venda-apartamento-03-dorm-em-passo-fundo/duplex-03-dormitorios-centro/7432" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/verdiimo/vista.imobi/fotos/13353/i9wRki6_1335369e2929c2b68f.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Cobertura Duplex 3 quartos — Merlin (Centro)</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Natan curtiu o terraço (dá pra fechar, fogão a lenha/lareira). Mateus: garagens difíceis de manobrar.</p>
+      <a class="btn" href="https://verdiimoveis.com.br/imovel/VE9366/cobertura-duplex-3-quartos-residencial-j.-a.-merlin-centro-passo-fundo/" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento 2 quartos semi-mobiliado</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Ideia da Cheila: apto de transição (sair do aluguel) e daqui 2-3 anos ir pra casa maior.</p>
+      <a class="btn" href="https://www.gregorioimob.com.br/imovel/apartamento-2-quartos-semi-mobiliado/14122" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/associadas/img_vendas/i21_17811_269315_1629_190526.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento Duplex 2 dorm reformado — Centro</h3>
+      <p class="loc">Centro (Boqueirão), Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Mais barato porque é sem elevador (4 andares). Natan: até 5 andares ele sobe.</p>
+      <a class="btn" href="https://www.gregorioimob.com.br/imovel/apartamento-duplex-de-2-dormitorios-reformado-no-centro-da-cidade/17811" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/associadas/img_vendas/i21_17729_267515_1051_060526.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento semi-mobiliado c/ suíte — frente à praça do HC</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Indicação do Mateus.</p>
+      <a class="btn" href="https://www.gregorioimob.com.br/imovel/apartamento-semi-mobiliado-com-suite-em-frente-a-praca-do-hc/17729" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Apartamento Centurion</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Indicação do Mateus.</p>
+      <a class="btn" href="https://www.imoveisvistaprime.com.br/imovel/centurion/598" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article></div>
+  <h2 class="sec">Casas <span>(7)</span></h2>
+  <div class="grid">
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/associadas/img_vendas/i21_12517_152706_1552_210624.jpg')">
+      
+      <span class="tag tag-like">❤ Vocês gostaram</span>
+      
+    </div>
+    <div class="body">
+      <h3>Linda Casa na Petrópolis (Castro Alves)</h3>
+      <p class="loc">Petrópolis, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">EXCLUSIVA Gregório. Cheila gostou do estilo (gramado na frente, fogão a lenha, cozinha campeira). Castro Alves, bom lugar.</p>
+      <a class="btn" href="https://www.associadas.com.br/imovel/linda-casa-na-petropolis/12517" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="">
+      
+      
+      <span class="tag tag-cal">📍 A visitar</span>
+    </div>
+    <div class="body">
+      <h3>Casa 2 dormitórios — São Cristóvão</h3>
+      <p class="loc">São Cristóvão, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Na lista pra visitar (tem gente morando — visita combinada p/ semana que vem).</p>
+      <a class="btn" href="https://www.ceolinimoveis.com.br/imovel/casa-2-dormitorios-sao-cristovao/57530" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/bortolin/fotos/32321/im1K5W62i749DN9u_3232169299dd1d2361_p.jpg')">
+      
+      
+      <span class="tag tag-cal">📍 A visitar</span>
+    </div>
+    <div class="body">
+      <h3>Casa — São José</h3>
+      <p class="loc">São José, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Na lista pra visitar. São José é mais perto do centro (ponto a favor).</p>
+      <a class="btn" href="https://bortoliniimoveis.com.br/imovel/comprar/casa-em-passo-fundo/32321" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Sobrado Cidade Nova</h3>
+      <p class="loc">Cidade Nova, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Natan: sala fica apertada (do lado da garagem).</p>
+      <a class="btn" href="https://www.gregorioimob.com.br/imovel/sobrado-no-bairro-cidade-nova/16651" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/amilton/img_vendas/m1_7253_176159_1131_220126.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Casa 3 dormitórios — Vera Cruz</h3>
+      <p class="loc">Vera Cruz, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Cheila: boa opção, valor um pouco acima. Mateus: precisa de uma reforma boa; fotos enganam.</p>
+      <a class="btn" href="https://www.amiltonnazariimoveis.com.br/imovel/venda-casa-03-dorm-em-passo-fundo/casa-03-dormitorios-vera-cruz/7253" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/bortolin/fotos/33117/i5m7P_3311768c08abcdb77f_p.jpg')">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Casa steelframe</h3>
+      <p class="loc">Passo Fundo, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Steelframe (estilo americano, estrutura de ferro; tipo as do Bastian/Cubo). Natan quer negociar. Mateus: no máx ~650-670.</p>
+      <a class="btn" href="https://bortoliniimoveis.com.br/imovel/comprar/casa-em-passo-fundo/33117" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="">
+      
+      
+      
+    </div>
+    <div class="body">
+      <h3>Casa Saint James</h3>
+      <p class="loc">Passo Fundo, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">Indicação do Mateus.</p>
+      <a class="btn" href="https://www.silvaimoveisrs.com.br/imovel/saint-james/64328" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article></div>
+    
+    
+  <h2 class="sec">🗂️ Já descartados <span>(2)</span></h2>
+  <div class="grid">
+  <article class="card desc">
+    <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/bortolin/fotos/24153/i5MX6Z73130X65_241536376a3d363e90_p.jpg')">
+      
+      
+      <span class="tag tag-desc">descartado</span>
+    </div>
+    <div class="body">
+      <h3>Casa Vera Cruz (fundos, perto do Compre Bem)</h3>
+      <p class="loc">Vera Cruz, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">DESCARTADA: terreno enorme, mas Mateus alertou que é lugar de passagem ruim; Cheila não curtiu a região.</p>
+      <a class="btn" href="https://bortoliniimoveis.com.br/imovel/comprar/casa-em-passo-fundo/24153" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card desc">
+    <div class="thumb" style="">
+      
+      
+      <span class="tag tag-desc">descartado</span>
+    </div>
+    <div class="body">
+      <h3>Casa na Petrópolis (da reforma)</h3>
+      <p class="loc">Petrópolis, Passo Fundo</p>
+      <p class="price price-sc">Valor sob consulta</p>
+      <ul class="specs">
+        
+        
+        
+        
+      </ul>
+      <p class="obs">DESCARTADA: Cheila desistiu por conta de tudo que precisava reformar; e não gostou da localização ao visitar.</p>
+      
+    </div>
+  </article></div>
+  </div>
+  <div class="foot">
+    <strong>Mateus Gregório</strong> · Gregório Imóveis · Passo Fundo/RS<br>
+    <a class="wa" href="https://wa.me/5554996050443" target="_blank" rel="noopener">💬 Falar no WhatsApp — (54) 99605-0443</a>
+  </div>
+</body></html>
