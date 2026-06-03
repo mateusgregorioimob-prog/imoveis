@@ -65,6 +65,12 @@
   .hint{background:#fff;border:1px solid #eef1f4;border-left:4px solid var(--ouro);border-radius:0 10px 10px 0;padding:12px 14px;margin:18px 0 0;font-size:13.5px;color:#445;line-height:1.5}
   .fab{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;border:none;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:800;box-shadow:0 6px 22px rgba(0,0,0,.28);cursor:pointer;z-index:50}
   .fab .badge{background:rgba(255,255,255,.28);border-radius:999px;padding:1px 9px;font-size:13px}
+  .savedlay{display:none;position:fixed;inset:0;background:rgba(13,42,74,.55);align-items:center;justify-content:center;z-index:100;padding:20px}
+  .savedbox{background:#fff;border-radius:18px;max-width:340px;width:100%;padding:28px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.3)}
+  .savedck{font-size:46px;line-height:1}
+  .savedbox h3{margin:10px 0 6px;color:var(--azul)}
+  .savedbox p{margin:0 0 18px;color:#445;font-size:14px;line-height:1.5}
+  .savedclose{background:var(--azul);color:#fff;border:none;border-radius:10px;padding:11px 26px;font-weight:700;font-size:14px;cursor:pointer}
 </style></head><body>
   <div class="hero">
     <div class="kicker">Gregório Imóveis</div>
@@ -511,10 +517,11 @@
     <strong>Mateus Gregório</strong> · Gregório Imóveis · Passo Fundo/RS<br>
     <a class="wa" href="https://wa.me/5554999905912" target="_blank" rel="noopener">💬 Falar no WhatsApp — (54) 99990-5912</a>
   </div>
-  <button class="fab" id="fab" type="button">📲 Enviar pro Mateus <span class="badge" id="fabn">0</span></button>
+  <button class="fab" id="fab" type="button">💾 Salvar minhas escolhas <span class="badge" id="fabn">0</span></button>
+  <div class="savedlay" id="savedlay"><div class="savedbox"><div class="savedck">✅</div><h3>Tudo salvo!</h3><p id="savedtxt">Suas escolhas e comentários foram guardados. O Mateus já vai receber tudo. 🙌</p><button type="button" class="savedclose" id="savedclose">Fechar</button></div></div>
   <script>
   (function(){
-    var KEY="prio-natan-cheila", WA="5554999905912", NOME="Natan &amp; Cheila";
+    var KEY="prio-natan-cheila", WA="5554999905912", NOME="Natan &amp; Cheila", COLETOR="";
     var st={}; try{st=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){}
     var fab=document.getElementById("fab"), fabn=document.getElementById("fabn");
     var rows=[].slice.call(document.querySelectorAll(".prio"));
@@ -564,15 +571,34 @@
     }
     function lineFor(id){var s=st[id]||{}; var c=(s.cmt&&s.cmt.trim())?(' — "'+s.cmt.trim()+'"'):''; return "- "+titleOf[id]+c;}
     function group(pred){return Object.keys(st).filter(function(id){return titleOf[id]&&pred(st[id]);}).map(lineFor).join("\n");}
-    fab.addEventListener("click",function(){
-      var msg="Oi Mateus! Aqui esta o nosso retorno ("+NOME+"):\n";
+    function montarResumo(){
+      var msg="Retorno de "+NOME+":\n";
       var o=group(function(s){return s.prio==="ouro";}); if(o){msg+="\n🥇 OURO:\n"+o+"\n";}
       var p=group(function(s){return s.prio==="prata";}); if(p){msg+="\n🥈 PRATA:\n"+p+"\n";}
       var b=group(function(s){return s.prio==="bronze";}); if(b){msg+="\n🥉 BRONZE:\n"+b+"\n";}
-      var v=group(function(s){return s.visit;}); if(v){msg+="\n📅 QUEREMOS VISITAR:\n"+v+"\n";}
+      var v=group(function(s){return s.visit;}); if(v){msg+="\n📅 QUEREM VISITAR:\n"+v+"\n";}
       var co=group(function(s){return (s.cmt&&s.cmt.trim())&&!s.prio&&!s.visit;}); if(co){msg+="\n💬 COMENTARIOS:\n"+co+"\n";}
-      var ex=extras&&extras.value.trim(); if(ex){msg+="\n🔎 IMOVEIS QUE ACHAMOS:\n"+ex+"\n";}
-      window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
+      var ex=extras&&extras.value.trim(); if(ex){msg+="\n🔎 ACHARAM:\n"+ex+"\n";}
+      return msg;
+    }
+    function montarItens(){
+      var arr=[]; rows.forEach(function(r){var id=r.getAttribute("data-id"); var s=st[id]; if(s&&(s.prio||s.visit||(s.cmt&&s.cmt.trim()))){arr.push({imovel:titleOf[id], prioridade:s.prio||"", visitar:!!s.visit, comentario:(s.cmt||"").trim()});}}); return arr;
+    }
+    var lay=document.getElementById("savedlay"), savedtxt=document.getElementById("savedtxt");
+    document.getElementById("savedclose").addEventListener("click",function(){lay.style.display="none";});
+    fab.addEventListener("click",function(){
+      var payload={cliente:NOME, pagina:KEY, itens:montarItens(), acharam:(extras?extras.value.trim():""), resumo:montarResumo()};
+      try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}
+      if(COLETOR){
+        savedtxt.textContent="Salvando...";
+        lay.style.display="flex";
+        fetch(COLETOR,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})
+          .then(function(){savedtxt.textContent="Suas escolhas e comentários foram guardados. O Mateus já vai receber tudo. 🙌";})
+          .catch(function(){savedtxt.textContent="Salvamos aqui no seu aparelho. Se tiver internet, recarregue e salve de novo pra chegar pro Mateus. 🙂";});
+      } else {
+        savedtxt.textContent="Suas escolhas foram guardadas neste aparelho. 🙌";
+        lay.style.display="flex";
+      }
     });
     render();
   })();
