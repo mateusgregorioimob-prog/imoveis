@@ -47,6 +47,9 @@
   .prio .p.on[data-v=prata]{background:#cfd6dd;border-color:#9aa6b2;color:#33414f}
   .prio .p.on[data-v=bronze]{background:#e0a36b;border-color:#b9763c;color:#4a2a10}
   .prio .p.on[data-v=visit]{background:#0d2a4a;border-color:#0d2a4a;color:#fff}
+  .cmt{width:100%;box-sizing:border-box;border:1.5px solid #e1e6ec;border-radius:8px;padding:8px;font:inherit;font-size:13px;resize:vertical;margin:0 0 10px;color:#1d2733}
+  .cmt:focus{outline:none;border-color:var(--ouro)}
+  .cmt.has{border-color:#25d366;background:#f3fbf5}
   .hint{background:#fff;border:1px solid #eef1f4;border-left:4px solid var(--ouro);border-radius:0 10px 10px 0;padding:12px 14px;margin:18px 0 0;font-size:13.5px;color:#445;line-height:1.5}
   .fab{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;border:none;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:800;box-shadow:0 6px 22px rgba(0,0,0,.28);cursor:pointer;z-index:50}
   .fab .badge{background:rgba(255,255,255,.28);border-radius:999px;padding:1px 9px;font-size:13px}
@@ -58,7 +61,7 @@
     <div class="chips"><span class="chip">Comprar</span><span class="chip">Casa OU Apto (transição)</span><span class="chip">Passo Fundo</span><span class="chip">Até R$ 600–650 mil</span><span class="chip">Entrada R$ 150–200 mil</span></div>
   </div>
   <div class="wrap">
-    <p class="hint">👉 <b>Como usar:</b> em cada imóvel, toquem em 🥇 <b>Ouro</b>, 🥈 <b>Prata</b> ou 🥉 <b>Bronze</b> conforme o interesse de vocês, e em 📅 <b>Visitar</b> nos que querem conhecer. No final, toquem no botão verde pra me mandar tudo organizado. 🙂</p>
+    <p class="hint">👉 <b>Como usar:</b> em cada imóvel, classifiquem em 🥇 <b>Ouro</b>, 🥈 <b>Prata</b> ou 🥉 <b>Bronze</b>, marquem 📅 <b>Visitar</b> nos que querem conhecer, e <b>escrevam no campo de comentário o que acharam</b> (o que gostaram, o que não, dúvidas). No final, toquem no botão verde que chega tudo pra mim. 🙂</p>
     
     
   <h2 class="sec">Apartamentos <span>(9)</span></h2>
@@ -66,7 +69,6 @@
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/verdiimo/vista.imobi/fotos/13354/i167mp5866r914665862V_1335469e2a69be854f.jpg')">
       
-      <span class="tag tag-like">❤ Vocês gostaram</span>
       
     </div>
     <div class="body">
@@ -79,21 +81,20 @@
         
         
       </ul>
-      <p class="obs">Cheila gostou da localização; só o valor é mais alto.</p>
       <div class="prio" data-id="a3" data-title="Apartamento 3 quartos — Centurion (Centro)">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a3" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://verdiimoveis.com.br/imovel/VE9367/apartamento-3-quartos-centurion-centro-passo-fundo/" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/zanata/img_vendas/m1_5227_86566_1116_071025.jpg')">
       
-      
-      <span class="tag tag-cal">📍 A visitar</span>
+      <span class="tag tag-cal">📍 Pra visitar</span>
     </div>
     <div class="body">
       <h3>Apartamento 3 dorm — Dreams</h3>
@@ -105,19 +106,18 @@
         
         
       </ul>
-      <p class="obs">Natan quer ver. Mateus tem amigos que moram lá e não reclamam.</p>
       <div class="prio" data-id="a5" data-title="Apartamento 3 dorm — Dreams">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a5" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.zanataimoveis.com/imovel/venda-apartamentos-03-dorm-em-passo-fundo/dreams/5227" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/fragomeni/img_vendas/m1_3949_71225_0919_060326.jpg')">
-      
       
       
     </div>
@@ -131,19 +131,18 @@
         
         
       </ul>
-      <p class="obs">Opção de apto perto do Marista (indicação do Mateus).</p>
       <div class="prio" data-id="a1" data-title="Apartamento 3 dormitórios c/ suíte">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a1" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.fragomeniimoveis.com.br/imovel/venda-apartamentos-03-dorm-em-passo-fundo/apartamento-03-dormitorios-com-suite/3949" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/amilton/img_vendas/m1_7432_179720_1745_050326.jpg')">
-      
       
       
     </div>
@@ -157,19 +156,18 @@
         
         
       </ul>
-      <p class="obs">Indicação do Mateus.</p>
       <div class="prio" data-id="a2" data-title="Apartamento Duplex 3 dorm — Centro">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a2" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.amiltonnazariimoveis.com.br/imovel/venda-apartamento-03-dorm-em-passo-fundo/duplex-03-dormitorios-centro/7432" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/verdiimo/vista.imobi/fotos/13353/i9wRki6_1335369e2929c2b68f.jpg')">
-      
       
       
     </div>
@@ -183,19 +181,18 @@
         
         
       </ul>
-      <p class="obs">Natan curtiu o terraço (dá pra fechar, fogão a lenha/lareira). Mateus: garagens difíceis de manobrar.</p>
       <div class="prio" data-id="a4" data-title="Cobertura Duplex 3 quartos — Merlin (Centro)">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a4" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://verdiimoveis.com.br/imovel/VE9366/cobertura-duplex-3-quartos-residencial-j.-a.-merlin-centro-passo-fundo/" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="">
-      
       
       
     </div>
@@ -209,19 +206,18 @@
         
         
       </ul>
-      <p class="obs">Ideia da Cheila: apto de transição (sair do aluguel) e daqui 2-3 anos ir pra casa maior.</p>
       <div class="prio" data-id="a6" data-title="Apartamento 2 quartos semi-mobiliado">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a6" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.gregorioimob.com.br/imovel/apartamento-2-quartos-semi-mobiliado/14122" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/associadas/img_vendas/i21_17811_269315_1629_190526.jpg')">
-      
       
       
     </div>
@@ -235,19 +231,18 @@
         
         
       </ul>
-      <p class="obs">Mais barato porque é sem elevador (4 andares). Natan: até 5 andares ele sobe.</p>
       <div class="prio" data-id="a7" data-title="Apartamento Duplex 2 dorm reformado — Centro">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a7" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.gregorioimob.com.br/imovel/apartamento-duplex-de-2-dormitorios-reformado-no-centro-da-cidade/17811" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/associadas/img_vendas/i21_17729_267515_1051_060526.jpg')">
-      
       
       
     </div>
@@ -261,19 +256,18 @@
         
         
       </ul>
-      <p class="obs">Indicação do Mateus.</p>
       <div class="prio" data-id="a8" data-title="Apartamento semi-mobiliado c/ suíte — frente à praça do HC">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a8" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.gregorioimob.com.br/imovel/apartamento-semi-mobiliado-com-suite-em-frente-a-praca-do-hc/17729" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="">
-      
       
       
     </div>
@@ -287,13 +281,13 @@
         
         
       </ul>
-      <p class="obs">Indicação do Mateus.</p>
       <div class="prio" data-id="a9" data-title="Apartamento Centurion">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="a9" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.imoveisvistaprime.com.br/imovel/centurion/598" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article></div>
@@ -302,8 +296,7 @@
   <article class="card">
     <div class="thumb" style="">
       
-      
-      <span class="tag tag-cal">📍 A visitar</span>
+      <span class="tag tag-cal">📍 Pra visitar</span>
     </div>
     <div class="body">
       <h3>Casa 2 dormitórios — São Cristóvão</h3>
@@ -315,21 +308,20 @@
         
         
       </ul>
-      <p class="obs">Na lista pra visitar (tem gente morando — visita combinada p/ semana que vem).</p>
       <div class="prio" data-id="c2" data-title="Casa 2 dormitórios — São Cristóvão">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c2" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.ceolinimoveis.com.br/imovel/casa-2-dormitorios-sao-cristovao/57530" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/bortolin/fotos/32321/im1K5W62i749DN9u_3232169299dd1d2361_p.jpg')">
       
-      
-      <span class="tag tag-cal">📍 A visitar</span>
+      <span class="tag tag-cal">📍 Pra visitar</span>
     </div>
     <div class="body">
       <h3>Casa — São José</h3>
@@ -341,19 +333,18 @@
         
         
       </ul>
-      <p class="obs">Na lista pra visitar. São José é mais perto do centro (ponto a favor).</p>
       <div class="prio" data-id="c3" data-title="Casa — São José">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c3" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://bortoliniimoveis.com.br/imovel/comprar/casa-em-passo-fundo/32321" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="">
-      
       
       
     </div>
@@ -367,19 +358,18 @@
         
         
       </ul>
-      <p class="obs">Natan: sala fica apertada (do lado da garagem).</p>
       <div class="prio" data-id="c1" data-title="Sobrado Cidade Nova">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c1" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.gregorioimob.com.br/imovel/sobrado-no-bairro-cidade-nova/16651" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/bortolin/fotos/33117/i5m7P_3311768c08abcdb77f_p.jpg')">
-      
       
       
     </div>
@@ -393,19 +383,18 @@
         
         
       </ul>
-      <p class="obs">Steelframe (estilo americano, estrutura de ferro; tipo as do Bastian/Cubo). Natan quer negociar. Mateus: no máx ~650-670.</p>
       <div class="prio" data-id="c6" data-title="Casa steelframe">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c6" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://bortoliniimoveis.com.br/imovel/comprar/casa-em-passo-fundo/33117" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="">
-      
       
       
     </div>
@@ -419,13 +408,13 @@
         
         
       </ul>
-      <p class="obs">Indicação do Mateus.</p>
       <div class="prio" data-id="c7" data-title="Casa Saint James">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c7" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.silvaimoveisrs.com.br/imovel/saint-james/64328" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article></div>
@@ -435,8 +424,7 @@
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/amilton/img_vendas/m1_7253_176159_1131_220126.jpg')">
       
-      <span class="tag tag-like tag-fav">⭐ Favorita de vocês</span>
-      <span class="tag tag-ok">✓ Visitado</span>
+      <span class="tag tag-ok">✓ Já visitado</span>
     </div>
     <div class="body">
       <h3>Casa 3 dormitórios — Vera Cruz</h3>
@@ -448,21 +436,20 @@
         
         
       </ul>
-      <p class="obs">⭐ FAVORITA DELES — a que mais gostaram nas visitas (ref. Itamarati). Cheila: boa opção. Mateus: precisa de uma reforma.</p>
       <div class="prio" data-id="c4" data-title="Casa 3 dormitórios — Vera Cruz">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c4" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.amiltonnazariimoveis.com.br/imovel/venda-casa-03-dorm-em-passo-fundo/casa-03-dormitorios-vera-cruz/7253" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/associadas/img_vendas/i21_12517_152706_1552_210624.jpg')">
       
-      <span class="tag tag-like">❤ Vocês gostaram</span>
-      <span class="tag tag-ok">✓ Visitado</span>
+      <span class="tag tag-ok">✓ Já visitado</span>
     </div>
     <div class="body">
       <h3>Linda Casa na Petrópolis (Castro Alves)</h3>
@@ -474,21 +461,20 @@
         
         
       </ul>
-      <p class="obs">EXCLUSIVA Gregório. JÁ VISITARAM. Cheila gostou do estilo (gramado na frente, fogão a lenha, cozinha campeira). Castro Alves, bom lugar.</p>
       <div class="prio" data-id="c5" data-title="Linda Casa na Petrópolis (Castro Alves)">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="c5" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       <a class="btn" href="https://www.associadas.com.br/imovel/linda-casa-na-petropolis/12517" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
   </article>
   <article class="card">
     <div class="thumb" style="">
       
-      
-      <span class="tag tag-ok">✓ Visitado</span>
+      <span class="tag tag-ok">✓ Já visitado</span>
     </div>
     <div class="body">
       <h3>Casa na Petrópolis (da reforma)</h3>
@@ -500,13 +486,13 @@
         
         
       </ul>
-      <p class="obs">JÁ VISITARAM. Casa que precisa de reforma. Estava na Bortolini por ~R$ 599 mil.</p>
       <div class="prio" data-id="d2" data-title="Casa na Petrópolis (da reforma)">
         <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
         <button class="p" data-v="prata" type="button">🥈 Prata</button>
         <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
         <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
       </div>
+      <textarea class="cmt" data-id="d2" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
       
     </div>
   </article></div>
@@ -515,7 +501,6 @@
   <div class="grid">
   <article class="card desc">
     <div class="thumb" style="background-image:url('https://cdn.vistahost.com.br/bortolin/fotos/24153/i5MX6Z73130X65_241536376a3d363e90_p.jpg')">
-      
       
       <span class="tag tag-desc">descartado</span>
     </div>
@@ -529,7 +514,6 @@
         
         
       </ul>
-      <p class="obs">DESCARTADA: terreno enorme, mas Mateus alertou que é lugar de passagem ruim; Cheila não curtiu a região.</p>
       
       <a class="btn" href="https://bortoliniimoveis.com.br/imovel/comprar/casa-em-passo-fundo/24153" target="_blank" rel="noopener">Ver detalhes</a>
     </div>
@@ -539,13 +523,17 @@
     <strong>Mateus Gregório</strong> · Gregório Imóveis · Passo Fundo/RS<br>
     <a class="wa" href="https://wa.me/5554996050443" target="_blank" rel="noopener">💬 Falar no WhatsApp — (54) 99605-0443</a>
   </div>
-  <button class="fab" id="fab" type="button">📲 Enviar nossas prioridades <span class="badge" id="fabn">0</span></button>
+  <button class="fab" id="fab" type="button">📲 Enviar pro Mateus <span class="badge" id="fabn">0</span></button>
   <script>
   (function(){
     var KEY="prio-natan-cheila", WA="5554996050443", NOME="Natan &amp; Cheila";
     var st={}; try{st=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){}
     var fab=document.getElementById("fab"), fabn=document.getElementById("fabn");
     var rows=[].slice.call(document.querySelectorAll(".prio"));
+    var cmts=[].slice.call(document.querySelectorAll(".cmt"));
+    var titleOf={}; rows.forEach(function(r){titleOf[r.getAttribute("data-id")]=r.getAttribute("data-title");});
+    function clean(id){var s=st[id]; if(s&&!s.prio&&!s.visit&&!(s.cmt&&s.cmt.trim())){delete st[id];}}
+    function count(){var n=Object.keys(st).length; fab.style.display=n?"inline-flex":"none"; fabn.textContent=n;}
     function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}render();}
     rows.forEach(function(row){
       var id=row.getAttribute("data-id");
@@ -553,9 +541,17 @@
         b.addEventListener("click",function(){
           st[id]=st[id]||{}; var v=b.getAttribute("data-v");
           if(v==="visit"){st[id].visit=!st[id].visit;} else {st[id].prio=(st[id].prio===v)?null:v;}
-          if(!st[id].prio&&!st[id].visit){delete st[id];}
-          save();
+          clean(id); save();
         });
+      });
+    });
+    cmts.forEach(function(t){
+      var id=t.getAttribute("data-id");
+      if(st[id]&&st[id].cmt){t.value=st[id].cmt; t.classList.add("has");}
+      t.addEventListener("input",function(){
+        st[id]=st[id]||{}; st[id].cmt=t.value;
+        if(t.value.trim()){t.classList.add("has");}else{t.classList.remove("has");}
+        clean(id); try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){} count();
       });
     });
     function render(){
@@ -566,15 +562,17 @@
           if(on){b.classList.add("on");}else{b.classList.remove("on");}
         });
       });
-      var n=Object.keys(st).length; fab.style.display=n?"inline-flex":"none"; fabn.textContent=n;
+      count();
     }
-    function list(pred){return rows.filter(function(r){return pred(st[r.getAttribute("data-id")]||{});}).map(function(r){return "- "+r.getAttribute("data-title");}).join("\n");}
+    function lineFor(id){var s=st[id]||{}; var c=(s.cmt&&s.cmt.trim())?(' — "'+s.cmt.trim()+'"'):''; return "- "+titleOf[id]+c;}
+    function group(pred){return Object.keys(st).filter(function(id){return titleOf[id]&&pred(st[id]);}).map(lineFor).join("\n");}
     fab.addEventListener("click",function(){
-      var msg="Oi Mateus! Aqui estao nossas prioridades ("+NOME+"):\n";
-      var o=list(function(s){return s.prio==="ouro";}); if(o){msg+="\n🥇 OURO:\n"+o+"\n";}
-      var p=list(function(s){return s.prio==="prata";}); if(p){msg+="\n🥈 PRATA:\n"+p+"\n";}
-      var b=list(function(s){return s.prio==="bronze";}); if(b){msg+="\n🥉 BRONZE:\n"+b+"\n";}
-      var v=list(function(s){return s.visit;}); if(v){msg+="\n📅 QUEREMOS VISITAR:\n"+v+"\n";}
+      var msg="Oi Mateus! Aqui esta o nosso retorno ("+NOME+"):\n";
+      var o=group(function(s){return s.prio==="ouro";}); if(o){msg+="\n🥇 OURO:\n"+o+"\n";}
+      var p=group(function(s){return s.prio==="prata";}); if(p){msg+="\n🥈 PRATA:\n"+p+"\n";}
+      var b=group(function(s){return s.prio==="bronze";}); if(b){msg+="\n🥉 BRONZE:\n"+b+"\n";}
+      var v=group(function(s){return s.visit;}); if(v){msg+="\n📅 QUEREMOS VISITAR:\n"+v+"\n";}
+      var co=group(function(s){return (s.cmt&&s.cmt.trim())&&!s.prio&&!s.visit;}); if(co){msg+="\n💬 COMENTARIOS:\n"+co+"\n";}
       window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
     });
     render();
