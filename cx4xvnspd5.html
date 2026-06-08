@@ -1,0 +1,387 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seleção de imóveis — Natan &amp; Cheila | Gregório Imóveis</title>
+<style>
+  :root{--azul:#0d2a4a;--ouro:#c8a24a;--bg:#f6f7f9;--card:#fff;--txt:#1d2733;--mut:#6b7785}
+  *{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+  .hero{background:linear-gradient(135deg,var(--azul),#16365c);color:#fff;padding:38px 22px 30px;text-align:center}
+  .hero .kicker{letter-spacing:3px;font-size:12px;text-transform:uppercase;color:var(--ouro);font-weight:700}
+  .hero h1{margin:8px 0 4px;font-size:26px}.hero p{margin:0;color:#cdd8e6;font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:12.5px}
+  .wrap{max-width:1080px;margin:0 auto;padding:8px 16px 40px}
+  .sec{font-size:19px;margin:30px 4px 12px;border-left:4px solid var(--ouro);padding-left:10px}.sec span{color:var(--mut);font-weight:400;font-size:15px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(13,42,74,.08);display:flex;flex-direction:column;border:1px solid #eef1f4}
+  .card.alto{border:1px solid var(--ouro)}
+  .thumb{height:170px;background:#dde3ea center/cover no-repeat;position:relative}
+  .tag{position:absolute;top:10px;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px;color:#fff;backdrop-filter:blur(2px)}
+  .tag-alto{left:10px;background:var(--ouro)}.tag-like{right:10px;background:#e0395e}
+  .tag-fav{background:linear-gradient(90deg,#e0a800,#f6c945);color:#4a3800}
+  .tag-ok{left:10px;top:auto;bottom:10px;background:#1f9d55}.tag-cal{left:10px;top:auto;bottom:10px;background:var(--azul)}
+  .body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .body h3{margin:0;font-size:15.5px;line-height:1.25}
+  .loc{margin:0;color:var(--mut);font-size:13px}
+  .price{margin:2px 0 4px;font-size:18px;font-weight:800;color:var(--azul)}
+  .specs{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 8px;font-size:12.5px;color:#445}
+  .specs li{background:#f0f3f7;padding:3px 8px;border-radius:7px}
+  .dist{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0 0 10px;font-size:12px}
+  .dist li{background:#eef5ff;color:#1d3a5f;padding:3px 8px;border-radius:7px;border:1px solid #dbe7f5}
+  .legend{font-size:12.5px;color:var(--mut);margin:8px 4px 0;text-align:center}
+  .scoreb{position:absolute;right:10px;top:10px;font-size:13px;font-weight:800;color:#fff;padding:4px 10px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+  .s-hi{background:#1f9d55}.s-md{background:#e0a800}.s-lo{background:#8a94a0}
+  .scb{font-size:12px;color:#445;background:#f4f7fb;border-radius:8px;padding:7px 9px;margin:0 0 10px;line-height:1.45}
+  .scb b{color:var(--azul)}
+  .btn{margin-top:auto;display:block;text-align:center;background:var(--azul);color:#fff;text-decoration:none;padding:9px;border-radius:9px;font-weight:600;font-size:13.5px}
+  .btn:hover{background:#16365c}
+  .agenda{display:flex;flex-direction:column;gap:10px}
+  .ag-item{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid #eef1f4;border-left:4px solid var(--ouro);border-radius:12px;padding:12px 14px}
+  .ag-item.done{border-left-color:#1f9d55;opacity:.85}
+  .ag-date{min-width:64px;text-align:center;line-height:1.2}.ag-date strong{display:block;font-size:15px;color:var(--azul)}.ag-date span{font-size:12px;color:var(--mut)}
+  .ag-info{flex:1}.ag-im{margin:0;font-weight:600;font-size:14.5px}.ag-loc{margin:2px 0 0;color:var(--mut);font-size:12.5px}
+  .ag-badge{font-size:11.5px;font-weight:700;color:#fff;background:var(--azul);padding:4px 10px;border-radius:999px}.ag-item.done .ag-badge{background:#1f9d55}
+  .foot{text-align:center;padding:28px 16px;color:var(--mut);font-size:13px}
+  .foot .wa{display:inline-block;margin-top:8px;background:#25d366;color:#fff;text-decoration:none;padding:11px 20px;border-radius:999px;font-weight:700;font-size:14px}
+  .empty{color:var(--mut);text-align:center;padding:30px}
+  .obs{font-size:12.5px;color:#56697b;margin:0 0 10px;line-height:1.4;background:#f7f9fb;border-left:3px solid var(--ouro);padding:7px 9px;border-radius:0 7px 7px 0}
+  .price-sc{color:#6b7785;font-size:14px;font-weight:600}
+  .tag-desc{left:10px;background:#8a94a0}
+  .card.desc{opacity:.62;filter:grayscale(.3)}
+  .prio{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 10px}
+  .prio .p{flex:1;min-width:60px;font-size:11px;font-weight:700;border:1.5px solid #e1e6ec;background:#fff;color:#56697b;border-radius:8px;padding:6px 3px;cursor:pointer;transition:.15s}
+  .prio .p:active{transform:scale(.96)}
+  .prio .p.on[data-v=ouro]{background:#f6c945;border-color:#e0a800;color:#5a4500}
+  .prio .p.on[data-v=prata]{background:#cfd6dd;border-color:#9aa6b2;color:#33414f}
+  .prio .p.on[data-v=bronze]{background:#e0a36b;border-color:#b9763c;color:#4a2a10}
+  .prio .p.on[data-v=visit]{background:#0d2a4a;border-color:#0d2a4a;color:#fff}
+  .cmt{width:100%;box-sizing:border-box;border:1.5px solid #e1e6ec;border-radius:8px;padding:8px;font:inherit;font-size:13px;resize:vertical;margin:0 0 10px;color:#1d2733}
+  .cmt:focus{outline:none;border-color:var(--ouro)}
+  .cmt.has{border-color:#25d366;background:#f3fbf5}
+  .extras-box{background:var(--card);border:1px solid #eef1f4;border-radius:14px;padding:14px 16px;box-shadow:0 2px 10px rgba(13,42,74,.06)}
+  .extras-box p{margin:0 0 10px;font-size:13.5px;color:#445;line-height:1.5}
+  #extras{width:100%;box-sizing:border-box;border:1.5px solid #e1e6ec;border-radius:10px;padding:11px;font:inherit;font-size:14px;resize:vertical;color:#1d2733}
+  #extras:focus{outline:none;border-color:var(--ouro)}
+  #extras.has{border-color:#25d366;background:#f3fbf5}
+  .hint{background:#fff;border:1px solid #eef1f4;border-left:4px solid var(--ouro);border-radius:0 10px 10px 0;padding:12px 14px;margin:18px 0 0;font-size:13.5px;color:#445;line-height:1.5}
+  .fab{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;display:none;align-items:center;gap:9px;background:#25d366;color:#fff;border:none;border-radius:999px;padding:13px 24px;font-size:15px;font-weight:800;box-shadow:0 6px 22px rgba(0,0,0,.28);cursor:pointer;z-index:50}
+  .fab .badge{background:rgba(255,255,255,.28);border-radius:999px;padding:1px 9px;font-size:13px}
+  .savedlay{display:none;position:fixed;inset:0;background:rgba(13,42,74,.55);align-items:center;justify-content:center;z-index:100;padding:20px}
+  .savedbox{background:#fff;border-radius:18px;max-width:340px;width:100%;padding:28px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.3)}
+  .savedck{font-size:46px;line-height:1}
+  .savedbox h3{margin:10px 0 6px;color:var(--azul)}
+  .savedbox p{margin:0 0 18px;color:#445;font-size:14px;line-height:1.5}
+  .savedclose{background:var(--azul);color:#fff;border:none;border-radius:10px;padding:11px 26px;font-weight:700;font-size:14px;cursor:pointer}
+</style></head><body>
+  <div class="hero">
+    <div class="kicker">Gregório Imóveis</div>
+    <h1>Olá, Natan &amp; Cheila 👋</h1>
+    <p>Sua seleção personalizada de imóveis — preparada pelo corretor Mateus Gregório</p>
+    <div class="chips"><span class="chip">Comprar</span><span class="chip">Apto 2 dorm c/ suíte</span><span class="chip">Maior que 75m²</span><span class="chip">Até R$ 650 mil</span></div>
+  </div>
+  <div class="wrap">
+    <p class="legend">📍 Em cada imóvel mostramos a distância aproximada até: 💼 Trabalho · 🎒 Colégio Conceição</p>
+    <p class="hint">👉 <b>Como usar:</b> em cada imóvel, classifiquem em 🥇 <b>Ouro</b>, 🥈 <b>Prata</b> ou 🥉 <b>Bronze</b>, marquem 📅 <b>Visitar</b> nos que querem conhecer, e <b>escrevam no campo de comentário o que acharam</b> (o que gostaram, o que não, dúvidas). No final, toquem no botão verde que chega tudo pra mim. 🙂</p>
+    
+    
+  <h2 class="sec">Apartamentos <span>(7)</span></h2>
+  <div class="grid">
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/ariotti/img_vendas/g1_9663_188059_1610_180326.jpg')">
+      
+      <span class="scoreb s-hi">🎯 83%</span>
+      
+    </div>
+    <div class="body">
+      <h3>⭐ Ed. Maison Renoir — 2 dorm c/ suíte</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price">R$ 615.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 1 vaga</li>
+        <li>📐 103 m²</li>
+      </ul>
+      <ul class="dist"><li>💼 <b>0.8 km</b> · Trabalho</li><li>🎒 <b>0.2 km</b> · Colégio Conceição</li></ul>
+      <p class="scb"><b>83% compatível</b> · 📍 ótima localização · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="p1" data-title="⭐ Ed. Maison Renoir — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="p1" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="p1" href="https://www.ariotti.com.br/imovel/ed-maison-renoir/9663" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/coligadas/img_vendas/g12_60585_1388684_1418_120925.jpg')">
+      
+      <span class="scoreb s-hi">🎯 80%</span>
+      
+    </div>
+    <div class="body">
+      <h3>Ed. Matisse — 2 dorm c/ suíte</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price">R$ 650.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 1 vaga</li>
+        <li>📐 121 m²</li>
+      </ul>
+      <ul class="dist"><li>💼 <b>0.8 km</b> · Trabalho</li><li>🎒 <b>0.2 km</b> · Colégio Conceição</li></ul>
+      <p class="scb"><b>80% compatível</b> · 📍 ótima localização · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="a2" data-title="Ed. Matisse — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="a2" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="a2" href="https://www.ceolinimoveis.com.br/imovel/ed-matisse-com-suite/60585" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/ariotti/img_vendas/g1_7757_144849_1733_181224.jpeg')">
+      
+      <span class="scoreb s-hi">🎯 80%</span>
+      
+    </div>
+    <div class="body">
+      <h3>Cond. Vitoriano — 2 dorm c/ suíte</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price">R$ 650.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 1 vaga</li>
+        <li>📐 208 m²</li>
+      </ul>
+      <ul class="dist"><li>💼 <b>0.8 km</b> · Trabalho</li><li>🎒 <b>0.2 km</b> · Colégio Conceição</li></ul>
+      <p class="scb"><b>80% compatível</b> · 📍 ótima localização · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="a3" data-title="Cond. Vitoriano — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="a3" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="a3" href="https://www.ariotti.com.br/imovel/cond-vitoriano-2-dorm-sendo-1-suite/7757" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/ariotti/img_vendas/g1_9872_193326_0822_250526.jpg')">
+      
+      <span class="scoreb s-hi">🎯 80%</span>
+      
+    </div>
+    <div class="body">
+      <h3>Ed. Adam Schell — 2 dorm c/ suíte</h3>
+      <p class="loc">Centro, Passo Fundo</p>
+      <p class="price">R$ 649.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 2 vagas</li>
+        <li>📐 126 m²</li>
+      </ul>
+      <ul class="dist"><li>💼 <b>0.8 km</b> · Trabalho</li><li>🎒 <b>0.2 km</b> · Colégio Conceição</li></ul>
+      <p class="scb"><b>80% compatível</b> · 📍 ótima localização · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="a1" data-title="Ed. Adam Schell — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="a1" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="a1" href="https://www.ariotti.com.br/imovel/edificio-adam-schell/9872" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/coligadas/img_vendas/g3_59790_1367707_1636_250725.jpg')">
+      
+      <span class="scoreb s-md">🎯 76%</span>
+      
+    </div>
+    <div class="body">
+      <h3>Residencial Mauá — 2 dorm c/ suíte</h3>
+      <p class="loc">Vila Rodrigues, Passo Fundo</p>
+      <p class="price">R$ 650.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 1 vaga</li>
+        <li>📐 100 m²</li>
+      </ul>
+      <ul class="dist"><li>💼 <b>1.1 km</b> · Trabalho</li><li>🎒 <b>1.3 km</b> · Colégio Conceição</li></ul>
+      <p class="scb"><b>76% compatível</b> · 📍 ótima localização · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="a6" data-title="Residencial Mauá — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="a6" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="a6" href="https://www.medinaimoveis.com/imovel/residencial-maua/59790" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/amilton/img_vendas/m1_7370_179430_1639_030326.jpg')">
+      
+      <span class="scoreb s-md">🎯 70%</span>
+      
+    </div>
+    <div class="body">
+      <h3>Vista Family Club (mobiliado) — 2 dorm c/ suíte</h3>
+      <p class="loc">Cidade Nova, Passo Fundo</p>
+      <p class="price">R$ 650.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 2 vagas</li>
+        <li>📐 135 m²</li>
+      </ul>
+      
+      <p class="scb"><b>70% compatível</b> · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="a5" data-title="Vista Family Club (mobiliado) — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="a5" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="a5" href="https://www.amiltonnazariimoveis.com.br/imovel/venda-apartamento-02-dorm-em-passo-fundo/vista-family-club-mobiliado/7370" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article>
+  <article class="card">
+    <div class="thumb" style="background-image:url('https://cdn.mizia.com.br/coligadas/img_vendas/g12_62855_1452622_1019_110226.jpeg')">
+      
+      <span class="scoreb s-md">🎯 70%</span>
+      
+    </div>
+    <div class="body">
+      <h3>Astrum Residence — 2 dorm c/ suíte</h3>
+      <p class="loc">Cidade Nova, Passo Fundo</p>
+      <p class="price">R$ 649.000</p>
+      <ul class="specs">
+        <li>🛏 2 dorm</li>
+        <li>🛁 1 suíte</li>
+        <li>🚗 1 vaga</li>
+        <li>📐 104 m²</li>
+      </ul>
+      
+      <p class="scb"><b>70% compatível</b> · 💰 dentro do orçamento · 📐 tamanho ideal</p>
+      <div class="prio" data-id="a4" data-title="Astrum Residence — 2 dorm c/ suíte">
+        <button class="p" data-v="ouro" type="button">🥇 Ouro</button>
+        <button class="p" data-v="prata" type="button">🥈 Prata</button>
+        <button class="p" data-v="bronze" type="button">🥉 Bronze</button>
+        <button class="p p-vis" data-v="visit" type="button">📅 Visitar</button>
+      </div>
+      <textarea class="cmt" data-id="a4" rows="2" placeholder="O que vocês acharam? (opcional)"></textarea>
+      <a class="btn" data-id="a4" href="https://www.ceolinimoveis.com.br/imovel/apartamento-2-dormitorios-astrum-residence/62855" target="_blank" rel="noopener">Ver detalhes</a>
+    </div>
+  </article></div>
+    
+    <h2 class="sec">🔎 Acharam outro imóvel que gostaram?</h2>
+    <div class="extras-box">
+      <p>Viram algo legal em qualquer lugar (outra imobiliária, ZAP, OLX, Instagram, uma placa na rua)? Colem o link aqui — <b>um por linha</b>. Eu analiso, vejo a documentação e organizo a visita. 👑</p>
+      <textarea id="extras" rows="4" placeholder="Cole os links aqui (um por linha)... e o que acharam, se quiserem 🙂"></textarea>
+    </div>
+    
+  </div>
+  <div class="foot">
+    <strong>Mateus Gregório</strong> · Gregório Imóveis · Passo Fundo/RS<br>
+    <a class="wa" href="https://wa.me/5554999905912" target="_blank" rel="noopener">💬 Falar no WhatsApp — (54) 99990-5912</a>
+  </div>
+  <button class="fab" id="fab" type="button">💾 Salvar minhas escolhas <span class="badge" id="fabn">0</span></button>
+  <div class="savedlay" id="savedlay"><div class="savedbox"><div class="savedck">✅</div><h3>Tudo salvo!</h3><p id="savedtxt">Suas escolhas e comentários foram guardados. O Mateus já vai receber tudo. 🙌</p><button type="button" class="savedclose" id="savedclose">Fechar</button></div></div>
+  <script>
+  (function(){
+    try{(new Image()).src="https://abacus.jasoncameron.dev/hit/gregorio-vistas/natan-cheila?t="+Date.now();}catch(e){}
+    var KEY="prio-natan-cheila", WA="5554999905912", NOME="Natan &amp; Cheila", COLETOR="";
+    var st={}; try{st=JSON.parse(localStorage.getItem(KEY)||"{}");}catch(e){}
+    var fab=document.getElementById("fab"), fabn=document.getElementById("fabn");
+    var rows=[].slice.call(document.querySelectorAll(".prio"));
+    var cmts=[].slice.call(document.querySelectorAll(".cmt"));
+    var extras=document.getElementById("extras"), EKEY=KEY+"-x";
+    var titleOf={}; rows.forEach(function(r){titleOf[r.getAttribute("data-id")]=r.getAttribute("data-title");});
+    function bump(id){try{(new Image()).src="https://abacus.jasoncameron.dev/hit/gregorio-calor/natan-cheila-"+id+"?t="+Date.now();}catch(e){}}
+    [].slice.call(document.querySelectorAll(".btn")).forEach(function(b){b.addEventListener("click",function(){bump(b.getAttribute("data-id"));});});
+    function clean(id){var s=st[id]; if(s&&!s.prio&&!s.visit&&!(s.cmt&&s.cmt.trim())){delete st[id];}}
+    function count(){var hasX=!!(extras&&extras.value.trim()); var n=Object.keys(st).length+(hasX?1:0); fab.style.display=n?"inline-flex":"none"; fabn.textContent=n;}
+    function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}render();}
+    rows.forEach(function(row){
+      var id=row.getAttribute("data-id");
+      [].slice.call(row.querySelectorAll("button")).forEach(function(b){
+        b.addEventListener("click",function(){
+          st[id]=st[id]||{}; var v=b.getAttribute("data-v");
+          if(v==="visit"){st[id].visit=!st[id].visit;} else {st[id].prio=(st[id].prio===v)?null:v;}
+          bump(id); clean(id); save();
+        });
+      });
+    });
+    cmts.forEach(function(t){
+      var id=t.getAttribute("data-id");
+      if(st[id]&&st[id].cmt){t.value=st[id].cmt; t.classList.add("has");}
+      t.addEventListener("input",function(){
+        st[id]=st[id]||{}; st[id].cmt=t.value;
+        if(t.value.trim()){t.classList.add("has");}else{t.classList.remove("has");}
+        clean(id); try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){} count();
+      });
+    });
+    if(extras){
+      extras.value=localStorage.getItem(EKEY)||"";
+      if(extras.value.trim()){extras.classList.add("has");}
+      extras.addEventListener("input",function(){
+        try{localStorage.setItem(EKEY,extras.value);}catch(e){}
+        if(extras.value.trim()){extras.classList.add("has");}else{extras.classList.remove("has");}
+        count();
+      });
+    }
+    function render(){
+      rows.forEach(function(row){
+        var s=st[row.getAttribute("data-id")]||{};
+        [].slice.call(row.querySelectorAll("button")).forEach(function(b){
+          var v=b.getAttribute("data-v"); var on=(v==="visit")?!!s.visit:(s.prio===v);
+          if(on){b.classList.add("on");}else{b.classList.remove("on");}
+        });
+      });
+      count();
+    }
+    function lineFor(id){var s=st[id]||{}; var c=(s.cmt&&s.cmt.trim())?(' — "'+s.cmt.trim()+'"'):''; return "- "+titleOf[id]+c;}
+    function group(pred){return Object.keys(st).filter(function(id){return titleOf[id]&&pred(st[id]);}).map(lineFor).join("\n");}
+    function montarResumo(){
+      var msg="Retorno de "+NOME+":\n";
+      var o=group(function(s){return s.prio==="ouro";}); if(o){msg+="\n🥇 OURO:\n"+o+"\n";}
+      var p=group(function(s){return s.prio==="prata";}); if(p){msg+="\n🥈 PRATA:\n"+p+"\n";}
+      var b=group(function(s){return s.prio==="bronze";}); if(b){msg+="\n🥉 BRONZE:\n"+b+"\n";}
+      var v=group(function(s){return s.visit;}); if(v){msg+="\n📅 QUEREM VISITAR:\n"+v+"\n";}
+      var co=group(function(s){return (s.cmt&&s.cmt.trim())&&!s.prio&&!s.visit;}); if(co){msg+="\n💬 COMENTARIOS:\n"+co+"\n";}
+      var ex=extras&&extras.value.trim(); if(ex){msg+="\n🔎 ACHARAM:\n"+ex+"\n";}
+      return msg;
+    }
+    function montarItens(){
+      var arr=[]; rows.forEach(function(r){var id=r.getAttribute("data-id"); var s=st[id]; if(s&&(s.prio||s.visit||(s.cmt&&s.cmt.trim()))){arr.push({imovel:titleOf[id], prioridade:s.prio||"", visitar:!!s.visit, comentario:(s.cmt||"").trim()});}}); return arr;
+    }
+    var lay=document.getElementById("savedlay"), savedtxt=document.getElementById("savedtxt");
+    document.getElementById("savedclose").addEventListener("click",function(){lay.style.display="none";});
+    fab.addEventListener("click",function(){
+      var payload={cliente:NOME, pagina:KEY, itens:montarItens(), acharam:(extras?extras.value.trim():""), resumo:montarResumo()};
+      try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}
+      if(COLETOR){
+        savedtxt.textContent="Salvando...";
+        lay.style.display="flex";
+        fetch(COLETOR,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})
+          .then(function(){savedtxt.textContent="Suas escolhas e comentários foram guardados. O Mateus já vai receber tudo. 🙌";})
+          .catch(function(){savedtxt.textContent="Salvamos aqui no seu aparelho. Se tiver internet, recarregue e salve de novo pra chegar pro Mateus. 🙂";});
+      } else {
+        var msg=montarResumo();
+        window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank");
+        savedtxt.textContent="Tudo pronto! Abrimos o WhatsApp do Mateus com suas escolhas — é só tocar em ENVIAR pra ele receber. 🙌";
+        lay.style.display="flex";
+      }
+    });
+    render();
+  })();
+  </script>
+</body></html>
