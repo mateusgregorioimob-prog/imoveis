@@ -44,16 +44,17 @@
   .nav{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:36px clamp(28px,6.5vw,110px);border-bottom:1px solid transparent;transition:padding .7s var(--ease),background .7s var(--ease),border-color .7s var(--ease)}
   .nav.shrink{padding:18px clamp(28px,6.5vw,110px);background:rgba(14,14,14,.76);backdrop-filter:blur(14px);border-color:var(--line)}
   .mark{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:20px;letter-spacing:.52em;text-transform:uppercase;padding-left:.52em}
-  .seal{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;font-family:'Cormorant Garamond',serif;color:var(--gold);font-weight:400;line-height:1;flex:none}
-  .lock{display:inline-flex;align-items:center;gap:15px}
+  .lock{display:inline-flex;align-items:center;gap:14px}
+  .ncrown{height:30px;width:auto;display:block;transition:height .7s var(--ease)}
+  .nav.shrink .ncrown{height:26px}
+  .flogo{width:clamp(160px,24vw,220px);height:auto;display:block;margin:0 auto;opacity:.97}
   .nav .links{display:flex;gap:52px}
   @media(max-width:760px){.nav .links{display:none}.nav{padding:24px 26px}}
 
   /* hero — imagem com blur+escurecimento, conteúdo centralizado */
   .hero{height:100vh;min-height:680px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--ink)}
-  .hero .bg{position:absolute;inset:-24px;z-index:0;
-    background:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=82') center 42%/cover no-repeat;
-    filter:blur(3px) brightness(.56) saturate(.9);transform:scale(1.07)}
+  .hero .bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;
+    filter:brightness(.5) saturate(.92)}
   .hero .ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,14,.42),rgba(14,14,14,.60) 52%,rgba(14,14,14,.95))}
   .hero .wrap{position:relative;z-index:2;width:100%}
   .hero .eyebrow{opacity:0;animation:rise 1.5s .3s var(--ease) forwards}
@@ -151,7 +152,7 @@
 <body>
 
 <nav class="nav" id="nav">
-  <span class="lock"><span class="seal" style="width:32px;height:32px;font-size:18px">R</span><span class="mark">Rei das Casas</span></span>
+  <span class="lock"><img class="ncrown" src="crown-rei.png" alt=""><span class="mark">Rei das Casas</span></span>
   <div class="links">
     <a class="ul" href="#selecao">Seleção</a>
     <a class="ul" href="#metodo">Método</a>
@@ -160,7 +161,7 @@
 </nav>
 
 <header class="hero">
-  <div class="bg"></div>
+  <video class="bg" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=70"><source src="hero.mp4" type="video/mp4"></video>
   <div class="ov"></div>
   <div class="wrap">
     <div class="eyebrow">Passo Fundo</div>
@@ -277,10 +278,10 @@
 
 <footer>
   <div class="wrap">
-    <div class="rv" style="margin-bottom:52px"><span class="seal" style="width:68px;height:68px;font-size:36px">R</span></div>
+    <div class="rv" style="margin-bottom:64px"><img class="flogo" src="logo-rei.png" alt="Rei das Casas PF"></div>
     <div class="big serif rv">Ainda existe uma casa esperando pela sua família.</div>
     <div class="rv"><a class="btn" href="#convite">Começar a conversa</a></div>
-    <div class="meta rv"><span class="mark">Rei das Casas</span><br>Passo Fundo · Rio Grande do Sul · <a class="gold" href="https://wa.me/5554999905912">(54) 99990-5912</a></div>
+    <div class="meta rv">Passo Fundo · Rio Grande do Sul · <a class="gold" href="https://wa.me/5554999905912">(54) 99990-5912</a></div>
   </div>
 </footer>
 
