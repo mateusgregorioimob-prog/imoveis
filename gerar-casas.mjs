@@ -130,5 +130,5 @@ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script>
 </body></html>`;
 
-for (const c of casas) { writeFileSync(new URL(`./casa-${c.slug}.html`, import.meta.url), page(c)); console.log("casa-"+c.slug+".html"); }
+for (const c of casas) { if (c.slug === "morada-dos-ipes") continue; /* página custom imersiva (Casa Legado) — não sobrescrever */ writeFileSync(new URL(`./casa-${c.slug}.html`, import.meta.url), page(c)); console.log("casa-"+c.slug+".html"); }
 console.log("OK — "+casas.length+" páginas geradas.");

@@ -1,85 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morada dos Ipês — Rei das Casas</title>
+<title>Casa Legado — Morada dos Ipês · Rei das Casas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#8d8576;--dim:rgba(245,242,235,.5);--line:rgba(200,163,72,.16);--hair:rgba(245,242,235,.06);--ease:cubic-bezier(.19,1,.22,1)}
+:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a59c89;--dim:rgba(245,242,235,.62);--line:rgba(200,163,72,.4);--hair:rgba(245,242,235,.12);--ease:cubic-bezier(.19,1,.22,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.038;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.serif{font-family:'Cormorant Garamond',serif}h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.08}
-.wrap{max-width:1000px;margin:0 auto;padding:0 clamp(28px,6vw,80px)}
+body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.02}
 a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
-.eyebrow{font-size:11px;letter-spacing:.46em;text-transform:uppercase;color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:26px clamp(28px,6vw,80px);transition:.6s var(--ease)}
-.nav.s{padding:16px clamp(28px,6vw,80px);background:rgba(14,14,14,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav .back{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--warm);transition:.4s}.nav .back:hover{color:var(--gold)}
-.nav .lk{display:inline-flex;align-items:center;gap:11px}.nav .lk img{height:26px}
-.nav .mk{font-family:'Cormorant Garamond',serif;letter-spacing:.5em;text-transform:uppercase;font-size:14px;padding-left:.5em}
-.hero{height:100vh;min-height:620px;position:relative;display:flex;align-items:flex-end;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;animation:kb 26s ease-out both}
-@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
-.hero .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,14,.25),rgba(14,14,14,.35) 45%,rgba(14,14,14,.9))}
-.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:11vh}
-.hero h1{font-size:clamp(44px,8vw,104px);margin:20px 0 14px}
-.hero .life{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,36px);color:var(--gold);max-width:18ch}
-.rv{opacity:0;transform:translateY(40px);filter:blur(6px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease),filter 1.3s}.rv.in{opacity:1;transform:none;filter:none}
-section{padding:18vh 0}
-.imag .eyebrow,.love .eyebrow{margin-bottom:6vh;display:block}
-.imag ul{list-style:none;max-width:640px}
-.imag li{font-size:clamp(18px,2.4vw,26px);color:var(--paper);opacity:.92;padding:22px 0;border-bottom:1px solid var(--hair);display:flex;gap:20px;align-items:baseline}
-.imag li::before{content:"";width:20px;height:1px;background:var(--gold);opacity:.65;flex:none;position:relative;top:-8px}
-.love{text-align:center}.love p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(28px,4.4vw,54px);line-height:1.35;max-width:22ch;margin:5vh auto 0}
-.ficha{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);text-align:center;padding:12vh 0}
-.ficha .spec{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--warm);margin-bottom:14px}
-.ficha .preco{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,46px);color:var(--gold)}
-.ficha .site{display:inline-block;margin-top:26px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;position:relative;padding-bottom:7px}
-.ficha .site::after{content:"";position:absolute;left:50%;bottom:0;height:1px;width:0;background:var(--gold);transform:translateX(-50%);transition:width .9s var(--ease)}.ficha .site:hover::after{width:100%}
-.cta{text-align:center}.cta h2{font-size:clamp(28px,4.4vw,52px);max-width:20ch;margin:18px auto 50px;line-height:1.25}
-.btn{display:inline-block;border:1px solid var(--line);color:var(--paper);padding:24px 64px;font-size:11.5px;letter-spacing:.36em;text-transform:uppercase;transition:.8s var(--ease)}
-.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.42em}
-footer{padding:16vh 0 10vh;text-align:center;border-top:1px solid var(--hair)}
-footer .mk{font-family:'Cormorant Garamond',serif;letter-spacing:.5em;text-transform:uppercase;font-size:15px;display:inline-block;margin-bottom:18px}
-footer a.back{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--warm)}footer a.back:hover{color:var(--gold)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(24px,4vw,56px);transition:.6s var(--ease)}
+.nav.s{padding:14px clamp(24px,4vw,56px);background:rgba(14,14,14,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.brand{display:flex;align-items:center;gap:12px}.brand img{height:40px}
+.brand b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:17px;letter-spacing:.34em;text-transform:uppercase;line-height:1.1;display:block}
+.brand small{font-size:9px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
+.nav .right{display:flex;align-items:center;gap:26px}
+.nav .lnk{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
+.nav .spec{border:1px solid var(--line);color:var(--paper);padding:13px 26px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;transition:.6s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media(max-width:900px){.nav .lnk{display:none}}
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(14,14,14,.86),rgba(14,14,14,.5) 45%,rgba(14,14,14,.2)),url('morada-hero.jpg') center/cover no-repeat}
+.hero .in{padding:0 clamp(24px,6vw,90px);max-width:760px;margin-top:6vh}
+.hero .kicker{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,58px);letter-spacing:.04em;color:var(--paper)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(60px,11vw,150px);color:var(--gold);line-height:.92;letter-spacing:.02em;margin-bottom:8px}
+.hero .rule{width:64px;height:1px;background:var(--gold);margin:14px 0 26px}
+.hero .tag{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);line-height:1.3}
+.hero .tag i{display:block;font-style:italic;color:var(--gold)}
+.hero .loc{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--paper);margin:26px 0 18px;display:flex;align-items:center;gap:9px}
+.hero .loc::before{content:"";width:8px;height:8px;border:1px solid var(--gold);border-radius:50% 50% 50% 0;transform:rotate(45deg)}
+.hero .desc{font-size:15.5px;line-height:1.8;max-width:480px;color:var(--dim);margin-bottom:34px}
+.hero .cta{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--line);padding:19px 40px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;transition:.6s var(--ease)}
+.hero .cta:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);gap:20px}
+.stats{position:absolute;bottom:9vh;left:0;right:0;z-index:3;display:flex;padding:0 clamp(24px,6vw,90px);flex-wrap:wrap}
+.stats .st{padding-right:38px;margin-right:38px;border-right:1px solid var(--hair)}
+.stats .st:last-child{border-right:0}
+.stats .v{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--paper);line-height:1}
+.stats .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);margin-top:6px;max-width:18ch}
+.stats .v.gold{color:var(--gold)}
+@media(max-width:680px){.stats{display:none}}
+.cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;text-align:center;font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--warm)}
+.cue span{display:block;font-size:16px;color:var(--gold);margin-top:6px;animation:b 2s var(--ease) infinite}
+@keyframes b{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.scene{height:100vh;min-height:600px;position:relative;display:flex;align-items:center;background-size:cover;background-position:center}
+.scene::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,14,14,.9),rgba(14,14,14,.45) 48%,rgba(14,14,14,.05))}
+.scene .tx{position:relative;z-index:2;padding:0 clamp(24px,6vw,90px);max-width:620px}
+.scene h2{font-size:clamp(34px,5vw,66px);line-height:1.12;margin-bottom:30px}
+.scene .rule{width:70px;height:1px;background:var(--gold);margin-bottom:30px}
+.scene p{font-size:15.5px;line-height:1.95;color:var(--dim);max-width:440px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1.4s var(--ease),transform 1.4s var(--ease)}.rv.in{opacity:1;transform:none}
+.close{padding:30vh 0;text-align:center}
+.close .wrap{max-width:780px;margin:0 auto;padding:0 28px}
+.close .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.close h2{font-size:clamp(34px,5vw,64px);margin:20px auto 50px;max-width:18ch;line-height:1.2}
+.btn{display:inline-block;border:1px solid var(--line);padding:24px 60px;font-size:11px;letter-spacing:.34em;text-transform:uppercase;transition:.7s var(--ease)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.4em}
+footer{padding:14vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
+footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:15px;display:inline-block;margin-bottom:16px}
+footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
 </style></head><body>
+
 <nav class="nav" id="nav">
-  <a class="back" href="rei-das-casas.html">← voltar</a>
-  <a class="lk" href="rei-das-casas.html"><img src="crown-rei.png" alt=""><span class="mk">Rei das Casas</span></a>
-</nav>
-<header class="hero">
-  <div class="bg" style="background-image:url('casa-morada.jpg')"></div><div class="ov"></div>
-  <div class="wrap">
-    <div class="eyebrow">Roselândia</div>
-    <h1 class="serif">Morada dos Ipês</h1>
-    <p class="life">Para quem acredita que a casa também conta uma história.</p>
+  <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt=""><span><b>Rei das Casas</b><small>Exclusivas</small></span></a>
+  <div class="right">
+    <a class="lnk" href="rei-das-casas.html">Início</a>
+    <a class="lnk" href="rei-das-casas.html#selecao">Casas exclusivas</a>
+    <a class="lnk" href="rei-das-casas.html#mateus">Sobre nós</a>
+    <a class="spec" href="https://wa.me/5554999905912?text=Quero%20falar%20sobre%20a%20Casa%20Legado%20(Morada%20dos%20Ip%C3%AAs)">Falar com o especialista</a>
   </div>
+</nav>
+
+<header class="hero">
+  <div class="in">
+    <div class="kicker">Casa</div>
+    <h1>Legado</h1>
+    <div class="rule"></div>
+    <div class="tag">Algumas casas impressionam.<i>Esta permanece.</i></div>
+    <div class="loc">Morada dos Ipês · Passo Fundo/RS</div>
+    <p class="desc">Totalmente mobiliada, cuidadosamente planejada e pronta para receber uma nova família. Um projeto onde arquitetura, interiores e conforto caminham juntos desde o primeiro dia.</p>
+    <a class="cta" href="#essencia">Conhecer esta casa →</a>
+  </div>
+  <div class="stats">
+    <div class="st"><div class="v">403 m²</div><div class="l">área construída</div></div>
+    <div class="st"><div class="v gold">4 suítes</div><div class="l">2 suítes master</div></div>
+    <div class="st"><div class="v">Elevador</div><div class="l">automação residencial</div></div>
+    <div class="st"><div class="v">Morada dos Ipês</div><div class="l">um dos condomínios mais desejados da cidade</div></div>
+  </div>
+  <div class="cue">Role para baixo<span>↓</span></div>
 </header>
-<section class="imag"><div class="wrap">
-  <span class="eyebrow rv">O que imaginamos aqui</span>
-  <ul><li class="rv">receber com tranquilidade</li><li class="rv">as noites de inverno na sala</li><li class="rv">cada detalhe no seu lugar</li><li class="rv">a casa que vira lembrança</li></ul>
-</div></section>
-<section class="love"><div class="wrap">
-  <span class="eyebrow rv">O que mais gostamos</span>
-  <p class="rv">A escada e a luz da tarde fazem dela uma casa que a gente não esquece.</p>
-</div></section>
-<section class="ficha"><div class="wrap">
-  <div class="spec rv">4 suítes · alto padrão</div>
-  <div class="preco rv">sob consulta</div>
-  
-</div></section>
-<section class="cta"><div class="wrap">
-  <div class="eyebrow rv">O convite</div>
-  <h2 class="serif rv">Essa casa combina com a história da sua família?</h2>
-  <div class="rv"><a class="btn" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20casa%20Morada%20dos%20Ip%C3%AAs">Vamos conversar</a></div>
-</div></section>
-<footer><div class="wrap">
-  <span class="mk">Rei das Casas</span><br>
-  <a class="back" href="rei-das-casas.html">← ver as outras casas</a>
-</div></footer>
+
+<section class="scene" id="essencia" style="background-image:url('casa-morada.jpg')">
+  <div class="tx">
+    <h2 class="serif rv">Toda grande casa revela sua essência antes mesmo da sala.</h2>
+    <div class="rule rv"></div>
+    <p class="rv">O primeiro passo já mostra que aqui nada foi pensado por acaso. A madeira aquece, a pedra traz imponência, a luz conduz o olhar e a escada convida você a descobrir o restante da arquitetura.</p>
+  </div>
+</section>
+
+<section class="scene" style="background-image:url('morada-cozinha.jpg')">
+  <div class="tx">
+    <h2 class="serif rv">O verdadeiro luxo não se mostra. Se sente.</h2>
+    <div class="rule rv"></div>
+    <p class="rv">Cada textura, cada material e cada luz foram escolhidos para criar um ambiente que acolhe, impressiona e permanece na memória.</p>
+  </div>
+</section>
+
+<section class="scene" style="background-image:url('morada-pool.jpg')">
+  <div class="tx">
+    <h2 class="serif rv">O luxo está nas escolhas que você faz todos os dias.</h2>
+    <div class="rule rv"></div>
+    <p class="rv">Ambientes que unem sofisticação, conforto e funcionalidade para transformar momentos simples em experiências memoráveis.</p>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <div class="eyebrow rv">O convite</div>
+    <h2 class="serif rv">Essa casa combina com a história da sua família?</h2>
+    <div class="rv"><a class="btn" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20Casa%20Legado%20(Morada%20dos%20Ip%C3%AAs)">Vamos conversar</a></div>
+  </div>
+</section>
+
+<footer>
+  <span class="b">Rei das Casas</span><br>
+  <a class="bk" href="rei-das-casas.html">← ver as outras casas</a>
+</footer>
+
 <script>
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.15});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.2});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script>
 </body></html>
