@@ -246,6 +246,17 @@
   .piece .cta-line{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,2.2vw,25px);color:var(--gold);line-height:1.4;margin:4px 0 16px;max-width:24ch;transition:opacity .4s}
   .piece .cta-line:hover{opacity:.7}
   @media(max-width:820px){.sel .frame{position:static}}
+  /* cards compactos da home (cada um abre a página da casa) */
+  .sel .cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,44px);margin-top:2vh}
+  .card{display:block}
+  .card .card-img{height:46vh;min-height:300px;background-size:cover;background-position:center;border:1px solid var(--hair);transition:filter .6s var(--ease),transform .6s var(--ease)}
+  .card:hover .card-img{filter:brightness(1.07)}
+  .card-b{padding:24px 4px 0}
+  .card h3{font-size:clamp(26px,3vw,38px);font-weight:300;margin-bottom:8px;transition:color .4s}
+  .card:hover h3{color:var(--gold)}
+  .card-life{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,2vw,22px);color:var(--gold);margin-bottom:20px;max-width:26ch;line-height:1.35}
+  .card-f{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);border-top:1px solid var(--hair);padding-top:14px}
+  @media(max-width:760px){.sel .cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -342,117 +353,31 @@
     <h2 class="serif rv" style="font-size:clamp(38px,5.6vw,68px);margin-top:20px">Poucas. Escolhidas uma a uma.</h2>
   </div>
 
-  <div class="piece rv">
-    <div class="frame" style="--img:url('casa-16909.jpg')"></div>
-    <div class="tx">
-      <div class="idx">I</div>
-      <h3 class="serif">Vivenda das Palmeiras</h3>
-      <div class="lifeline">Para quem imagina os domingos com a casa cheia.</div>
-      <div class="imag">
-        <span class="t">O que imaginamos aqui</span>
-        <ul><li>domingos com a casa cheia</li><li>o churrasco que junta os amigos</li><li>as crianças entre as casas do condomínio</li><li>o fim de tarde na varanda</li></ul>
-      </div>
-      <div class="love"><span class="t">O que mais gostamos</span><p>O espaço que sobra é o que deixa a família toda caber — sem ninguém apertar.</p></div>
-      <div class="loc">São José</div>
-      <div class="spec">4 dormitórios · semimobiliada · condomínio</div>
-      <div class="price">R$ 4.449.500</div>
-      <a class="cta-line" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20Vivenda%20das%20Palmeiras">Essa casa combina com a história da sua família? Vamos conversar.</a>
-      <a class="ul gold" href="https://www.gregorioimob.com.br/imovel/casa-quatro-dormitorios-semi-mobiliada-condominio-vivenda-das-palmeiras-bairro-sao-jose-passo-fundo-rs/16909" target="_blank" rel="noopener">Ver no site</a>
-    </div>
-  </div>
-
-  <div class="piece flip rv">
-    <div class="frame" style="--img:url('casa-17027.jpg')"></div>
-    <div class="tx">
-      <div class="idx">II</div>
-      <h3 class="serif">La Barra</h3>
-      <div class="lifeline">Para quem quer silêncio sem abrir mão de nada.</div>
-      <div class="imag">
-        <span class="t">O que imaginamos aqui</span>
-        <ul><li>o silêncio depois de um dia cheio</li><li>cada filho com a sua suíte</li><li>receber sem pressa</li><li>chegar e desligar do mundo</li></ul>
-      </div>
-      <div class="love"><span class="t">O que mais gostamos</span><p>É o tipo de casa onde o tempo parece andar mais devagar.</p></div>
-      <div class="loc">Cidade Nova</div>
-      <div class="spec">3 suítes · condomínio fechado</div>
-      <div class="price">R$ 5.800.000</div>
-      <a class="cta-line" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20casa%20do%20condom%C3%ADnio%20La%20Barra">Essa casa combina com a história da sua família? Vamos conversar.</a>
-      <a class="ul gold" href="https://www.gregorioimob.com.br/imovel/casa-tres-suites-condominio-la-barra-bairro-cidade-nova-passo-fundo-rs/17027" target="_blank" rel="noopener">Ver no site</a>
-    </div>
-  </div>
-
-  <div class="piece rv">
-    <div class="frame" style="--img:url('casa-16207.jpg')"></div>
-    <div class="tx">
-      <div class="idx">III</div>
-      <h3 class="serif">São Cristóvão</h3>
-      <div class="lifeline">Para quem sonha com as tardes em volta da água.</div>
-      <div class="imag">
-        <span class="t">O que imaginamos aqui</span>
-        <ul><li>as tardes de verão na piscina</li><li>os amigos que ficam até tarde</li><li>as crianças saindo da água pro almoço</li><li>o cheiro de churrasco no domingo</li></ul>
-      </div>
-      <div class="love"><span class="t">O que mais gostamos</span><p>Nos dias quentes, a piscina vira o centro da casa — todo mundo acaba ali.</p></div>
-      <div class="loc">São Cristóvão</div>
-      <div class="spec">casa com piscina</div>
-      <div class="price">R$ 2.980.000</div>
-      <a class="cta-line" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20casa%20na%20S%C3%A3o%20Crist%C3%B3v%C3%A3o">Essa casa combina com a história da sua família? Vamos conversar.</a>
-      <a class="ul gold" href="https://www.gregorioimob.com.br/imovel/casa-na-regiao-da-sao-cristovao-com-piscina/16207" target="_blank" rel="noopener">Ver no site</a>
-    </div>
-  </div>
-
-  <div class="piece flip rv">
-    <div class="frame" style="--img:url('casa-17986.jpg')"></div>
-    <div class="tx">
-      <div class="idx">IV</div>
-      <h3 class="serif">Cidade Nova</h3>
-      <div class="lifeline">Para quem está começando uma nova fase.</div>
-      <div class="imag">
-        <span class="t">O que imaginamos aqui</span>
-        <ul><li>o primeiro café na cozinha nova</li><li>a rotina ganhando um novo ritmo</li><li>espaço pra família crescer</li><li>o começo de uma fase</li></ul>
-      </div>
-      <div class="love"><span class="t">O que mais gostamos</span><p>É uma casa pronta pra receber uma história desde o começo.</p></div>
-      <div class="loc">Cidade Nova</div>
-      <div class="spec">três dormitórios</div>
-      <div class="price">R$ 2.790.000</div>
-      <a class="cta-line" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20casa%20na%20Cidade%20Nova%20(3%20dorm)">Essa casa combina com a história da sua família? Vamos conversar.</a>
-      <a class="ul gold" href="https://www.gregorioimob.com.br/imovel/casa-tres-dormitorios-bairro-cidade-nova-passo-fundo-rs/17986" target="_blank" rel="noopener">Ver no site</a>
-    </div>
-  </div>
-
-  <div class="piece rv">
-    <div class="frame" style="--img:url('casa-17018.jpg')"></div>
-    <div class="tx">
-      <div class="idx">V</div>
-      <h3 class="serif">Impecável</h3>
-      <div class="lifeline">Para quem quer só chegar e viver.</div>
-      <div class="imag">
-        <span class="t">O que imaginamos aqui</span>
-        <ul><li>chegar e simplesmente viver</li><li>a mudança num fim de semana</li><li>nenhuma obra, nenhuma espera</li><li>o sossego de tudo pronto</li></ul>
-      </div>
-      <div class="love"><span class="t">O que mais gostamos</span><p>Não falta nada — é só trazer a família e começar.</p></div>
-      <div class="loc">Cidade Nova</div>
-      <div class="spec">pronta para morar</div>
-      <div class="price">R$ 2.290.000</div>
-      <a class="cta-line" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20casa%20impec%C3%A1vel%20na%20Cidade%20Nova">Essa casa combina com a história da sua família? Vamos conversar.</a>
-      <a class="ul gold" href="https://www.gregorioimob.com.br/imovel/casa-cidade-nova-impecavel/17018" target="_blank" rel="noopener">Ver no site</a>
-    </div>
-  </div>
-
-  <div class="piece flip rv">
-    <div class="frame" style="--img:url('casa-morada.jpg')"></div>
-    <div class="tx">
-      <div class="idx">VI</div>
-      <h3 class="serif">Morada dos Ipês</h3>
-      <div class="lifeline">Para quem acredita que a casa também conta uma história.</div>
-      <div class="imag">
-        <span class="t">O que imaginamos aqui</span>
-        <ul><li>receber com tranquilidade</li><li>as noites de inverno na sala</li><li>cada detalhe no seu lugar</li><li>a casa que vira lembrança</li></ul>
-      </div>
-      <div class="love"><span class="t">O que mais gostamos</span><p>A escada e a luz da tarde fazem dela uma casa que a gente não esquece.</p></div>
-      <div class="loc">Roselândia</div>
-      <div class="spec">4 suítes · alto padrão</div>
-      <div class="price">sob consulta</div>
-      <a class="cta-line" href="https://wa.me/5554999905912?text=Quero%20conversar%20sobre%20a%20casa%20na%20Morada%20dos%20Ip%C3%AAs">Essa casa combina com a história da sua família? Vamos conversar.</a>
-    </div>
+  <div class="wrap cards">
+    <a class="card rv" href="casa-vivenda-das-palmeiras.html">
+      <div class="card-img" style="background-image:url('casa-16909.jpg')"></div>
+      <div class="card-b"><h3 class="serif">Vivenda das Palmeiras</h3><div class="card-life">Para quem imagina os domingos com a casa cheia.</div><div class="card-f"><span>São José</span><span>R$ 4.449.500</span></div></div>
+    </a>
+    <a class="card rv" href="casa-la-barra.html">
+      <div class="card-img" style="background-image:url('casa-17027.jpg')"></div>
+      <div class="card-b"><h3 class="serif">La Barra</h3><div class="card-life">Para quem quer silêncio sem abrir mão de nada.</div><div class="card-f"><span>Cidade Nova</span><span>R$ 5.800.000</span></div></div>
+    </a>
+    <a class="card rv" href="casa-sao-cristovao.html">
+      <div class="card-img" style="background-image:url('casa-16207.jpg')"></div>
+      <div class="card-b"><h3 class="serif">São Cristóvão</h3><div class="card-life">Para quem sonha com as tardes em volta da água.</div><div class="card-f"><span>São Cristóvão</span><span>R$ 2.980.000</span></div></div>
+    </a>
+    <a class="card rv" href="casa-cidade-nova.html">
+      <div class="card-img" style="background-image:url('casa-17986.jpg')"></div>
+      <div class="card-b"><h3 class="serif">Cidade Nova</h3><div class="card-life">Para quem está começando uma nova fase.</div><div class="card-f"><span>Cidade Nova</span><span>R$ 2.790.000</span></div></div>
+    </a>
+    <a class="card rv" href="casa-impecavel.html">
+      <div class="card-img" style="background-image:url('casa-17018.jpg')"></div>
+      <div class="card-b"><h3 class="serif">Impecável</h3><div class="card-life">Para quem quer só chegar e viver.</div><div class="card-f"><span>Cidade Nova</span><span>R$ 2.290.000</span></div></div>
+    </a>
+    <a class="card rv" href="casa-morada-dos-ipes.html">
+      <div class="card-img" style="background-image:url('casa-morada.jpg')"></div>
+      <div class="card-b"><h3 class="serif">Morada dos Ipês</h3><div class="card-life">Para quem acredita que a casa também conta uma história.</div><div class="card-f"><span>Roselândia</span><span>sob consulta</span></div></div>
+    </a>
   </div>
 </section>
 
