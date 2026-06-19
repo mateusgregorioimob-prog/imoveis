@@ -207,6 +207,31 @@
   .sel .frame{height:60vh;min-height:380px}
   .sel .piece{margin-bottom:13vh}
   .piece .spec{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);margin:-18px 0 30px}
+  .piece .lifeline{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(22px,2.6vw,30px);line-height:1.35;color:var(--paper);margin:8px 0 18px;max-width:22ch}
+  /* momentos de vida */
+  .moments{padding:26vh 0}
+  .moments .wrap{max-width:800px}
+  .moments .leadq{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,4.6vw,56px);line-height:1.22;margin:18px 0 8vh}
+  .moments ul{list-style:none}
+  .moments li{font-size:clamp(17px,2.1vw,22px);color:var(--paper);opacity:.92;padding:20px 0;border-bottom:1px solid var(--hair);display:flex;gap:20px;align-items:baseline}
+  .moments li::before{content:"";width:20px;height:1px;background:var(--gold);flex:none;position:relative;top:-7px;opacity:.7}
+  .moments .closeq{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.5vw,42px);color:var(--gold);margin-top:9vh;line-height:1.3;max-width:24ch}
+  /* ainda não anunciada */
+  .notyet{padding:26vh 0;text-align:center}
+  .notyet .wrap{max-width:900px}
+  .notyet h2{font-size:clamp(30px,4.7vw,60px);font-weight:300;line-height:1.2;margin:18px auto 44px;max-width:19ch}
+  .notyet p{font-size:16.5px;line-height:2.05;color:var(--warm);max-width:44ch;margin:0 auto 14px}
+  .notyet .hl{color:var(--paper)}
+  /* histórias */
+  .stories{padding:24vh 0}
+  .stories .wrap{max-width:880px}
+  .stories .story{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(24px,3.3vw,40px);line-height:1.45;color:var(--paper);margin-top:20px}
+  .stories .who{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm);margin-top:42px}
+  /* chips no form */
+  .f .chips{display:flex;flex-wrap:wrap;gap:12px}
+  .f .chip{border:1px solid var(--line);border-radius:2px;padding:9px 17px;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--paper);cursor:pointer;transition:.25s var(--ease)}
+  .f .chip:hover{border-color:var(--gold)}
+  .f .chip.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
 </style>
 </head>
 <body>
@@ -235,6 +260,23 @@
   <div class="wrap">
     <p class="rv">Algumas casas não se anunciam.<br>Esperam, em silêncio, ser encontradas.</p>
     <p class="sub rv">Dedicamos tempo a poucas famílias. Ouvimos o que importa, percorremos a cidade inteira e esperamos o momento certo — sem pressa, sem ruído.</p>
+  </div>
+</section>
+
+<section class="moments">
+  <div class="wrap">
+    <div class="eyebrow rv">Um momento</div>
+    <p class="leadq rv">Talvez você esteja vivendo uma dessas situações.</p>
+    <ul>
+      <li class="rv">A família cresceu e a casa ficou pequena.</li>
+      <li class="rv">Os filhos saíram e agora sobra espaço.</li>
+      <li class="rv">O trabalho mudou a sua rotina.</li>
+      <li class="rv">Você procura mais tranquilidade.</li>
+      <li class="rv">Quer receber os amigos sem apertos.</li>
+      <li class="rv">Sonha com um jardim para as crianças.</li>
+      <li class="rv">Ou sente que chegou a hora de recomeçar.</li>
+    </ul>
+    <p class="closeq rv">Se alguma dessas histórias parece familiar, talvez seja hora de encontrar uma nova casa.</p>
   </div>
 </section>
 
@@ -291,6 +333,7 @@
     <div class="tx">
       <div class="idx">I</div>
       <h3 class="serif">Vivenda das Palmeiras</h3>
+      <div class="lifeline">Para quem imagina os domingos com a casa cheia.</div>
       <div class="loc">São José</div>
       <div class="spec">4 dormitórios · semimobiliada · condomínio</div>
       <div class="price">R$ 4.449.500</div>
@@ -303,6 +346,7 @@
     <div class="tx">
       <div class="idx">II</div>
       <h3 class="serif">La Barra</h3>
+      <div class="lifeline">Para quem quer silêncio sem abrir mão de nada.</div>
       <div class="loc">Cidade Nova</div>
       <div class="spec">3 suítes · condomínio fechado</div>
       <div class="price">R$ 5.800.000</div>
@@ -315,6 +359,7 @@
     <div class="tx">
       <div class="idx">III</div>
       <h3 class="serif">São Cristóvão</h3>
+      <div class="lifeline">Para quem sonha com as tardes em volta da água.</div>
       <div class="loc">São Cristóvão</div>
       <div class="spec">casa com piscina</div>
       <div class="price">R$ 2.980.000</div>
@@ -327,6 +372,7 @@
     <div class="tx">
       <div class="idx">IV</div>
       <h3 class="serif">Cidade Nova</h3>
+      <div class="lifeline">Para quem está começando uma nova fase.</div>
       <div class="loc">Cidade Nova</div>
       <div class="spec">três dormitórios</div>
       <div class="price">R$ 2.790.000</div>
@@ -339,6 +385,7 @@
     <div class="tx">
       <div class="idx">V</div>
       <h3 class="serif">Impecável</h3>
+      <div class="lifeline">Para quem quer só chegar e viver.</div>
       <div class="loc">Cidade Nova</div>
       <div class="spec">pronta para morar</div>
       <div class="price">R$ 2.290.000</div>
@@ -351,6 +398,7 @@
     <div class="tx">
       <div class="idx">VI</div>
       <h3 class="serif">Morada dos Ipês</h3>
+      <div class="lifeline">Para quem acredita que a casa também conta uma história.</div>
       <div class="loc">Roselândia</div>
       <div class="spec">4 suítes · alto padrão</div>
       <div class="price">sob consulta</div>
@@ -389,6 +437,24 @@
   </div>
 </section>
 
+<section class="stories">
+  <div class="wrap">
+    <div class="eyebrow rv">Histórias</div>
+    <p class="story rv">A família chegou procurando uma piscina. Depois da primeira conversa, percebemos que o que faltava mesmo era um escritório e um quintal para as crianças. A piscina veio depois — o que importava era como aquela casa encaixava na rotina deles.</p>
+    <div class="who rv">Uma família que ajudamos a encontrar o lar</div>
+  </div>
+</section>
+
+<section class="notyet">
+  <div class="wrap">
+    <div class="eyebrow rv">Antes de tudo</div>
+    <h2 class="serif rv">A casa que você procura talvez ainda não esteja anunciada.</h2>
+    <p class="rv">Nem sempre a casa certa está disponível hoje. Às vezes ela aparece daqui a uma semana. Ou daqui a dois meses.</p>
+    <p class="rv">Por isso preferimos conhecer primeiro a sua família.</p>
+    <p class="rv"><span class="hl">Quando ela aparecer, você será uma das primeiras pessoas a saber.</span></p>
+  </div>
+</section>
+
 <section class="invite" id="convite">
   <div class="wrap">
     <div class="eyebrow rv">III — O convite</div>
@@ -396,8 +462,21 @@
     <p class="lead rv">O resto é conosco. Quando a casa certa surgir, você saberá primeiro — no WhatsApp ou no e-mail.</p>
 
     <form class="form rv" onsubmit="return enviar(event)">
+      <div class="f"><label>Como é um sábado perfeito para a sua família?</label><input name="sabado" placeholder="conta pra gente como seria…"></div>
       <div class="f"><label>Quem vai morar</label><input name="familia" placeholder="o casal, dois filhos, um cachorro…"></div>
-      <div class="f"><label>O que não pode faltar</label><input name="precisa" placeholder="luz natural, um pátio, perto da escola…"></div>
+      <div class="f"><label>O que vocês procuram?</label>
+        <div class="chips" data-group="busca">
+          <span class="chip" onclick="tog(this)">Mais espaço para os filhos</span>
+          <span class="chip" onclick="tog(this)">Trabalhar em casa</span>
+          <span class="chip" onclick="tog(this)">Receber os amigos</span>
+          <span class="chip" onclick="tog(this)">Contato com a natureza</span>
+          <span class="chip" onclick="tog(this)">Menos manutenção</span>
+          <span class="chip" onclick="tog(this)">Segurança</span>
+          <span class="chip" onclick="tog(this)">Vista</span>
+          <span class="chip" onclick="tog(this)">Quintal</span>
+          <span class="chip" onclick="tog(this)">Piscina</span>
+        </div>
+      </div>
       <div class="f"><label>Onde a família se imagina</label><input name="bairro" placeholder="um bairro, uma vista, um silêncio…"></div>
       <div class="f"><label>Há um imóvel para permuta?</label>
         <div class="opts" data-group="permuta">
@@ -453,12 +532,15 @@
   para();
 
   function pick(el){var g=el.parentElement;g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on')});el.classList.add('on')}
+  function tog(el){el.classList.toggle('on')}
   function enviar(ev){
     ev.preventDefault();var f=ev.target;
     function sel(g){var o=f.querySelector('[data-group="'+g+'"] .opt.on');return o?o.textContent:'—'}
+    function chips(g){return [].slice.call(f.querySelectorAll('[data-group="'+g+'"] .chip.on')).map(function(c){return c.textContent}).join(', ')||'—'}
     var m='Um convite — Rei das Casas%0a%0a'
-      +'Família: '+(f.familia.value||'—')+'%0a'
-      +'Essencial: '+(f.precisa.value||'—')+'%0a'
+      +'Sábado perfeito: '+(f.sabado.value||'—')+'%0a'
+      +'Quem vai morar: '+(f.familia.value||'—')+'%0a'
+      +'O que procuram: '+chips('busca')+'%0a'
       +'Onde: '+(f.bairro.value||'—')+'%0a'
       +'Permuta: '+sel('permuta')+'%0a'
       +'Contato: '+(f.contato.value||'—');
