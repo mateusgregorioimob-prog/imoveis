@@ -147,6 +147,21 @@
   footer .big{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(36px,6vw,84px);line-height:1.18;max-width:15ch;margin:0 auto 64px}
   footer .meta{font-size:12px;letter-spacing:.2em;color:var(--warm);line-height:2.8;margin-top:72px}
   footer .meta .mark{font-size:15px}
+
+  /* === refino editorial (revista de arquitetura) === */
+  .statement{padding:36vh 0}
+  .moves{padding:30vh 0}
+  .manifesto{padding:40vh 0}
+  .sel{padding:28vh 0}
+  .invite{padding:34vh 0}
+  .hero{overflow:hidden}
+  .hero .bg{animation:kb 28s ease-out both}
+  @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.11)}}
+  .plate{overflow:hidden}
+  .plate .tag{position:absolute;top:clamp(26px,4vw,46px);left:clamp(26px,5vw,56px);z-index:2;font-size:10px;font-weight:400;letter-spacing:.36em;text-transform:uppercase;color:rgba(245,242,235,.62)}
+  .piece .desc{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:23px;line-height:1.4;color:var(--dim);margin:-16px 0 32px;max-width:20ch}
+  .piece .price{font-size:17px;color:var(--warm);letter-spacing:.18em;font-family:'Jost';font-weight:300}
+  .editionline{font-size:10px;letter-spacing:.42em;text-transform:uppercase;color:var(--warm);opacity:.7;margin-top:34px}
 </style>
 </head>
 <body>
@@ -179,12 +194,13 @@
 </section>
 
 <section class="plate" style="background-image:url('plate-concreto.jpg')">
+  <div class="tag">Concreto · luz da tarde</div>
   <div class="cap"><p class="rv">Concreto, madeira e a luz da tarde.</p></div>
 </section>
 
 <section class="moves" id="metodo">
   <div class="wrap">
-    <div class="eyebrow rv" style="margin-bottom:9vh">O método</div>
+    <div class="eyebrow rv" style="margin-bottom:9vh">I — O método</div>
     <div class="move rv"><div class="no">i</div><div><h3 class="serif">Você confia o que procura.</h3><p>Quem vai morar, o que torna um lugar um lar, o tempo da sua família.</p></div></div>
     <div class="move rv"><div class="no">ii</div><div><h3 class="serif">Percorremos a cidade inteira.</h3><p>Acompanhamos cada casa de Passo Fundo, todos os dias — inclusive as que ainda não estão à venda.</p></div></div>
     <div class="move rv"><div class="no">iii</div><div><h3 class="serif">A casa certa chega até você.</h3><p>No instante em que ela aparece, você é o primeiro a saber. No seu tempo.</p></div></div>
@@ -192,6 +208,7 @@
 </section>
 
 <section class="plate" style="background-image:url('plate-escada.jpg')">
+  <div class="tag">Escada · concreto e madeira</div>
   <div class="cap"><p class="rv">O silêncio também é um endereço.</p></div>
 </section>
 
@@ -204,7 +221,7 @@
 
 <section class="sel" id="selecao">
   <div class="wrap head">
-    <div class="eyebrow rv">A seleção</div>
+    <div class="eyebrow rv">II — A seleção</div>
     <h2 class="serif rv" style="font-size:clamp(38px,5.6vw,68px);margin-top:20px">Poucas. Escolhidas uma a uma.</h2>
   </div>
 
@@ -214,6 +231,7 @@
       <div class="idx">I</div>
       <h3 class="serif">Esplendor</h3>
       <div class="loc">Cidade Nova</div>
+      <div class="desc">Onde a luz desenha o dia.</div>
       <div class="price">R$ 2.790.000</div>
       <a class="ul gold" href="#convite">Conhecer</a>
     </div>
@@ -225,6 +243,7 @@
       <div class="idx">II</div>
       <h3 class="serif">Térrea</h3>
       <div class="loc">Cidade Nova</div>
+      <div class="desc">O chão, o jardim, o tempo.</div>
       <div class="price">R$ 1.150.000</div>
       <a class="ul gold" href="#convite">Conhecer</a>
     </div>
@@ -236,6 +255,7 @@
       <div class="idx">III</div>
       <h3 class="serif">Morada dos Ipês</h3>
       <div class="loc">Roselândia</div>
+      <div class="desc">Madeira, sombra e horizonte.</div>
       <div class="price">sob consulta</div>
       <a class="ul gold" href="#convite">Conhecer</a>
     </div>
@@ -243,12 +263,13 @@
 </section>
 
 <section class="plate" style="background-image:url('plate-piscina.jpg')">
+  <div class="tag">Reflexo · entardecer</div>
   <div class="cap"><p class="rv">A água devolve o céu.</p></div>
 </section>
 
 <section class="invite" id="convite">
   <div class="wrap">
-    <div class="eyebrow rv">O convite</div>
+    <div class="eyebrow rv">III — O convite</div>
     <h2 class="serif rv">Conte-nos sobre a sua família.</h2>
     <p class="lead rv">O resto é conosco. Quando a casa certa surgir, você saberá primeiro — no WhatsApp ou no e-mail.</p>
 
@@ -282,6 +303,7 @@
     <div class="big serif rv">Ainda existe uma casa esperando pela sua família.</div>
     <div class="rv"><a class="btn" href="#convite">Começar a conversa</a></div>
     <div class="meta rv">Passo Fundo · Rio Grande do Sul · <a class="gold" href="https://wa.me/5554999905912">(54) 99990-5912</a></div>
+    <div class="editionline rv">Edição Passo Fundo · MMXXVI</div>
   </div>
 </footer>
 
