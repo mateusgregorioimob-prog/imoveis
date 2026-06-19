@@ -53,8 +53,8 @@
 
   /* hero — imagem com blur+escurecimento, conteúdo centralizado */
   .hero{height:100vh;min-height:680px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--ink)}
-  .hero .bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;
-    filter:brightness(.5) saturate(.92)}
+  .hero .bg{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center;
+    filter:brightness(.62) saturate(.95)}
   .hero .ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,14,.42),rgba(14,14,14,.60) 52%,rgba(14,14,14,.95))}
   .hero .wrap{position:relative;z-index:2;width:100%}
   .hero .eyebrow{opacity:0;animation:rise 1.5s .3s var(--ease) forwards}
@@ -161,7 +161,7 @@
 </nav>
 
 <header class="hero">
-  <video class="bg" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=70"><source src="hero.mp4" type="video/mp4"></video>
+  <img class="bg" src="hero.jpg" alt="">
   <div class="ov"></div>
   <div class="wrap">
     <div class="eyebrow">Passo Fundo</div>
@@ -178,7 +178,7 @@
   </div>
 </section>
 
-<section class="plate" style="background-image:linear-gradient(135deg,#1a1712,#0E0E0E),url('https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=2200&q=82')">
+<section class="plate" style="background-image:linear-gradient(135deg,#1a1712,#0E0E0E),url('plate-concreto.jpg')">
   <div class="cap"><p class="rv">Concreto, madeira e a luz da tarde.</p></div>
 </section>
 
@@ -191,7 +191,7 @@
   </div>
 </section>
 
-<section class="plate" style="background-image:linear-gradient(135deg,#15120d,#0E0E0E),url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=2200&q=82')">
+<section class="plate" style="background-image:linear-gradient(135deg,#15120d,#0E0E0E),url('plate-escada.jpg')">
   <div class="cap"><p class="rv">O silêncio também é um endereço.</p></div>
 </section>
 
@@ -242,7 +242,7 @@
   </div>
 </section>
 
-<section class="plate" style="background-image:linear-gradient(135deg,#15120d,#0E0E0E),url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=2200&q=82')">
+<section class="plate" style="background-image:linear-gradient(135deg,#15120d,#0E0E0E),url('plate-piscina.jpg')">
   <div class="cap"><p class="rv">A água devolve o céu.</p></div>
 </section>
 
