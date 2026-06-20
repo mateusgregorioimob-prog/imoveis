@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Esplendor — Cidade Nova · Rei das Casas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a59c89;--dim:rgba(245,242,235,.6);--line:rgba(200,163,72,.4);--hair:rgba(245,242,235,.1);--ease:cubic-bezier(.19,1,.22,1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.serif{font-family:'Cormorant Garamond',serif}
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:15px clamp(22px,4vw,52px);background:rgba(14,14,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair);transform:translateY(-110%);transition:transform .6s var(--ease)}
+.nav.show{transform:none}
+.nav .bk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .bk:hover{color:var(--gold)}
+.nav .brand{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:14px}
+.nav .spec{border:1px solid var(--line);padding:11px 22px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;transition:.5s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media(max-width:640px){.nav .brand{display:none}}
+.book{display:block;font-size:0}.book .slide{display:block;width:100%;height:auto}
+.close{padding:24vh 0 20vh;text-align:center}
+.close .w{max-width:760px;margin:0 auto;padding:0 28px}
+.close .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.close h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,5vw,62px);line-height:1.2;margin:22px auto 30px;max-width:18ch}
+.close p{color:var(--warm);font-size:15.5px;line-height:1.9;max-width:30ch;margin:0 auto 46px}
+.btn{display:inline-block;border:1px solid var(--line);padding:23px 58px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;transition:.7s var(--ease)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.38em}
+footer{padding:0 0 12vh;text-align:center}
+footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px;color:var(--paper)}
+footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
+</style></head><body>
+
+<nav class="nav" id="nav">
+  <a class="bk" href="rei-das-casas.html">← Rei das Casas</a>
+  <span class="brand">Casa Esplendor</span>
+  <a class="spec" href="https://wa.me/5554999905912?text=Quero%20falar%20sobre%20a%20Casa%20Esplendor%20(Cidade%20Nova)">Falar com o especialista</a>
+</nav>
+
+<div class="book">
+  <img class="slide" src="esplendor-01.jpg" alt="Casa Esplendor — Cidade Nova">
+  <img class="slide" src="esplendor-02.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-03.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-04.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-05.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-06.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-07.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-08.jpg" alt="" loading="lazy">
+  <img class="slide" src="esplendor-09.jpg" alt="" loading="lazy">
+</div>
+
+<section class="close">
+  <div class="w">
+    <div class="eyebrow">O convite</div>
+    <h2 class="serif">Essa casa combina com a história da sua família?</h2>
+    <p>As fotos completas e a visita a gente reserva para quem quer conhecer de perto. Vamos conversar?</p>
+    <a class="btn" href="https://wa.me/5554999905912?text=Quero%20conhecer%20a%20Casa%20Esplendor%20(Cidade%20Nova)%20de%20perto">Falar com o especialista</a>
+  </div>
+</section>
+
+<footer>
+  <span class="b">Rei das Casas</span>
+  <a class="bk" href="rei-das-casas.html">← ver as outras casas</a>
+</footer>
+
+<script>
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('show', scrollY > innerHeight*0.85)});
+</script>
+</body></html>
