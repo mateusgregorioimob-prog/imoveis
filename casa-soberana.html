@@ -69,6 +69,16 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
 .play span{width:86px;height:86px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;padding-left:6px;background:rgba(14,14,14,.4);transition:.4s var(--ease)}
 .player:hover .play span{background:var(--gold);color:var(--ink)}
+
+@media(max-width:640px){
+  .scene{height:auto;min-height:0;display:block;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:76vw}
+  .scene::before{display:none}
+  .scene.right{justify-content:flex-start}
+  .scene .tx{position:static;max-width:none;padding:30px 22px 60px}
+  .scene h2{font-size:33px;margin-bottom:16px}
+  .scene .rule{margin-bottom:16px}
+  .scene p{font-size:18px;color:rgba(245,242,235,.9);max-width:none}
+}
 </style></head><body>
 
 <nav class="nav" id="nav">
