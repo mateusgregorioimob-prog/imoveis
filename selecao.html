@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para proprietários — Rei das Casas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ===== Rei das Casas — escala PREMIUM (direção de arte: Mateus) ===== */
+:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a59c89;--dim:rgba(245,242,235,.62);--hair:rgba(245,242,235,.12);--max:1700px;--sec:clamp(120px,13vw,180px);--ease:cubic-bezier(.19,1,.22,1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.95;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}a{color:inherit;text-decoration:none}
+.pad{padding-left:clamp(24px,5vw,90px);padding-right:clamp(24px,5vw,90px)}
+.wrap{max-width:var(--max);margin:0 auto;width:100%}
+.eyebrow{font-size:13px;letter-spacing:.48em;text-transform:uppercase;color:var(--gold)}
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:30px clamp(24px,5vw,70px);transition:.7s var(--ease)}
+.nav.s{padding:18px clamp(24px,5vw,70px);background:rgba(14,14,14,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:46px}
+.brand b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:19px;letter-spacing:.34em;text-transform:uppercase;line-height:1.1;display:block}
+.brand small{font-size:9px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
+.nav .right{display:flex;align-items:center;gap:32px}
+.nav .lnk{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
+.nav .spec{height:62px;display:inline-flex;align-items:center;border:1px solid rgba(200,163,72,.45);color:var(--paper);padding:0 34px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:.7s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media(max-width:900px){.nav .lnk{display:none}.brand img{height:38px}}
+/* HERO 100vh com imagem */
+.hero{height:100vh;min-height:680px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(180deg,rgba(14,14,14,.5),rgba(14,14,14,.32) 40%,rgba(14,14,14,.72)),url('selecao-hero.jpg') center/cover no-repeat}
+.hero .in{position:relative;z-index:2;padding:0 clamp(24px,6vw,90px);max-width:1500px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(72px,8vw,120px);line-height:1.02;letter-spacing:.01em;color:var(--paper);max-width:16ch;margin:34px auto 0}
+.cue{position:absolute;bottom:46px;left:50%;transform:translateX(-50%);z-index:2;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:rgba(245,242,235,.7);text-align:center}
+.cue span{display:block;font-size:20px;color:var(--gold);margin-top:10px;animation:bob 2.2s var(--ease) infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+/* LEAD */
+.lead{padding-top:var(--sec);padding-bottom:var(--sec);text-align:center}
+.lead .in{max-width:900px;margin:0 auto}
+.lead .eyebrow{display:block;text-align:center;margin-bottom:50px}
+.lead p{font-size:clamp(22px,1.6vw,24px);line-height:1.85;color:var(--dim);margin-bottom:40px}
+.lead p.em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(30px,3vw,40px);color:var(--gold);line-height:1.45}
+/* FRASE tela cheia */
+.phrase{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.phrase p{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(52px,5vw,80px);line-height:1.1;color:var(--paper);max-width:20ch}
+.phrase .sub{display:block;color:var(--gold);font-size:.66em;margin-top:.5em;line-height:1.15}
+.phrase .g{color:var(--gold)}
+/* IMAGEM full-bleed */
+.shot{height:90vh;background-size:cover;background-position:center;position:relative}
+.shot::after{content:"";position:absolute;inset:0;background:rgba(14,14,14,.15)}
+/* CRITÉRIOS 2 colunas */
+.obs{padding-top:var(--sec);padding-bottom:var(--sec)}
+.obs h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,5vw,82px);text-align:center;color:var(--paper);margin-bottom:clamp(90px,11vw,150px)}
+.obs .grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:120px clamp(70px,8vw,140px)}
+.crit svg{width:62px;height:62px;stroke:var(--gold);stroke-width:1;fill:none;stroke-linecap:round;stroke-linejoin:round;display:block;margin-bottom:42px;opacity:.95}
+.crit h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3vw,44px);color:var(--paper);margin-bottom:24px}
+.crit p{font-size:clamp(22px,1.4vw,23px);line-height:1.7;color:var(--warm);max-width:34ch}
+@media(max-width:820px){.obs .grid{grid-template-columns:1fr;gap:90px}}
+/* EDITORIAL branco — foto domina */
+.edit{background:var(--paper);color:#1a1814}
+.edit .in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;min-height:100vh}
+.edit .ph{background:url('selecao-editorial.jpg') center/cover no-repeat;min-height:75vh}
+.edit .tx{padding:clamp(90px,13vh,180px) clamp(40px,6vw,120px);display:flex;flex-direction:column;justify-content:center}
+.edit .tx p{font-size:clamp(22px,1.4vw,23px);line-height:1.95;color:#37322b;margin-bottom:30px;max-width:42ch}
+.edit .tx p.lead2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,3.6vw,54px);line-height:1.2;color:#16140f;margin:0 0 50px;max-width:16ch}
+.edit .tx .stack{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,2vw,28px);color:#8a7f63;line-height:1.6;margin-bottom:38px}
+@media(max-width:820px){.edit .in{grid-template-columns:1fr}.edit .ph{min-height:70vh}}
+/* CTA */
+.cta{padding-top:var(--sec);padding-bottom:var(--sec);text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,5vw,82px);color:var(--paper);line-height:1.12;max-width:18ch;margin:0 auto 50px}
+.cta p{font-size:clamp(22px,1.6vw,24px);line-height:1.85;color:var(--dim);max-width:54ch;margin:0 auto}
+.cta .conv{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(30px,3vw,42px);color:var(--gold);margin:50px auto 60px;line-height:1.35;max-width:20ch}
+.cta .btn{height:70px;display:inline-flex;align-items:center;border:1px solid rgba(200,163,72,.5);color:var(--paper);padding:0 48px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;border-radius:0;transition:.7s var(--ease)}
+.cta .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.36em}
+.cta .fine{font-size:16px;line-height:1.8;color:var(--warm);max-width:50ch;margin:60px auto 0}
+/* PILAR tela cheia */
+.pillar{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.pillar p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(46px,5vw,78px);line-height:1.28;color:var(--paper);max-width:22ch}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.in{opacity:1;transform:none}
+footer{padding:var(--sec) 0 12vh;text-align:center;border-top:1px solid var(--hair)}
+footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:17px;display:block;margin-bottom:18px}
+footer a.bk{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
+</style></head><body>
+
+<nav class="nav" id="nav">
+  <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt=""><span><b>Rei das Casas</b><small>Exclusivas</small></span></a>
+  <div class="right">
+    <a class="lnk" href="rei-das-casas.html">Início</a>
+    <a class="lnk" href="rei-das-casas.html#selecao">Casas exclusivas</a>
+    <a class="spec" href="https://wa.me/5554999905912?text=Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20da%20minha%20casa%20para%20o%20Rei%20das%20Casas">Solicitar uma avaliação</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="in">
+    <div class="eyebrow">A seleção</div>
+    <h1 class="serif">Como uma casa entra para o Rei das Casas</h1>
+  </div>
+  <div class="cue">Role<span>↓</span></div>
+</header>
+
+<section class="lead pad">
+  <div class="in">
+    <span class="eyebrow rv">O nosso critério</span>
+    <p class="rv">O Rei das Casas não nasceu para reunir o maior número de imóveis. Nasceu para apresentar residências que acreditamos merecer uma forma diferente de serem vistas.</p>
+    <p class="rv">Cada casa passa por uma análise antes de fazer parte desta seleção. Nem todas entram. E essa é, justamente, a essência do projeto.</p>
+    <p class="em rv">Queremos que cada residência represente aquilo em que acreditamos: arquitetura, qualidade, personalidade e uma experiência de morar que faça sentido para uma família.</p>
+  </div>
+</section>
+
+<section class="phrase pad">
+  <p class="rv">Nem toda casa faz parte do Rei das Casas.<span class="sub">E isso é exatamente o que torna esta seleção especial.</span></p>
+</section>
+
+<div class="shot" style="background-image:url('selecao-arch.jpg')"></div>
+
+<section class="obs pad">
+  <h2 class="rv">O que observamos</h2>
+  <div class="grid">
+    <div class="crit rv">
+      <svg viewBox="0 0 24 24"><path d="M4 21h16M3 9l9-6 9 6M6 9v12M18 9v12M10 9v12M14 9v12"/></svg>
+      <h3 class="serif">Arquitetura</h3>
+      <p>Projetos que permanecem atuais com o passar do tempo.</p>
+    </div>
+    <div class="crit rv">
+      <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+      <h3 class="serif">Conservação</h3>
+      <p>Residências bem cuidadas, onde cada detalhe demonstra atenção.</p>
+    </div>
+    <div class="crit rv">
+      <svg viewBox="0 0 24 24"><path d="M12 3l1.9 6.1L20 11l-6.1 1.9L12 19l-1.9-6.1L4 11l6.1-1.9L12 3Z"/></svg>
+      <h3 class="serif">Personalidade</h3>
+      <p>Casas que possuem identidade própria, não apenas acabamentos de alto padrão.</p>
+    </div>
+    <div class="crit rv">
+      <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>
+      <h3 class="serif">Localização</h3>
+      <p>Endereços que oferecem qualidade de vida e fazem sentido para o perfil da residência.</p>
+    </div>
+    <div class="crit rv">
+      <svg viewBox="0 0 24 24"><path d="M12 6c-2-1.4-5-1.4-7.5 0v12c2.5-1.4 5.5-1.4 7.5 0 2-1.4 5-1.4 7.5 0V6c-2.5-1.4-5.5-1.4-7.5 0Z"/><path d="M12 6v12"/></svg>
+      <h3 class="serif">História</h3>
+      <p>Casas que foram construídas para serem vividas, e não apenas ocupadas.</p>
+    </div>
+    <div class="crit rv">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18M12 3v4M5 10 3.7 8.7M19 10l1.3-1.3M7.5 18a4.5 4.5 0 0 1 9 0"/></svg>
+      <h3 class="serif">Experiência</h3>
+      <p>Ambientes capazes de proporcionar uma rotina melhor para quem vai morar ali.</p>
+    </div>
+  </div>
+</section>
+
+<section class="edit">
+  <div class="in">
+    <div class="ph"></div>
+    <div class="tx">
+      <p class="lead2 rv">Não escolhemos apenas casas. Escolhemos aquelas que representam o propósito do Rei das Casas.</p>
+      <p class="rv">Cada residência publicada recebe tempo, dedicação e uma apresentação exclusiva.</p>
+      <div class="stack rv">Fotografias. Filme. História. Detalhes.</div>
+      <p class="rv">Tudo é preparado para apresentar a casa da forma como ela merece. Porque uma residência extraordinária também merece uma apresentação extraordinária.</p>
+    </div>
+  </div>
+</section>
+
+<section class="phrase pad">
+  <p class="rv">Algumas casas são anunciadas.<br><span class="g">Outras são escolhidas.</span></p>
+</section>
+
+<section class="cta pad">
+  <h2 class="rv">Sua casa pode fazer parte desta seleção.</h2>
+  <p class="rv">Se você acredita que sua residência reúne arquitetura, personalidade e uma história que merece ser apresentada de forma diferente, teremos prazer em conhecê-la.</p>
+  <div class="conv rv">O primeiro passo não é um anúncio. É uma conversa.</div>
+  <div class="rv"><a class="btn" href="https://wa.me/5554999905912?text=Gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20da%20minha%20casa%20para%20o%20Rei%20das%20Casas">Solicitar uma avaliação</a></div>
+  <p class="fine rv">Cada residência passa por uma análise antes de integrar o Rei das Casas. Nosso compromisso é preservar a identidade e o nível de qualidade desta seleção.</p>
+</section>
+
+<section class="pillar pad">
+  <p class="rv">Não buscamos a maior seleção de casas. Buscamos uma seleção da qual possamos nos orgulhar.</p>
+</section>
+
+<footer>
+  <span class="b">Rei das Casas</span>
+  <a class="bk" href="rei-das-casas.html">← voltar ao início</a>
+</footer>
+
+<script>
+var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.14});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
+</body></html>
