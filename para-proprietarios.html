@@ -4,73 +4,78 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
-/* ===== Design Bible — Rei das Casas (escala editorial) ===== */
-:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a59c89;--dim:rgba(245,242,235,.62);--hair:rgba(245,242,235,.12);--max:1600px;--ease:cubic-bezier(.19,1,.22,1)}
+/* ===== Rei das Casas — escala PREMIUM (direção de arte: Mateus) ===== */
+:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a59c89;--dim:rgba(245,242,235,.62);--hair:rgba(245,242,235,.12);--max:1700px;--sec:clamp(120px,13vw,180px);--ease:cubic-bezier(.19,1,.22,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.95;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .serif{font-family:'Cormorant Garamond',serif}a{color:inherit;text-decoration:none}
-.pad{padding-left:clamp(24px,5vw,80px);padding-right:clamp(24px,5vw,80px)}
-.eyebrow{font-size:12px;letter-spacing:.46em;text-transform:uppercase;color:var(--gold);text-align:center}
+.pad{padding-left:clamp(24px,5vw,90px);padding-right:clamp(24px,5vw,90px)}
+.wrap{max-width:var(--max);margin:0 auto;width:100%}
+.eyebrow{font-size:13px;letter-spacing:.48em;text-transform:uppercase;color:var(--gold)}
 /* nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:28px clamp(24px,5vw,64px);transition:.7s var(--ease)}
-.nav.s{padding:16px clamp(24px,5vw,64px);background:rgba(14,14,14,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
-.brand{display:flex;align-items:center;gap:13px}.brand img{height:44px}
-.brand b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:18px;letter-spacing:.34em;text-transform:uppercase;line-height:1.1;display:block}
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:30px clamp(24px,5vw,70px);transition:.7s var(--ease)}
+.nav.s{padding:18px clamp(24px,5vw,70px);background:rgba(14,14,14,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.brand{display:flex;align-items:center;gap:14px}.brand img{height:46px}
+.brand b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:19px;letter-spacing:.34em;text-transform:uppercase;line-height:1.1;display:block}
 .brand small{font-size:9px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
-.nav .right{display:flex;align-items:center;gap:30px}
-.nav .lnk{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
-.nav .spec{height:60px;display:inline-flex;align-items:center;border:1px solid rgba(200,163,72,.45);color:var(--paper);padding:0 32px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:.7s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.nav .right{display:flex;align-items:center;gap:32px}
+.nav .lnk{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
+.nav .spec{height:62px;display:inline-flex;align-items:center;border:1px solid rgba(200,163,72,.45);color:var(--paper);padding:0 34px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:.7s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
 @media(max-width:900px){.nav .lnk{display:none}.brand img{height:38px}}
-/* manifesto / hero */
-.manifesto{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:24vh;padding-bottom:16vh}
-.manifesto h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,8.5vw,108px);line-height:1.03;letter-spacing:.01em;text-align:center;color:var(--paper);max-width:17ch;margin:40px auto 78px}
-.manifesto .lead{max-width:820px;margin:0 auto;text-align:center}
-.manifesto .lead p{font-size:clamp(20px,1.55vw,22px);line-height:1.95;color:var(--dim);margin-bottom:38px}
-.manifesto .lead p.em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(27px,3vw,36px);color:var(--gold);line-height:1.5;margin-top:14px}
-/* frase tela cheia */
-.statement{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.statement p{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(42px,7vw,88px);line-height:1.16;color:var(--paper);max-width:18ch}
-.statement .sub{display:block;color:var(--gold);font-size:.6em;margin-top:.55em;line-height:1.25}
-/* foto full-bleed */
-.shot{height:85vh;background-size:cover;background-position:center;position:relative}
+/* HERO 100vh com imagem */
+.hero{height:100vh;min-height:680px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(180deg,rgba(14,14,14,.5),rgba(14,14,14,.32) 40%,rgba(14,14,14,.72)),url('selecao-hero.jpg') center/cover no-repeat}
+.hero .in{position:relative;z-index:2;padding:0 clamp(24px,6vw,90px);max-width:1500px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(72px,8vw,120px);line-height:1.02;letter-spacing:.01em;color:var(--paper);max-width:16ch;margin:34px auto 0}
+.cue{position:absolute;bottom:46px;left:50%;transform:translateX(-50%);z-index:2;font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:rgba(245,242,235,.7);text-align:center}
+.cue span{display:block;font-size:20px;color:var(--gold);margin-top:10px;animation:bob 2.2s var(--ease) infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+/* LEAD */
+.lead{padding-top:var(--sec);padding-bottom:var(--sec);text-align:center}
+.lead .in{max-width:900px;margin:0 auto}
+.lead .eyebrow{display:block;text-align:center;margin-bottom:50px}
+.lead p{font-size:clamp(22px,1.6vw,24px);line-height:1.85;color:var(--dim);margin-bottom:40px}
+.lead p.em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(30px,3vw,40px);color:var(--gold);line-height:1.45}
+/* FRASE tela cheia */
+.phrase{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.phrase p{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(52px,5vw,80px);line-height:1.1;color:var(--paper);max-width:20ch}
+.phrase .sub{display:block;color:var(--gold);font-size:.66em;margin-top:.5em;line-height:1.15}
+.phrase .g{color:var(--gold)}
+/* IMAGEM full-bleed */
+.shot{height:90vh;background-size:cover;background-position:center;position:relative}
 .shot::after{content:"";position:absolute;inset:0;background:rgba(14,14,14,.15)}
-/* critérios — 2 colunas, blocos */
-.obs{padding-top:clamp(120px,16vw,200px);padding-bottom:clamp(120px,16vw,200px)}
-.obs h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,68px);text-align:center;color:var(--paper);margin-bottom:clamp(80px,10vw,140px)}
-.obs .grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(80px,9vw,130px) clamp(60px,8vw,120px)}
-.crit svg{width:54px;height:54px;stroke:var(--gold);stroke-width:1;fill:none;stroke-linecap:round;stroke-linejoin:round;display:block;margin-bottom:38px;opacity:.95}
-.crit h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,3vw,38px);color:var(--paper);margin-bottom:20px}
-.crit p{font-size:18px;line-height:1.8;color:var(--warm);max-width:36ch}
-@media(max-width:820px){.obs .grid{grid-template-columns:1fr;gap:80px}}
-/* editorial branco — foto domina */
+/* CRITÉRIOS 2 colunas */
+.obs{padding-top:var(--sec);padding-bottom:var(--sec)}
+.obs h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,5vw,82px);text-align:center;color:var(--paper);margin-bottom:clamp(90px,11vw,150px)}
+.obs .grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:120px clamp(70px,8vw,140px)}
+.crit svg{width:62px;height:62px;stroke:var(--gold);stroke-width:1;fill:none;stroke-linecap:round;stroke-linejoin:round;display:block;margin-bottom:42px;opacity:.95}
+.crit h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(34px,3vw,44px);color:var(--paper);margin-bottom:24px}
+.crit p{font-size:clamp(22px,1.4vw,23px);line-height:1.7;color:var(--warm);max-width:34ch}
+@media(max-width:820px){.obs .grid{grid-template-columns:1fr;gap:90px}}
+/* EDITORIAL branco — foto domina */
 .edit{background:var(--paper);color:#1a1814}
-.edit .in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;min-height:94vh}
-.edit .ph{background:url('selecao-editorial.jpg') center/cover no-repeat;min-height:60vh}
-.edit .tx{padding:clamp(80px,12vh,170px) clamp(36px,6vw,110px);display:flex;flex-direction:column;justify-content:center}
-.edit .tx p{font-size:clamp(19px,1.4vw,21px);line-height:2;color:#37322b;margin-bottom:26px;max-width:44ch}
-.edit .tx p.lead{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,3.6vw,48px);line-height:1.24;color:#16140f;margin-bottom:40px;max-width:17ch}
-.edit .tx .stack{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,2vw,26px);color:#8a7f63;line-height:1.7;margin-bottom:34px}
-@media(max-width:820px){.edit .in{grid-template-columns:1fr}.edit .ph{min-height:64vh}}
-/* impacto tela cheia */
-.impact{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.impact p{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(44px,7vw,90px);line-height:1.14;color:var(--paper)}
-.impact .g{color:var(--gold)}
+.edit .in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;min-height:100vh}
+.edit .ph{background:url('selecao-editorial.jpg') center/cover no-repeat;min-height:75vh}
+.edit .tx{padding:clamp(90px,13vh,180px) clamp(40px,6vw,120px);display:flex;flex-direction:column;justify-content:center}
+.edit .tx p{font-size:clamp(22px,1.4vw,23px);line-height:1.95;color:#37322b;margin-bottom:30px;max-width:42ch}
+.edit .tx p.lead2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,3.6vw,54px);line-height:1.2;color:#16140f;margin:0 0 50px;max-width:16ch}
+.edit .tx .stack{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,2vw,28px);color:#8a7f63;line-height:1.6;margin-bottom:38px}
+@media(max-width:820px){.edit .in{grid-template-columns:1fr}.edit .ph{min-height:70vh}}
 /* CTA */
-.cta{padding-top:clamp(120px,16vw,200px);padding-bottom:clamp(120px,16vw,200px);text-align:center}
-.cta h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,5vw,66px);color:var(--paper);line-height:1.14;max-width:20ch;margin:0 auto 44px}
-.cta p{font-size:clamp(20px,1.55vw,22px);line-height:1.9;color:var(--dim);max-width:58ch;margin:0 auto}
-.cta .conv{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(25px,2.6vw,34px);color:var(--gold);margin:44px auto 58px;line-height:1.4}
-.cta .btn{height:64px;display:inline-flex;align-items:center;border:1px solid rgba(200,163,72,.5);color:var(--paper);padding:0 60px;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;border-radius:0;transition:.7s var(--ease)}
-.cta .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.38em}
-.cta .fine{font-size:14.5px;line-height:1.85;color:var(--warm);max-width:50ch;margin:52px auto 0}
-/* pilar tela cheia */
+.cta{padding-top:var(--sec);padding-bottom:var(--sec);text-align:center}
+.cta h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(54px,5vw,82px);color:var(--paper);line-height:1.12;max-width:18ch;margin:0 auto 50px}
+.cta p{font-size:clamp(22px,1.6vw,24px);line-height:1.85;color:var(--dim);max-width:54ch;margin:0 auto}
+.cta .conv{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(30px,3vw,42px);color:var(--gold);margin:50px auto 60px;line-height:1.35;max-width:20ch}
+.cta .btn{height:70px;display:inline-flex;align-items:center;border:1px solid rgba(200,163,72,.5);color:var(--paper);padding:0 48px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;border-radius:0;transition:.7s var(--ease)}
+.cta .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.36em}
+.cta .fine{font-size:16px;line-height:1.8;color:var(--warm);max-width:50ch;margin:60px auto 0}
+/* PILAR tela cheia */
 .pillar{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
-.pillar p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(38px,5.5vw,74px);line-height:1.3;color:var(--paper);max-width:22ch}
-/* reveal 700ms */
-.rv{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.in{opacity:1;transform:none}
-footer{padding:18vh 0 11vh;text-align:center;border-top:1px solid var(--hair)}
-footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:16px;display:block;margin-bottom:16px}
-footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
+.pillar p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(46px,5vw,78px);line-height:1.28;color:var(--paper);max-width:22ch}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv.in{opacity:1;transform:none}
+footer{padding:var(--sec) 0 12vh;text-align:center;border-top:1px solid var(--hair)}
+footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:17px;display:block;margin-bottom:18px}
+footer a.bk{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
 </style></head><body>
 
 <nav class="nav" id="nav">
@@ -82,17 +87,24 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </div>
 </nav>
 
-<section class="manifesto pad">
-  <div class="eyebrow rv">A seleção</div>
-  <h1 class="rv">Como uma casa entra para o Rei das Casas</h1>
-  <div class="lead">
+<header class="hero">
+  <div class="in">
+    <div class="eyebrow">A seleção</div>
+    <h1 class="serif">Como uma casa entra para o Rei das Casas</h1>
+  </div>
+  <div class="cue">Role<span>↓</span></div>
+</header>
+
+<section class="lead pad">
+  <div class="in">
+    <span class="eyebrow rv">O nosso critério</span>
     <p class="rv">O Rei das Casas não nasceu para reunir o maior número de imóveis. Nasceu para apresentar residências que acreditamos merecer uma forma diferente de serem vistas.</p>
     <p class="rv">Cada casa passa por uma análise antes de fazer parte desta seleção. Nem todas entram. E essa é, justamente, a essência do projeto.</p>
     <p class="em rv">Queremos que cada residência represente aquilo em que acreditamos: arquitetura, qualidade, personalidade e uma experiência de morar que faça sentido para uma família.</p>
   </div>
 </section>
 
-<section class="statement pad">
+<section class="phrase pad">
   <p class="rv">Nem toda casa faz parte do Rei das Casas.<span class="sub">E isso é exatamente o que torna esta seleção especial.</span></p>
 </section>
 
@@ -138,7 +150,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   <div class="in">
     <div class="ph"></div>
     <div class="tx">
-      <p class="lead rv">Não escolhemos apenas casas. Escolhemos aquelas que representam o propósito do Rei das Casas.</p>
+      <p class="lead2 rv">Não escolhemos apenas casas. Escolhemos aquelas que representam o propósito do Rei das Casas.</p>
       <p class="rv">Cada residência publicada recebe tempo, dedicação e uma apresentação exclusiva.</p>
       <div class="stack rv">Fotografias. Filme. História. Detalhes.</div>
       <p class="rv">Tudo é preparado para apresentar a casa da forma como ela merece. Porque uma residência extraordinária também merece uma apresentação extraordinária.</p>
@@ -146,7 +158,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </div>
 </section>
 
-<section class="impact pad">
+<section class="phrase pad">
   <p class="rv">Algumas casas são anunciadas.<br><span class="g">Outras são escolhidas.</span></p>
 </section>
 
@@ -169,7 +181,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 
 <script>
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.16});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.14});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script>
 </body></html>
