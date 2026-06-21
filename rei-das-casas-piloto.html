@@ -452,12 +452,11 @@
   <div class="wrap">
     <div class="eyebrow rv">III — O convite</div>
     <h2 class="serif rv">Conte-nos sobre a sua família.</h2>
-    <p class="lead rv">O resto é conosco. Quando a casa certa surgir, você saberá primeiro — no WhatsApp ou no e-mail.</p>
+    <p class="lead rv">Primeiro, queremos conhecer vocês. O resto é com a gente — quando a casa certa surgir, você será o primeiro a saber, no WhatsApp ou no e-mail.</p>
 
     <form class="form rv" onsubmit="return enviar(event)">
-      <div class="f"><label>Como você imagina a vida da sua família daqui a cinco anos?</label><input name="cincoanos" placeholder="o que mudou, onde vocês estão…"></div>
-      <div class="f"><label>Como é um sábado perfeito para a sua família?</label><input name="sabado" placeholder="conta pra gente como seria…"></div>
-      <div class="f"><label>Quem vai morar</label><input name="familia" placeholder="o casal, dois filhos, um cachorro…"></div>
+      <div class="f"><label>Para começar, como podemos te chamar?</label><input name="nome" placeholder="seu nome"></div>
+      <div class="f"><label>E quem é a sua família?</label><input name="familia" placeholder="o casal, dois filhos, um cachorro…"></div>
       <div class="f"><label>O que vocês procuram?</label>
         <div class="chips" data-group="busca">
           <span class="chip" onclick="tog(this)">Mais espaço para os filhos</span>
@@ -471,14 +470,16 @@
           <span class="chip" onclick="tog(this)">Piscina</span>
         </div>
       </div>
-      <div class="f"><label>Onde a família se imagina</label><input name="bairro" placeholder="um bairro, uma vista, um silêncio…"></div>
+      <div class="f"><label>Onde a família se imagina morando?</label><input name="bairro" placeholder="um bairro, uma vista, um silêncio…"></div>
+      <div class="f"><label>Como é um sábado perfeito para a sua família?</label><input name="sabado" placeholder="conta pra gente como seria…"></div>
+      <div class="f"><label>E daqui a cinco anos, como vocês imaginam a vida?</label><input name="cincoanos" placeholder="o que mudou, onde vocês estão…"></div>
       <div class="f"><label>Há um imóvel para permuta?</label>
         <div class="opts" data-group="permuta">
           <span class="opt" onclick="pick(this)">Sim</span>
           <span class="opt" onclick="pick(this)">Ainda não</span>
         </div>
       </div>
-      <div class="f"><label>Como te encontramos</label><input name="contato" placeholder="seu nome e WhatsApp ou e-mail"></div>
+      <div class="f"><label>Onde te encontramos?</label><input name="contato" placeholder="seu WhatsApp ou e-mail"></div>
       <div class="send"><button class="btn" type="submit">Enviar o convite</button></div>
       <div class="whisper">Respondemos com calma, e com cuidado.</div>
     </form>
@@ -533,11 +534,12 @@
     function sel(g){var o=f.querySelector('[data-group="'+g+'"] .opt.on');return o?o.textContent:'—'}
     function chips(g){return [].slice.call(f.querySelectorAll('[data-group="'+g+'"] .chip.on')).map(function(c){return c.textContent}).join(', ')||'—'}
     var m='Um convite — Rei das Casas%0a%0a'
-      +'Em 5 anos: '+(f.cincoanos.value||'—')+'%0a'
-      +'Sábado perfeito: '+(f.sabado.value||'—')+'%0a'
-      +'Quem vai morar: '+(f.familia.value||'—')+'%0a'
+      +'Nome: '+(f.nome.value||'—')+'%0a'
+      +'A família: '+(f.familia.value||'—')+'%0a'
       +'O que procuram: '+chips('busca')+'%0a'
       +'Onde: '+(f.bairro.value||'—')+'%0a'
+      +'Sábado perfeito: '+(f.sabado.value||'—')+'%0a'
+      +'Em 5 anos: '+(f.cincoanos.value||'—')+'%0a'
       +'Permuta: '+sel('permuta')+'%0a'
       +'Contato: '+(f.contato.value||'—');
     window.open('https://wa.me/5554999905912?text='+m,'_blank');return false;
