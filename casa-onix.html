@@ -68,6 +68,17 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 .ggrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .gimg{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
 @media(max-width:640px){.ggrid{grid-template-columns:1fr;gap:10px}.galeria{padding:11vh 0 4vh}}
+.filme{padding:18vh 0 4vh;text-align:center}
+.filme .w{max-width:1040px;margin:0 auto;padding:0 clamp(22px,4vw,52px)}
+.filme .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.filme h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4vw,50px);line-height:1.15;margin:18px 0 46px}
+.player{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center;cursor:pointer;border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 110px -60px rgba(0,0,0,.9)}
+.player::before{content:"";position:absolute;inset:0;background:rgba(14,14,14,.42);transition:.4s}
+.player:hover::before{background:rgba(14,14,14,.26)}
+.player.on{cursor:default}.player.on::before,.player.on .play{display:none}
+.play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
+.play span{width:86px;height:86px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;padding-left:6px;background:rgba(14,14,14,.4);transition:.4s var(--ease)}
+.player:hover .play span{background:var(--gold);color:var(--ink)}
 
 @media(max-width:640px){
   .scene{height:auto;min-height:0;display:block;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:57vw}
@@ -158,6 +169,16 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </div>
 </section>
 
+<section class="filme">
+  <div class="w">
+    <div class="eyebrow">O filme da casa</div>
+    <h2 class="serif">Veja a Casa Ônix em movimento.</h2>
+    <div class="player" id="player" onclick="playVideo()" style="background-image:url('https://img.youtube.com/vi/ZY7jYvUB79g/maxresdefault.jpg')">
+      <div class="play"><span>&#9654;</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="galeria">
   <div class="gwrap">
     <span class="eyebrow rv">Galeria</span>
@@ -206,5 +227,6 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.2});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+function playVideo(){var p=document.getElementById('player');p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/ZY7jYvUB79g?autoplay=1&rel=0" title="Casa Ônix" allow="autoplay; encrypted-media; fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';p.classList.add('on');}
 </script>
 </body></html>
