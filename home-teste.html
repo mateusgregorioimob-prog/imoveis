@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rei das Casas — teste (telas)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a89e8c;--dim:rgba(245,242,235,.82);--hair:rgba(245,242,235,.12);--ease:cubic-bezier(.19,1,.22,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}a{color:inherit;text-decoration:none}
+.eyebrow{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.panel{height:100vh;min-height:560px;scroll-snap-align:start;position:relative;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(26px,7vw,120px);overflow:hidden}
+/* nav topo */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(26px,5vw,60px)}
+.nav .lock{display:flex;align-items:center;gap:12px}.nav img{height:38px}
+.nav .mk{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:18px}
+.nav .lks{display:flex;gap:30px}.nav a.l{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);transition:.3s}.nav a.l:hover{color:var(--gold)}
+@media(max-width:760px){.nav .lks{display:none}.nav .mk{font-size:15px}}
+/* dots laterais */
+.dots{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:16px}
+.dots a{width:9px;height:9px;border:1px solid var(--gold);border-radius:50%;opacity:.45;transition:.3s}
+.dots a.on{opacity:1;background:var(--gold);transform:scale(1.25)}
+@media(max-width:760px){.dots{right:12px;gap:12px}}
+/* hero */
+#p1{background:linear-gradient(180deg,rgba(14,14,14,.45),rgba(14,14,14,.35) 45%,rgba(14,14,14,.8)),url('hero.jpg') center/cover no-repeat}
+#p1 h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(40px,6vw,86px);line-height:1.05;max-width:15ch;margin:26px 0 0}
+#p1 .accent{font-style:italic;color:var(--gold)}
+#p1 .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.4vw,30px);color:var(--dim);margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(200,163,72,.5);color:var(--paper);height:58px;padding:0 38px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;margin-top:40px;transition:.5s var(--ease)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--warm);text-align:center}
+.cue i{display:block;color:var(--gold);font-style:normal;margin-top:6px;animation:b 2s var(--ease) infinite}@keyframes b{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+/* seleção */
+#p2 .head{margin-bottom:40px}
+#p2 h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(34px,4.5vw,60px);margin-top:12px}
+.row{display:flex;gap:22px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.row::-webkit-scrollbar{height:4px}.row::-webkit-scrollbar-thumb{background:var(--hair)}
+.cardx{flex:0 0 300px;scroll-snap-align:start}
+.cardx .img{height:300px;background-size:cover;background-position:center}
+.cardx h3{font-family:'Cormorant Garamond',serif;font-size:24px;margin:16px 0 6px}
+.cardx .li{font-size:13px;color:var(--dim);line-height:1.5;min-height:38px}
+.cardx .f{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm);border-top:1px solid var(--hair);padding-top:10px;margin-top:10px}
+/* método */
+#p3 h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,4vw,52px);max-width:20ch;margin:12px 0 50px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+.steps .s .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:46px;color:var(--gold);line-height:1}
+.steps .s h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:21px;margin-top:14px;line-height:1.2}
+@media(max-width:760px){.steps{grid-template-columns:1fr 1fr;gap:26px}}
+/* mateus */
+#p4 .in{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto;width:100%}
+#p4 .ph{aspect-ratio:3/4;background:url('mateus.jpg') center 18%/cover no-repeat}
+#p4 .lead{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.6vw,34px);line-height:1.4;margin:16px 0 18px}
+#p4 p{font-size:17px;line-height:1.7;color:var(--dim);max-width:42ch}
+#p4 .sig{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:22px;margin-top:22px}
+@media(max-width:760px){#p4 .in{grid-template-columns:1fr;gap:26px}#p4 .ph{aspect-ratio:16/10}}
+/* contato */
+#p5{text-align:center;align-items:center}
+#p5 h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,5vw,68px);max-width:16ch;margin:12px auto 18px}
+#p5 p{font-size:18px;color:var(--dim);max-width:46ch;margin:0 auto 36px;line-height:1.7}
+.wa{display:inline-flex;align-items:center;gap:12px;background:var(--gold);color:var(--ink);height:62px;padding:0 40px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;border-radius:40px}
+.wa svg{width:24px;height:24px;fill:#0E0E0E}
+#p5 .alt{display:block;margin-top:24px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--warm)}
+/* float wa */
+.wa-float{position:fixed;bottom:20px;right:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px -10px rgba(0,0,0,.7)}
+.wa-float svg{width:28px;height:28px;fill:#0E0E0E}
+@media(max-width:760px){.dots{display:none}}
+.rv{opacity:0;transform:translateY(22px);transition:.9s var(--ease)}.panel.in .rv{opacity:1;transform:none}
+.rv:nth-child(2){transition-delay:.1s}.rv:nth-child(3){transition-delay:.2s}.rv:nth-child(4){transition-delay:.3s}
+</style></head><body>
+
+<nav class="nav">
+  <a class="lock" href="#p1"><img src="crown-rei.png" alt=""><span class="mk">Rei das Casas</span></a>
+  <div class="lks"><a class="l" href="#p2">Casas</a><a class="l" href="#p3">Método</a><a class="l" href="#p4">Sobre</a><a class="l" href="#p5">Contato</a></div>
+</nav>
+
+<div class="dots">
+  <a href="#p1" data-i="0" class="on" aria-label="Início"></a>
+  <a href="#p2" data-i="1" aria-label="Casas"></a>
+  <a href="#p3" data-i="2" aria-label="Método"></a>
+  <a href="#p4" data-i="3" aria-label="Sobre"></a>
+  <a href="#p5" data-i="4" aria-label="Contato"></a>
+</div>
+
+<section class="panel" id="p1">
+  <div class="eyebrow rv">Passo Fundo</div>
+  <h1 class="rv">O lar da sua <span class="accent">família</span> existe.</h1>
+  <div class="sub rv">Nós encontramos.</div>
+  <div class="rv"><a class="btn" href="#p5">Começar a conversa →</a></div>
+  <div class="cue">Role<i>↓</i></div>
+</section>
+
+<section class="panel" id="p2">
+  <div class="head"><div class="eyebrow rv">Casas escolhidas</div><h2 class="serif rv">Poucas. Escolhidas uma a uma.</h2></div>
+  <div class="row rv">
+    <a class="cardx" href="casa-esplendor.html"><div class="img" style="background-image:url('esplendor-card.jpg')"></div><h3 class="serif">Esplendor</h3><div class="li">Para quem faz do extraordinário o dia a dia.</div><div class="f"><span>Cidade Nova</span><span>R$ 2.790.000</span></div></a>
+    <a class="cardx" href="casa-bosque.html"><div class="img" style="background-image:url('bosque-card.jpg')"></div><h3 class="serif">Bosque</h3><div class="li">Morar entre árvores, sem sair da cidade.</div><div class="f"><span>Lucas Araújo</span><span>R$ 2.300.000</span></div></a>
+    <a class="cardx" href="casa-soberana.html"><div class="img" style="background-image:url('sc-card.jpg')"></div><h3 class="serif">Soberana</h3><div class="li">Morar com grandeza e receber quem ama.</div><div class="f"><span>São Cristóvão</span><span>R$ 1.950.000</span></div></a>
+    <a class="cardx" href="casa-onix.html"><div class="img" style="background-image:url('onix-card.jpg')"></div><h3 class="serif">Ônix</h3><div class="li">Moderna, com piscina e gourmet para a família.</div><div class="f"><span>Cidade Nova</span><span>R$ 1.699.000</span></div></a>
+    <a class="cardx" href="casa-morada-dos-ipes.html"><div class="img" style="background-image:url('casa-morada.jpg')"></div><h3 class="serif">Morada dos Ipês</h3><div class="li">A casa também conta uma história.</div><div class="f"><span>Roselândia</span><span>sob consulta</span></div></a>
+  </div>
+</section>
+
+<section class="panel" id="p3">
+  <div class="eyebrow rv">Como funciona</div>
+  <h2 class="serif rv">Primeiro conhecemos a sua família. Só então procuramos.</h2>
+  <div class="steps">
+    <div class="s rv"><div class="n">1</div><h4 class="serif">A gente conversa.</h4></div>
+    <div class="s rv"><div class="n">2</div><h4 class="serif">Procuramos com critério.</h4></div>
+    <div class="s rv"><div class="n">3</div><h4 class="serif">Só chamamos quando vale.</h4></div>
+    <div class="s rv"><div class="n">4</div><h4 class="serif">Caminhamos juntos.</h4></div>
+  </div>
+</section>
+
+<section class="panel" id="p4">
+  <div class="in">
+    <div class="ph rv"></div>
+    <div>
+      <div class="eyebrow rv">Quem está por trás</div>
+      <div class="lead serif rv">Meu nome é Mateus Gregório.</div>
+      <p class="rv">Há 14 anos ajudo famílias a encontrar o lugar onde viverão suas próximas histórias. Sou cristão, marido e pai — e acredito que cada casa pode se tornar um lar onde o amor cresce.</p>
+      <div class="sig rv">Mateus Gregório</div>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="p5">
+  <div class="eyebrow rv">O convite</div>
+  <h2 class="serif rv">Vamos encontrar o seu lugar?</h2>
+  <p class="rv">Conte pra gente sobre a sua família. Quando a casa certa surgir, você será o primeiro a saber.</p>
+  <div class="rv"><a class="wa" href="https://wa.me/5554999905912?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Rei%20das%20Casas%20e%20quero%20falar%20com%20o%20especialista." target="_blank"><svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.48-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>Falar com o especialista</a></div>
+  <a class="alt" href="rei-das-casas.html">ou ver a versão completa →</a>
+</section>
+
+<a class="wa-float" href="https://wa.me/5554999905912?text=Ol%C3%A1!%20Quero%20falar%20com%20o%20especialista." target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.48-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></a>
+
+<script>
+var panels=[].slice.call(document.querySelectorAll('.panel'));
+var dots=[].slice.call(document.querySelectorAll('.dots a'));
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');
+    var i=panels.indexOf(e.target);dots.forEach(function(d,k){d.classList.toggle('on',k===i)});}
+})},{threshold:.55});
+panels.forEach(function(p){io.observe(p)});
+</script>
+</body></html>
