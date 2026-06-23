@@ -94,6 +94,17 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 footer{padding:13vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
 footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
+.filme{padding:16vh clamp(24px,6vw,80px);text-align:center}
+.filme .eyebrow{display:block}
+.filme h2{font-size:clamp(28px,4vw,52px);margin:16px auto 46px;max-width:22ch;line-height:1.12}
+.filme .w{max-width:1040px;margin:0 auto}
+.player{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center;cursor:pointer;border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 110px -60px rgba(0,0,0,.9)}
+.player::before{content:"";position:absolute;inset:0;background:rgba(14,14,14,.42);transition:.4s}
+.player:hover::before{background:rgba(14,14,14,.26)}
+.player.on{cursor:default}.player.on::before,.player.on .play{display:none}
+.play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
+.play span{width:86px;height:86px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;padding-left:6px;background:rgba(14,14,14,.4);transition:.4s var(--ease)}
+.player:hover .play span{background:var(--gold);color:var(--ink)}
 </style></head><body>
 
 <nav class="nav" id="nav">
@@ -148,6 +159,16 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 
 <section class="frame" style="background-image:url('palmeiras-06.jpg')">
   <div class="cap"><h2 class="serif rv">As tardes de domingo, o ano inteiro.</h2><div class="sub rv">deck · piscinas aquecidas</div></div>
+</section>
+
+<section class="filme">
+  <div class="w">
+    <span class="eyebrow rv">O filme da casa</span>
+    <h2 class="serif rv">Veja a Vivenda das Palmeiras em movimento.</h2>
+    <div class="player rv" id="player" onclick="playVideo()" style="background-image:url('https://img.youtube.com/vi/qjj9tt4q-oQ/maxresdefault.jpg')">
+      <div class="play"><span>&#9654;</span></div>
+    </div>
+  </div>
 </section>
 
 <section class="ficha">
@@ -205,6 +226,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.18});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+function playVideo(){var p=document.getElementById('player');p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/qjj9tt4q-oQ?autoplay=1&rel=0" title="Vivenda das Palmeiras" allow="autoplay; encrypted-media; fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';p.classList.add('on');}
 </script>
 
 <style>.wa-float{position:fixed;bottom:22px;right:22px;z-index:300;display:inline-flex;align-items:center;gap:11px;height:58px;padding:0 24px;border-radius:40px;background:#C8A348;color:#0E0E0E;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 14px 38px -10px rgba(0,0,0,.65);transition:transform .35s cubic-bezier(.19,1,.22,1),box-shadow .35s cubic-bezier(.19,1,.22,1);text-decoration:none}.wa-float:hover{transform:translateY(-3px);box-shadow:0 20px 48px -10px rgba(0,0,0,.75)}.wa-float svg{width:27px;height:27px;fill:#0E0E0E;flex:none}.wa-float .t{white-space:nowrap}@media(max-width:600px){.wa-float{padding:0;width:58px;height:58px;justify-content:center;bottom:18px;right:18px}.wa-float .t{display:none}}</style>
