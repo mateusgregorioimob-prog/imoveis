@@ -7,71 +7,97 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a59c89;--dim:rgba(245,242,235,.62);--line:rgba(200,163,72,.4);--hair:rgba(245,242,235,.12);--ease:cubic-bezier(.19,1,.22,1)}
+:root{--ink:#0E0E0E;--paper:#F5F2EB;--gold:#C8A348;--warm:#a89e8c;--dim:rgba(245,242,235,.7);--line:rgba(200,163,72,.4);--hair:rgba(245,242,235,.1);--ease:cubic-bezier(.19,1,.22,1)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.serif{font-family:'Cormorant Garamond',serif}h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.02}
+body{background:var(--ink);color:var(--paper);font-family:'Jost',sans-serif;font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}h1,h2{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.05}
 a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
-.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(24px,4vw,56px);transition:.6s var(--ease)}
-.nav.s{padding:14px clamp(24px,4vw,56px);background:rgba(14,14,14,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
-.brand{display:flex;align-items:center;gap:12px}.brand img{height:40px}
-.brand b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:17px;letter-spacing:.34em;text-transform:uppercase;line-height:1.1;display:block}
-.brand small{font-size:9px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
-.nav .right{display:flex;align-items:center;gap:26px}
-.nav .lnk{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
-.nav .spec{border:1px solid var(--line);color:var(--paper);padding:13px 26px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;transition:.6s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-@media(max-width:900px){.nav .lnk{display:none}}
-.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;padding-top:15vh;padding-bottom:6vh;
-  background:linear-gradient(90deg,rgba(14,14,14,.9),rgba(14,14,14,.58) 45%,rgba(14,14,14,.28)),url('onix-hero.jpg') center/cover no-repeat}
-.hero .in{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,90px);max-width:760px}
-.hero .kicker{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,58px);letter-spacing:.04em;color:var(--paper)}
-.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(52px,9vw,128px);color:var(--gold);line-height:.92;letter-spacing:.02em;margin-bottom:8px}
-.hero .rule{width:64px;height:1px;background:var(--gold);margin:14px 0 26px}
-.hero .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(22px,3vw,34px);line-height:1.3;color:var(--gold)}
-.hero .loc{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--paper);margin:26px 0 18px;display:flex;align-items:center;gap:9px}
-.hero .loc::before{content:"";width:8px;height:8px;border:1px solid var(--gold);border-radius:50% 50% 50% 0;transform:rotate(45deg)}
-.hero .preco{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,3.4vw,42px);color:var(--gold);margin:4px 0 20px;line-height:1}
-.hero .preco span{font-family:'Jost';font-weight:300;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--warm);margin-left:10px}
-.hero .desc{font-size:15.5px;line-height:1.8;max-width:490px;color:var(--dim);margin-bottom:34px}
-.hero .cta{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--line);padding:19px 40px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;transition:.6s var(--ease)}
-.hero .cta:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);gap:20px}
-.stats{position:relative;z-index:3;display:flex;padding:0 clamp(24px,6vw,90px);flex-wrap:wrap;row-gap:18px}
-.stats .st{padding-right:38px;margin-right:38px;border-right:1px solid var(--hair)}
-.stats .st:last-child{border-right:0}
-.stats .v{font-family:'Cormorant Garamond',serif;font-size:23px;color:var(--paper);line-height:1.1}
-.stats .v.gold{color:var(--gold)}
-.stats .l{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);margin-top:6px;max-width:20ch}
-@media(max-width:680px){.stats{display:none}}
-.scene{height:100vh;min-height:600px;position:relative;display:flex;align-items:center;background-size:cover;background-position:center}
-.scene::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,14,14,.9),rgba(14,14,14,.4) 50%,rgba(14,14,14,0))}
-.scene.right{justify-content:flex-end}
-.scene.right::before{background:linear-gradient(270deg,rgba(14,14,14,.9),rgba(14,14,14,.4) 50%,rgba(14,14,14,0))}
-.scene .tx{position:relative;z-index:2;padding:0 clamp(24px,6vw,90px);max-width:620px}
-.scene h2{font-size:clamp(34px,5vw,64px);line-height:1.12;margin-bottom:28px}
-.scene .rule{width:70px;height:1px;background:var(--gold);margin-bottom:28px}
-.scene p{font-size:15.5px;line-height:1.95;color:var(--dim);max-width:430px}
-.rv{opacity:0;transform:translateY(34px);transition:opacity 1.4s var(--ease),transform 1.4s var(--ease)}.rv.in{opacity:1;transform:none}
-.close{padding:28vh 0 22vh;text-align:center}
-.close .w{max-width:780px;margin:0 auto;padding:0 28px}
-.close .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
-.close h2{font-size:clamp(34px,5vw,62px);margin:22px auto 30px;max-width:18ch;line-height:1.2}
-.close p{color:var(--warm);font-size:15.5px;line-height:1.9;max-width:30ch;margin:0 auto 46px}
-.btn{display:inline-block;border:1px solid var(--line);padding:24px 60px;font-size:11px;letter-spacing:.34em;text-transform:uppercase;transition:.7s var(--ease)}
-.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.4em}
-footer{padding:14vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
-footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.4em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
-footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
+.eyebrow{font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(24px,5vw,56px);transition:.6s var(--ease)}
+.nav.s{padding:14px clamp(24px,5vw,56px);background:rgba(14,14,14,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
+.nav .brand{display:flex;align-items:center;gap:12px}.nav .brand img{height:34px}
+.nav .brand b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:15px;letter-spacing:.34em;text-transform:uppercase}
+.nav .right{display:flex;align-items:center;gap:24px}
+.nav .lnk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
+.nav .spec{border:1px solid var(--line);padding:12px 24px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;transition:.6s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+@media(max-width:820px){.nav .lnk{display:none}}
+
+/* hero — assinatura: escada caracol no pôr do sol */
+.hero{height:100vh;min-height:600px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;
+  background:linear-gradient(180deg,rgba(14,14,14,.55),rgba(14,14,14,.25) 40%,rgba(14,14,14,.85)),url('onix-hero.jpg') center/cover no-repeat}
+.hero .eyebrow{opacity:0;animation:fade 1.4s .3s var(--ease) forwards}
+.hero h1{font-size:clamp(46px,7.5vw,118px);letter-spacing:.01em;margin:18px 0 20px;opacity:0;animation:fade 1.6s .5s var(--ease) forwards}
+.hero .rule{width:70px;height:1px;background:var(--gold);opacity:0;animation:fade 1.6s .8s var(--ease) forwards}
+.hero .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,2.6vw,32px);color:var(--gold);margin-top:22px;max-width:20ch;opacity:0;animation:fade 1.6s 1s var(--ease) forwards}
+@keyframes fade{to{opacity:1}}
+.cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--warm)}
+.cue i{display:block;color:var(--gold);font-style:normal;margin-top:7px;animation:bob 2s var(--ease) infinite}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}.rv.in{opacity:1;transform:none}
+
+/* statement centrado */
+.line{padding:22vh clamp(24px,6vw,80px);text-align:center}
+.line p{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4.2vw,58px);line-height:1.25;max-width:20ch;margin:0 auto;color:var(--paper)}
+
+/* essência — editorial 2 colunas */
+.ess{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch}
+.ess .img{min-height:74vh;background:url('onix-01.jpg') center/cover no-repeat}
+.ess .tx{display:flex;flex-direction:column;justify-content:center;padding:14vh clamp(28px,5vw,84px)}
+.ess h2{font-size:clamp(30px,3.6vw,52px);margin:18px 0 26px;line-height:1.12}
+.ess p{font-size:clamp(16px,1.4vw,19px);line-height:1.95;color:var(--dim);max-width:44ch}
+@media(max-width:820px){.ess{grid-template-columns:1fr}.ess .img{min-height:62vw}.ess .tx{padding:11vh 26px}}
+
+/* frames cinematográficos full-bleed com legenda */
+.frame{height:100vh;min-height:560px;position:relative;display:flex;align-items:flex-end;background-size:cover;background-position:center}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,14,.1) 40%,rgba(14,14,14,.82))}
+.frame .cap{position:relative;z-index:2;width:100%;text-align:center;padding:0 24px 9vh}
+.frame .cap h2{font-size:clamp(30px,4.4vw,60px);line-height:1.1}
+.frame .cap .sub{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:14px}
+@media(max-width:640px){
+  .frame{height:auto;min-height:0;display:block;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:57vw}
+  .frame::after{display:none}
+  .frame .cap{padding:30px 22px 52px;background:var(--ink)}
+}
+
+/* ficha */
+.ficha{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:16vh clamp(24px,6vw,80px);text-align:center}
+.ficha .eyebrow{display:block;margin-bottom:7vh}
+.ficha .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;max-width:1100px;margin:0 auto 8vh}
+.ficha .it .v{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.4vw,30px);color:var(--paper)}
+.ficha .it .v.gold{color:var(--gold)}
+.ficha .it .l{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);margin-top:9px}
+.ficha .preco{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);color:var(--gold)}
+.ficha .cond{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--warm);margin-top:10px}
+.ficha .site{display:inline-block;margin-top:28px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;position:relative;padding-bottom:7px;color:var(--paper)}
+.ficha .site::after{content:"";position:absolute;left:50%;bottom:0;height:1px;width:0;background:var(--gold);transform:translateX(-50%);transition:width .8s var(--ease)}.ficha .site:hover::after{width:100%}
+@media(max-width:760px){.ficha .grid{grid-template-columns:1fr 1fr;gap:30px}}
+
+/* galeria */
 .galeria{padding:16vh 0 4vh}
-.galeria .gwrap{max-width:1500px;margin:0 auto;padding:0 clamp(22px,4vw,60px)}
-.galeria .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);text-align:center;display:block}
-.galeria h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,4vw,54px);text-align:center;color:var(--paper);margin:16px 0 7vh}
+.galeria .gw{max-width:1500px;margin:0 auto;padding:0 clamp(22px,4vw,60px)}
+.galeria .eyebrow{display:block;text-align:center}
+.galeria h2{font-size:clamp(30px,4vw,54px);text-align:center;margin:16px 0 7vh}
 .ggrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .gimg{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
 @media(max-width:640px){.ggrid{grid-template-columns:1fr;gap:10px}.galeria{padding:11vh 0 4vh}}
-.filme{padding:18vh 0 4vh;text-align:center}
-.filme .w{max-width:1040px;margin:0 auto;padding:0 clamp(22px,4vw,52px)}
-.filme .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
-.filme h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4vw,50px);line-height:1.15;margin:18px 0 46px}
+
+/* close */
+.close{padding:20vh clamp(24px,6vw,80px) 18vh;text-align:center}
+.close .eyebrow{display:block}
+.close h2{font-size:clamp(30px,4.6vw,60px);max-width:18ch;margin:20px auto 28px;line-height:1.2}
+.close p{color:var(--dim);font-size:clamp(15px,1.4vw,18px);line-height:1.85;max-width:34ch;margin:0 auto 44px}
+.btn{display:inline-block;border:1px solid var(--line);padding:23px 58px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;transition:.7s var(--ease)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.38em}
+
+footer{padding:13vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
+footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
+footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
+.filme{padding:16vh clamp(24px,6vw,80px);text-align:center}
+.filme .eyebrow{display:block}
+.filme h2{font-size:clamp(28px,4vw,52px);margin:16px auto 46px;max-width:22ch;line-height:1.12}
+.filme .w{max-width:1040px;margin:0 auto}
 .player{position:relative;aspect-ratio:16/9;background-size:cover;background-position:center;cursor:pointer;border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 110px -60px rgba(0,0,0,.9)}
 .player::before{content:"";position:absolute;inset:0;background:rgba(14,14,14,.42);transition:.4s}
 .player:hover::before{background:rgba(14,14,14,.26)}
@@ -79,108 +105,74 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
 .play span{width:86px;height:86px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:24px;padding-left:6px;background:rgba(14,14,14,.4);transition:.4s var(--ease)}
 .player:hover .play span{background:var(--gold);color:var(--ink)}
-
-@media(max-width:640px){
-  .scene{height:auto;min-height:0;display:block;background-size:100% auto;background-position:top center;background-repeat:no-repeat;padding-top:57vw}
-  .scene::before{display:none}
-  .scene.right{justify-content:flex-start}
-  .scene .tx{position:static;max-width:none;padding:30px 22px 60px}
-  .scene h2{font-size:33px;margin-bottom:16px}
-  .scene .rule{margin-bottom:16px}
-  .scene p{font-size:18px;color:rgba(245,242,235,.9);max-width:none}
-}
-@media(max-width:640px){
-  .hero{min-height:auto;display:block;padding-top:57vw;padding-bottom:9vh;background:url('onix-hero.jpg') top center/100% auto no-repeat,#0E0E0E}
-  .hero .in{padding:0 22px;flex:none}
-  .hero h1{font-size:46px;margin-bottom:4px}
-  .hero .kicker{font-size:30px}
-  .hero .tag{font-size:21px}
-  .hero .desc{font-size:17px}
-  .hero .preco{font-size:30px}
-}
-</style></head><body>
+</style>
+</head><body>
 
 <nav class="nav" id="nav">
-  <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt=""><span><b>Rei das Casas</b><small>Exclusivas</small></span></a>
+  <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt=""><b>Rei das Casas</b></a>
   <div class="right">
     <a class="lnk" href="rei-das-casas.html">Início</a>
-    <a class="lnk" href="rei-das-casas.html#selecao">Casas exclusivas</a>
-    <a class="lnk" href="rei-das-casas.html#mateus">Sobre nós</a>
+    <a class="lnk" href="rei-das-casas.html#selecao">As casas</a>
     <a class="spec" href="https://wa.me/5554999905912?text=Quero%20falar%20sobre%20a%20Casa%20%C3%94nix%20(Cidade%20Nova)">Falar com o especialista</a>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="in">
-    <div class="kicker">Casa</div>
-    <h1>Ônix</h1>
-    <div class="rule"></div>
-    <div class="tag">O fim de tarde mais bonito é o que acontece em casa.</div>
-    <div class="loc">Cidade Nova · Passo Fundo/RS</div>
-    <div class="preco">R$ 1.699.000 <span>· estuda receber apto</span></div>
-    <p class="desc">Casa moderna e semimobiliada em Cidade Nova: 4 dormitórios (2 suítes), 258 m² de área construída em terreno de 500 m², piscina aquecida e espaço gourmet — pensada para a sua família viver bem.</p>
-    <a class="cta" href="#cena1">Conhecer esta casa →</a>
-  </div>
-  <div class="stats">
-    <div class="st"><div class="v gold">Cidade Nova</div><div class="l">bairro nobre da cidade</div></div>
-    <div class="st"><div class="v">4 dorm · 2 suítes</div><div class="l">+ 2 demi-suítes</div></div>
-    <div class="st"><div class="v">4 vagas</div><div class="l">garagem ampla</div></div>
-    <div class="st"><div class="v">Piscina aquecida</div><div class="l">e espaço gourmet</div></div>
-  </div>
+  <div class="eyebrow">Cidade Nova</div>
+  <h1 class="serif">Ônix</h1>
+  <div class="rule"></div>
+  <div class="tag">O fim de tarde mais bonito é o que acontece em casa.</div>
+  <div class="cue">Role<i>↓</i></div>
 </header>
 
-<section class="scene" id="cena1" style="background-image:url('onix-01.jpg')">
+<section class="line"><p class="rv">Há casas que se moram.<br>Esta convida você a viver — dentro e fora.</p></section>
+
+<section class="ess">
+  <div class="img rv"></div>
   <div class="tx">
-    <h2 class="serif rv">Arquitetura que se reconhece de longe.</h2>
-    <div class="rule rv"></div>
-    <p class="rv">Linhas modernas e presença — uma casa com identidade própria, em um dos endereços mais desejados de Passo Fundo.</p>
+    <span class="eyebrow rv">Cidade Nova</span>
+    <h2 class="serif rv">Arquitetura moderna, em endereço nobre.</h2>
+    <p class="rv">Casa semimobiliada em Cidade Nova, com linhas modernas, automação e espaço gourmet — pensada para a sua família viver bem, do café da manhã ao fim de tarde na piscina.</p>
   </div>
 </section>
 
-<section class="scene right" style="background-image:url('onix-02.jpg')">
-  <div class="tx">
-    <h2 class="serif rv">A sala onde a família se encontra.</h2>
-    <div class="rule rv"></div>
-    <p class="rv">Espaço, luz e integração para os dias e as noites em casa.</p>
-  </div>
+<section class="frame" style="background-image:url('onix-02.jpg')">
+  <div class="cap"><h2 class="serif rv">A sala onde a família se encontra.</h2><div class="sub rv">estar integrado · luz natural</div></div>
 </section>
-
-<section class="scene" style="background-image:url('onix-03.jpg')">
-  <div class="tx">
-    <h2 class="serif rv">A cozinha vira o coração da casa.</h2>
-    <div class="rule rv"></div>
-    <p class="rv">Ampla e integrada ao espaço gourmet — feita para os almoços e jantares que reúnem todo mundo.</p>
-  </div>
+<section class="frame" style="background-image:url('onix-03.jpg')">
+  <div class="cap"><h2 class="serif rv">A cozinha, coração da casa.</h2><div class="sub rv">cozinha + espaço gourmet</div></div>
 </section>
-
-<section class="scene right" style="background-image:url('onix-04.jpg')">
-  <div class="tx">
-    <h2 class="serif rv">Um quarto para recomeçar todos os dias.</h2>
-    <div class="rule rv"></div>
-    <p class="rv">Suítes pensadas para o descanso de verdade, com privacidade e conforto.</p>
-  </div>
+<section class="line"><p class="rv">E quando o sol cai,<br>a piscina vira o melhor lugar da casa.</p></section>
+<section class="frame" style="background-image:url('onix-04.jpg')">
+  <div class="cap"><h2 class="serif rv">O descanso de verdade.</h2><div class="sub rv">suítes</div></div>
 </section>
-
-<section class="scene" style="background-image:url('onix-05.jpg')">
-  <div class="tx">
-    <h2 class="serif rv">Um espaço só seu, para trabalhar em casa.</h2>
-    <div class="rule rv"></div>
-    <p class="rv">Porque a casa também acompanha a sua rotina — sem abrir mão do conforto.</p>
-  </div>
+<section class="frame" style="background-image:url('onix-05.jpg')">
+  <div class="cap"><h2 class="serif rv">Um espaço só seu, pra trabalhar em casa.</h2><div class="sub rv">home office</div></div>
 </section>
 
 <section class="filme">
   <div class="w">
-    <div class="eyebrow">O filme da casa</div>
-    <h2 class="serif">Veja a Casa Ônix em movimento.</h2>
-    <div class="player" id="player" onclick="playVideo()" style="background-image:url('https://img.youtube.com/vi/ZY7jYvUB79g/maxresdefault.jpg')">
+    <span class="eyebrow rv">O filme da casa</span>
+    <h2 class="serif rv">Veja a Casa Ônix em movimento.</h2>
+    <div class="player rv" id="player" onclick="playVideo()" style="background-image:url('https://img.youtube.com/vi/ZY7jYvUB79g/maxresdefault.jpg')">
       <div class="play"><span>&#9654;</span></div>
     </div>
   </div>
 </section>
+<section class="ficha">
+  <span class="eyebrow rv">A casa</span>
+  <div class="grid">
+    <div class="it rv"><div class="v gold">4 dorm · 2 suítes</div><div class="l">+ 2 demi-suítes</div></div>
+    <div class="it rv"><div class="v">258 m²</div><div class="l">de área construída</div></div>
+    <div class="it rv"><div class="v">500 m²</div><div class="l">de terreno</div></div>
+    <div class="it rv"><div class="v">4 vagas</div><div class="l">+ piscina aquecida</div></div>
+  </div>
+  <div class="preco rv">R$ 1.699.000</div>
+  <div class="cond rv">Estuda receber apto · semimobiliada</div>
+</section>
 
 <section class="galeria">
-  <div class="gwrap">
+  <div class="gw">
     <span class="eyebrow rv">Galeria</span>
     <h2 class="serif rv">A casa por inteiro.</h2>
     <div class="ggrid">
@@ -210,12 +202,10 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 </section>
 
 <section class="close">
-  <div class="w">
-    <div class="eyebrow">O convite</div>
-    <h2 class="serif">Essa casa combina com a história da sua família?</h2>
-    <p>As fotos completas e a visita a gente reserva para quem quer conhecer de perto. Vamos conversar?</p>
-    <a class="btn" href="https://wa.me/5554999905912?text=Quero%20conhecer%20a%20Casa%20%C3%94nix%20(Cidade%20Nova)%20de%20perto">Falar com o especialista</a>
-  </div>
+  <div class="eyebrow rv">O convite</div>
+  <h2 class="serif rv">Essa casa combina com a história da sua família?</h2>
+  <p class="rv">A visita a gente reserva para quem quer conhecer de perto. Vamos conversar?</p>
+  <div class="rv"><a class="btn" href="https://wa.me/5554999905912?text=Quero%20conhecer%20a%20Casa%20%C3%94nix%20(Cidade%20Nova)%20de%20perto">Falar com o especialista</a></div>
 </section>
 
 <footer>
@@ -225,7 +215,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 
 <script>
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.2});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.18});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 function playVideo(){var p=document.getElementById('player');p.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/ZY7jYvUB79g?autoplay=1&rel=0" title="Casa Ônix" allow="autoplay; encrypted-media; fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';p.classList.add('on');}
 </script>
