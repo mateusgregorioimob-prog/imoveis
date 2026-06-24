@@ -158,7 +158,7 @@
   .sel{padding:17vh 0}
   .invite{padding:21vh 0}
   .hero{overflow:hidden}
-  .hero .bg{animation:kb 28s ease-out both}
+  .hero .bg{animation:kb 28s ease-out both}.hero .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
   @keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.11)}}
   .plate{overflow:hidden}
   .plate .tag{position:absolute;top:clamp(26px,4vw,46px);left:clamp(26px,5vw,56px);z-index:2;font-size:7px;font-weight:400;letter-spacing:.36em;text-transform:uppercase;color:rgba(245,242,235,.62)}
@@ -324,7 +324,7 @@
 </style>
 
 <header class="hero">
-  <img class="bg" src="hero.jpg" alt="">
+  <img class="bg" src="hero.jpg" alt=""><video class="bgv" autoplay muted loop playsinline poster="hero.jpg"><source src="video-1080p.mp4" type="video/mp4"></video>
   <div class="ov"></div>
   <div class="wrap">
     <div class="eyebrow">Passo Fundo</div>
