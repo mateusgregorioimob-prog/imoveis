@@ -588,5 +588,6 @@
 function start(n){var v=V[n];try{v.currentTime=0;}catch(e){}v.play().catch(function(){});V.forEach(function(x,i){x.classList.toggle("show",i===n)});}
 V.forEach(function(v,i){v.addEventListener("ended",function(){start((i+1)%2)});});start(0);})();
 </script>
+<script>(function(){try{var q=new URLSearchParams(location.search);var p=(location.pathname.split("/").pop()||"index");var c=q.get("c")||"";var u=q.get("utm_source")||q.get("utm")||"";new Image().src="https://vps67275.publiccloud.com.br/track?p="+encodeURIComponent(p)+"&c="+encodeURIComponent(c)+"&utm="+encodeURIComponent(u)+"&r="+encodeURIComponent(document.referrer)+"&_="+Date.now();}catch(e){}})();</script>
 </body>
 </html>
