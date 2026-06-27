@@ -82,6 +82,31 @@ footer{padding:12vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:16px}
 footer .navf{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;margin-bottom:22px}
 footer .navf a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--warm)}footer .navf a:hover{color:var(--gold)}
+
+/* BLOCO 4 — vídeo do Mateus */
+.fala{padding:16vh clamp(24px,6vw,80px);text-align:center;border-top:1px solid var(--hair)}
+.fala .eyebrow{display:block}
+.fala h2{font-size:clamp(28px,4vw,52px);margin:16px auto 22px;max-width:18ch}
+.fala .lead{color:var(--dim);max-width:46ch;margin:0 auto 6vh;font-size:clamp(15px,1.45vw,18px);line-height:1.9}
+.fala .player{position:relative;max-width:1000px;margin:0 auto;aspect-ratio:16/9;background-size:cover;background-position:center 16%;cursor:pointer;border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 110px -60px rgba(0,0,0,.9)}
+.fala .player::before{content:"";position:absolute;inset:0;background:rgba(14,14,14,.42);transition:.4s}
+.fala .player:hover::before{background:rgba(14,14,14,.26)}
+.fala .player.on{cursor:default}.fala .player.on::before,.fala .player.on .play,.fala .player.on .tag{display:none}
+.fala .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2}
+.fala .play span{width:84px;height:84px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px;padding-left:5px;background:rgba(14,14,14,.42);transition:.4s var(--ease)}
+.fala .player:hover .play span{background:var(--gold);color:var(--ink)}
+.fala .player .tag{position:absolute;left:22px;bottom:18px;z-index:2;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--paper)}
+.fala .who{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--warm);margin-top:26px}
+
+/* BLOCO 5 — depoimentos */
+.depo{padding:15vh clamp(24px,6vw,80px);text-align:center;border-top:1px solid var(--hair)}
+.depo .eyebrow{display:block}
+.depo h2{font-size:clamp(28px,4vw,52px);margin:16px auto 8vh;max-width:20ch}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1140px;margin:0 auto;text-align:left}
+.depo .card{border:1px solid var(--hair);padding:36px 32px;background:#141312}
+.depo .card p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(19px,1.7vw,24px);line-height:1.46;color:var(--paper)}
+.depo .card .by{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:24px}
+@media(max-width:820px){.depo-grid{grid-template-columns:1fr;gap:16px}}
 </style>
 </head><body>
 
@@ -110,8 +135,8 @@ footer .navf a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color
 
 <!-- BLOCO 2 — O QUE É -->
 <section class="intro">
-  <span class="eyebrow rv">O Rei das Casas</span>
-  <p class="rv">Nascemos para apresentar residências escolhidas — casas com arquitetura, personalidade e história, que merecem ser vistas de um jeito diferente.</p>
+  <span class="eyebrow rv">Quem é o Rei das Casas</span>
+  <p class="rv">Selecionamos poucas residências.<br>Casas com personalidade. Casas onde famílias podem construir histórias.<br><span class="gold">Porque nem toda casa merece destaque — e nem toda família procura apenas um imóvel.</span></p>
 </section>
 
 <!-- BLOCO 3 — RESIDÊNCIAS EM DESTAQUE -->
@@ -131,20 +156,32 @@ footer .navf a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color
   <div class="all"><a class="btn" href="casas.html">Ver todas as residências →</a></div>
 </section>
 
-<!-- BLOCO 4 — SOBRE MATEUS -->
-<section class="sobre" id="sobre">
-  <div class="ph rv"></div>
-  <div class="tx">
-    <span class="eyebrow rv">Sobre Mateus</span>
-    <h2 class="serif rv">Quem está por trás de cada escolha.</h2>
-    <p class="rv">Sou Mateus Gregório. Há mais de 14 anos ajudo famílias a encontrarem o lugar onde viverão as suas próximas histórias. Acredito que a casa certa não muda só o endereço — muda o jeito como uma família vive.</p>
-    <div class="rv"><a class="btn" href="sobre.html">Conhecer a história</a></div>
+<!-- BLOCO 4 — VÍDEO DO MATEUS -->
+<section class="fala" id="sobre">
+  <span class="eyebrow rv">Quem está por trás de cada escolha</span>
+  <h2 class="serif rv">Antes da casa, a confiança.</h2>
+  <p class="lead rv">No alto padrão, ninguém compra só um imóvel — compra em quem confia. Deixa o Mateus te contar, em um minuto, como ele enxerga cada família e cada casa.</p>
+  <div class="player rv" id="falaPlayer" onclick="playFala()" style="background-image:url('mateus.jpg')">
+    <div class="play"><span>&#9654;</span></div>
+    <div class="tag">Mateus Gregório · Rei das Casas</div>
+  </div>
+  <div class="who rv">Há 14 anos ajudando famílias a encontrarem o seu lugar</div>
+</section>
+
+<!-- BLOCO 5 — DEPOIMENTOS -->
+<section class="depo">
+  <span class="eyebrow rv">Histórias reais</span>
+  <h2 class="serif rv">O que as famílias levam daqui.</h2>
+  <div class="depo-grid">
+    <div class="card rv"><p>&ldquo;Não procurávamos uma casa maior. Procurávamos um lugar onde os domingos voltassem a ser inteiros.&rdquo;</p><div class="by">— uma família · Passo Fundo</div></div>
+    <div class="card rv"><p>&ldquo;O Mateus não empurrou imóveis. Esperou a gente — e trouxe a casa certa, na hora certa.&rdquo;</p><div class="by">— um casal atendido</div></div>
+    <div class="card rv"><p>&ldquo;Mudamos de endereço e, sem perceber, mudamos a forma como a nossa família vive.&rdquo;</p><div class="by">— uma família realizada</div></div>
   </div>
 </section>
 
-<!-- BLOCO 5 — CTA FINAL -->
+<!-- BLOCO 6 — CONVITE FINAL -->
 <section class="final" id="contato">
-  <h2 class="serif rv">Ainda não encontrou a residência que procura?</h2>
+  <h2 class="serif rv">Talvez a próxima história da sua família já tenha endereço.</h2>
   <p class="rv">Às vezes a casa certa ainda nem foi anunciada. Quando ela aparecer, você será o primeiro a saber.</p>
   <div class="rv"><a class="btn solid" href="https://wa.me/5554999905912?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Rei%20das%20Casas%20e%20quero%20conversar." target="_blank" rel="noopener">Conversar comigo</a></div>
 </section>
@@ -167,6 +204,7 @@ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 (function(){var V=[document.getElementById("hv0"),document.getElementById("hv1")];if(!V[0])return;
 function start(n){var v=V[n];try{v.currentTime=0;}catch(e){}v.play().catch(function(){});V.forEach(function(x,i){x.classList.toggle("show",i===n)});}
 V.forEach(function(v,i){v.addEventListener("ended",function(){start((i+1)%2)});});start(0);})();
+function playFala(){var VID="";if(!VID)return;var el=document.getElementById('falaPlayer');el.classList.add('on');el.innerHTML='<iframe width="100%" height="100%" style="position:absolute;inset:0;border:0" src="https://www.youtube.com/embed/'+VID+'?autoplay=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';}
 </script>
 <style>.wa-float{position:fixed;bottom:22px;right:22px;z-index:300;display:inline-flex;align-items:center;gap:11px;height:58px;padding:0 24px;border-radius:40px;background:#C8A348;color:#0E0E0E;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 14px 38px -10px rgba(0,0,0,.65);transition:transform .35s cubic-bezier(.19,1,.22,1);text-decoration:none}.wa-float:hover{transform:translateY(-3px)}.wa-float svg{width:27px;height:27px;fill:#0E0E0E;flex:none}@media(max-width:600px){.wa-float{padding:0;width:58px;height:58px;justify-content:center;bottom:18px;right:18px}.wa-float .t{display:none}}</style>
 <a class="wa-float" href="https://wa.me/5554999905912?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Rei%20das%20Casas%20e%20quero%20conversar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.48-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg><span class="t">Falar com o especialista</span></a>
