@@ -31,13 +31,15 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 @media(max-width:900px){.nav .links .lnk:not(.cta){display:none}}
 
 /* BLOCO 1 — HERO */
-.hero{height:100vh;min-height:620px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;
-  background:linear-gradient(180deg,rgba(14,14,14,.55),rgba(14,14,14,.25) 42%,rgba(14,14,14,.8)),url('imp-04.jpg') center/cover no-repeat}
+.hero{height:100vh;min-height:620px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;overflow:hidden;background:var(--ink) url('imp-04.jpg') center/cover no-repeat}
+.hero .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transition:opacity 1s ease}.hero .bgv.show{opacity:1}
+.hero .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,14,.5),rgba(14,14,14,.22) 42%,rgba(14,14,14,.82))}
+.hero .hcontent{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
 .hero h1{font-size:clamp(40px,6.6vw,104px);letter-spacing:.005em;opacity:0;animation:fade 1.5s .3s var(--ease) forwards}
 .hero h1 .b2{display:block;color:var(--gold);font-style:italic;font-size:.86em;margin-top:.08em}
 .hero .cta-wrap{margin-top:46px;opacity:0;animation:fade 1.6s .8s var(--ease) forwards}
 @keyframes fade{to{opacity:1}}
-.cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--warm)}
+.cue{position:absolute;z-index:2;bottom:26px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--warm)}
 .cue i{display:block;color:var(--gold);font-style:normal;margin-top:6px;animation:bob 2s var(--ease) infinite}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}.rv.in{opacity:1;transform:none}
@@ -96,8 +98,13 @@ footer .navf a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color
 
 <!-- BLOCO 1 — HERO -->
 <header class="hero">
-  <h1 class="serif">Algumas casas mudam de endereço.<span class="b2">Outras mudam a vida de uma família.</span></h1>
-  <div class="cta-wrap"><a class="btn solid" href="casas.html">Conhecer as residências</a></div>
+  <video class="bgv" id="hv0" muted playsinline poster="imp-04.jpg" preload="auto"><source src="loop-1.mp4" type="video/mp4"></video>
+  <video class="bgv" id="hv1" muted playsinline><source src="loop-2.mp4" type="video/mp4"></video>
+  <div class="scrim"></div>
+  <div class="hcontent">
+    <h1 class="serif">Algumas casas mudam de endereço.<span class="b2">Outras mudam a vida de uma família.</span></h1>
+    <div class="cta-wrap"><a class="btn solid" href="casas.html">Conhecer as residências</a></div>
+  </div>
   <div class="cue">Role<i>↓</i></div>
 </header>
 
@@ -157,6 +164,9 @@ footer .navf a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color
 var nav=document.getElementById('nav');addEventListener('scroll',function(){nav.classList.toggle('s',scrollY>40)});
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.16});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+(function(){var V=[document.getElementById("hv0"),document.getElementById("hv1")];if(!V[0])return;
+function start(n){var v=V[n];try{v.currentTime=0;}catch(e){}v.play().catch(function(){});V.forEach(function(x,i){x.classList.toggle("show",i===n)});}
+V.forEach(function(v,i){v.addEventListener("ended",function(){start((i+1)%2)});});start(0);})();
 </script>
 <style>.wa-float{position:fixed;bottom:22px;right:22px;z-index:300;display:inline-flex;align-items:center;gap:11px;height:58px;padding:0 24px;border-radius:40px;background:#C8A348;color:#0E0E0E;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 14px 38px -10px rgba(0,0,0,.65);transition:transform .35s cubic-bezier(.19,1,.22,1);text-decoration:none}.wa-float:hover{transform:translateY(-3px)}.wa-float svg{width:27px;height:27px;fill:#0E0E0E;flex:none}@media(max-width:600px){.wa-float{padding:0;width:58px;height:58px;justify-content:center;bottom:18px;right:18px}.wa-float .t{display:none}}</style>
 <a class="wa-float" href="https://wa.me/5554999905912?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Rei%20das%20Casas%20e%20quero%20conversar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.23 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.48-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg><span class="t">Falar com o especialista</span></a>
