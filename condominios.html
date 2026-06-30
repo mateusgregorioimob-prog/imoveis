@@ -75,8 +75,7 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 footer{padding:13vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
 footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
-.cbanner{height:clamp(220px,38vh,440px);background-size:cover;background-position:center;border:1px solid var(--hair);margin-bottom:42px;position:relative}
-.cbanner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(14,14,14,.5))}
+.cbanner{display:block;width:100%;height:auto;border:1px solid var(--hair);margin-bottom:42px}
 </style></head><body>
 
 <nav class="nav" id="nav">
@@ -100,7 +99,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 <main class="wrap">
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-la-barra.jpg')"></div>
+    <img class="cbanner" src="cond-la-barra.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">01</span><div><h2 class="serif">La Barra</h2><div class="bairro">Cidade Nova</div></div></div>
     <div class="cquote rv">É o <span class="hl">CEP mais caro</span> de Passo Fundo. Quando aparece uma casa boa, fecha em menos de 30 dias.</div>
     <div class="cstats rv">
@@ -122,7 +121,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-bosque.jpg')"></div>
+    <img class="cbanner" src="cond-bosque.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">02</span><div><h2 class="serif">Bosque Village</h2><div class="bairro">Vila Luiza</div></div></div>
     <div class="cquote rv">Bosque Village é sinônimo de exclusividade e natureza. <span class="hl">Poucos entram, ninguém sai.</span></div>
     <div class="cstats rv">
@@ -142,7 +141,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-morada.jpg')"></div>
+    <img class="cbanner" src="cond-morada.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">03</span><div><h2 class="serif">Morada dos Ipês</h2><div class="bairro">Roselândia · Rua Eduardo Laimer</div></div></div>
     <div class="cquote rv">A única piscina semiolímpica com <span class="hl">raia de 25 metros</span> em condomínio de Passo Fundo. Se a família tem nadador, o resto não compete.</div>
     <div class="cstats rv">
@@ -164,7 +163,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-vivenda.jpg')"></div>
+    <img class="cbanner" src="cond-vivenda.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">04</span><div><h2 class="serif">Vivenda das Palmeiras</h2><div class="bairro">São José</div></div></div>
     <div class="cquote rv">O condomínio do entorno da UPF. Saiu de casa, em <span class="hl">3 minutos</span> está no consultório ou na sala de aula. Tempo é luxo aqui.</div>
     <div class="cstats rv">
@@ -187,7 +186,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-terrano.jpg')"></div>
+    <img class="cbanner" src="cond-terrano.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">05</span><div><h2 class="serif">Terrano Condomínio Clube</h2><div class="bairro">Estrada do Trigo (ERS-426) · próximo à UPF</div></div></div>
     <div class="cquote rv">&ldquo;O equilíbrio perfeito entre <span class="hl">natureza, lazer e conforto</span>&rdquo; — um clube completo no seu quintal, ao lado da UPF.</div>
     <div class="cstats rv">
@@ -209,7 +208,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-sonatta.jpg')"></div>
+    <img class="cbanner" src="cond-sonatta.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">06</span><div><h2 class="serif">Sonatta Condomínio Club</h2><div class="bairro">Boqueirão · Passo Fundo</div></div></div>
     <div class="cquote rv">A <span class="hl">única quadra de padel oficial</span> dentro de condomínio em PF. Esporte do momento na porta de casa — quem entra agora compra na faixa de lançamento.</div>
     <div class="cstats rv">
@@ -229,7 +228,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-quinta.jpg')"></div>
+    <img class="cbanner" src="cond-quinta.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">07</span><div><h2 class="serif">Quinta da Serra</h2><div class="bairro">São Cristóvão · Rua Cintia da Silva</div></div></div>
     <div class="cquote rv">O único condomínio com <span class="hl">estilo de campo dentro da cidade</span>: cavalo, pub inglês e trilhas — sem precisar dirigir 40 km até a chácara.</div>
     <div class="cstats rv">
@@ -249,7 +248,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-villa-palladio.jpg')"></div>
+    <img class="cbanner" src="cond-villa-palladio.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">08</span><div><h2 class="serif">Villa Palladio</h2><div class="bairro">Saída para Marau · RS-324, km 106</div></div></div>
     <div class="cquote rv">O único com <span class="hl">heliporto exclusivo</span> — a 10 minutos da UPF e do aeroporto, e com a taxa de condomínio mais baixa entre os de alto padrão.</div>
     <div class="cstats rv">
@@ -269,7 +268,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
   </section>
 
   <section class="condo">
-    <div class="cbanner" style="background-image:url('cond-noah.jpg')"></div>
+    <img class="cbanner" src="cond-noah.jpg" alt="" loading="lazy">
     <div class="chead"><span class="num serif">09</span><div><h2 class="serif">Noah Reserva Natural</h2><div class="bairro">Roselândia · Eduardo Laimer (mesma área da Morada dos Ipês)</div></div></div>
     <div class="cquote rv">5.000 m² de <span class="hl">mata atlântica preservada</span> dentro do condomínio. Único no sul do Brasil premiado por design residencial — você compra produto autoral, não commodity.</div>
     <div class="cstats rv">
