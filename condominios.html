@@ -76,6 +76,8 @@ footer{padding:13vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
 footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
 .cbanner{display:block;width:100%;height:auto;border:1px solid var(--hair);margin-bottom:42px}
+
+.navburger{display:none;background:none;border:0;color:#F5F2EB;font-size:25px;line-height:1;cursor:pointer;padding:4px 8px}@media(max-width:900px){.nav .right,.nav .links{position:fixed;inset:0;background:rgba(14,14,14,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .5s cubic-bezier(.19,1,.22,1);z-index:70}.nav.open .right,.nav.open .links{transform:none}.nav .lnk,.nav .ul{display:block !important;font-size:15px}.nav .spec,.nav .navcta,.nav .cta{margin-top:8px}.navburger{display:block !important;position:relative;z-index:80}.nav.open .navburger{color:#C8A348}}
 </style></head><body>
 
 <nav class="nav" id="nav">
@@ -88,6 +90,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
     <a class="lnk" href="para-proprietarios.html">Para proprietários</a>
     <a class="spec" href="https://wa.me/5554999905912?text=Quero%20falar%20sobre%20os%20condom%C3%ADnios%20de%20alto%20padr%C3%A3o">Contato</a>
   </div>
+  <button class="navburger" aria-label="Abrir menu" onclick="this.closest('.nav').classList.toggle('open')">&#9776;</button>
 </nav>
 
 <header class="hero">

@@ -305,6 +305,8 @@
   footer{padding:18vh 0 12vh}footer .big{font-size:46px;max-width:none}
   .end-sub{font-size:24px}footer .meta{font-size:14px}footer .meta .mark{font-size:22px}.editionline{font-size:13px}
 }
+
+.navburger{display:none;background:none;border:0;color:#F5F2EB;font-size:25px;line-height:1;cursor:pointer;padding:4px 8px}@media(max-width:900px){.nav .right,.nav .links{position:fixed;inset:0;background:rgba(14,14,14,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .5s cubic-bezier(.19,1,.22,1);z-index:70}.nav.open .right,.nav.open .links{transform:none}.nav .lnk,.nav .ul{display:block !important;font-size:15px}.nav .spec,.nav .navcta,.nav .cta{margin-top:8px}.navburger{display:block !important;position:relative;z-index:80}.nav.open .navburger{color:#C8A348}}
 </style>
 </head>
 <body>
@@ -319,6 +321,7 @@
     <a class="ul" href="para-proprietarios.html">Para proprietários</a>
     <a class="navcta" href="https://wa.me/5554999905912?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Rei%20das%20Casas%20e%20quero%20conversar." target="_blank" rel="noopener">Contato</a>
   </div>
+  <button class="navburger" aria-label="Abrir menu" onclick="this.closest('.nav').classList.toggle('open')">&#9776;</button>
 </nav>
 <style>
 .navcta{display:inline-block;border:1px solid rgba(200,163,72,.55);color:var(--paper);padding:11px 24px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;border-radius:30px;transition:.5s cubic-bezier(.19,1,.22,1)}

@@ -23,7 +23,7 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 .nav .right{display:flex;align-items:center;gap:24px}
 .nav .lnk{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);transition:.4s}.nav .lnk:hover{color:var(--gold)}
 .nav .spec{border:1px solid var(--line);padding:12px 24px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;transition:.6s var(--ease)}.nav .spec:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-@media(max-width:900px){.nav .lnk{display:none}}
+.navburger{display:none;background:none;border:0;color:var(--paper);font-size:25px;line-height:1;cursor:pointer;padding:4px 8px}@media(max-width:900px){.nav .right{position:fixed;inset:0;background:rgba(14,14,14,.97);flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .5s var(--ease);z-index:70}.nav.open .right{transform:none}.nav .lnk{display:block;font-size:15px}.nav .spec{margin-top:8px}.navburger{display:block;position:relative;z-index:80}.nav.open .navburger{color:var(--gold)}}
 .ahero{min-height:74vh;position:relative;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(14,14,14,.4),rgba(14,14,14,.35) 40%,rgba(14,14,14,.9)),url('palmeiras-hero.jpg') center/cover no-repeat;padding:0 clamp(24px,6vw,80px) 8vh}
 .ahero .in{max-width:900px}
 .ahero .cat{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
@@ -59,6 +59,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
     <a class="lnk" href="para-proprietarios.html">Para propriet&aacute;rios</a>
     <a class="spec" href="https://wa.me/5554999905912?text=Vim%20pelo%20Jornal%20do%20Rei%20das%20Casas%20e%20quero%20conversar.">Contato</a>
   </div>
+  <button class="navburger" aria-label="Abrir menu" onclick="this.closest('.nav').classList.toggle('open')">&#9776;</button>
 </nav>
 <header class="ahero">
   <div class="in">
