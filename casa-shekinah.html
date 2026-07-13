@@ -74,6 +74,12 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 .close p{color:var(--dim);font-size:clamp(15px,1.4vw,18px);line-height:1.85;max-width:34ch;margin:0 auto 44px}
 .btn{display:inline-block;border:1px solid var(--line);padding:23px 58px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;transition:.7s var(--ease)}
 .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);letter-spacing:.38em}
+.filme{padding:16vh clamp(24px,6vw,80px);text-align:center}
+.filme .eyebrow{display:block}
+.filme h2{font-size:clamp(28px,4vw,52px);margin:16px auto 46px;max-width:22ch;line-height:1.12}
+.filme .w{max-width:1040px;margin:0 auto}
+.filme .vframe{position:relative;aspect-ratio:16/9;border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 110px -60px rgba(0,0,0,.9);background:#000}
+.filme video{width:100%;height:100%;display:block;object-fit:cover}
 footer{padding:13vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
 footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
@@ -92,7 +98,7 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 </style>
 </head><body>
 <nav class="nav" id="nav">
-  <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt=""><b>Rei das Casas</b></a>
+  <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt="" loading="lazy" decoding="async"><b>Rei das Casas</b></a>
   <div class="right">
     <a class="lnk" href="rei-das-casas.html">Início</a>
     <a class="lnk" href="casas.html">Residências</a>
@@ -130,6 +136,14 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 <section class="line"><p class="rv">Nova, pronta, à sua espera.<br>Só falta a sua <span class="gold">família.</span></p></section>
 <section class="frame" style="background-image:url('shekinah-03.jpg')">
   <div class="cap"><h2 class="serif rv">Três suítes, para o descanso de cada um.</h2><div class="sub rv">piso aquecido · silêncio</div></div>
+</section>
+<section class="filme">
+  <div class="w"><span class="eyebrow rv">O filme da casa</span>
+    <h2 class="serif rv">Veja a Casa Shekinah em movimento.</h2>
+    <div class="vframe rv">
+      <video controls preload="metadata" playsinline poster="shekinah-hero.jpg" src="https://vps67275.publiccloud.com.br/midia/casa-shekinah.mp4"></video>
+    </div>
+  </div>
 </section>
 <section class="local">
   <span class="eyebrow rv">A vizinhança</span>
