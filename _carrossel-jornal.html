@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222;display:flex;justify-content:center;padding:24px;font-family:'Jost',sans-serif}
+.ig-frame{width:420px;background:#000;border-radius:14px;overflow:hidden}
+.carousel-viewport{width:420px;height:525px;overflow:hidden;position:relative;cursor:grab}
+.carousel-track{display:flex;transition:transform .4s cubic-bezier(.19,1,.22,1)}
+.slide{width:420px;height:525px;flex:0 0 420px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 42px 70px}
+.slide.center{justify-content:center;align-items:center;text-align:center}
+.dark{background:#0E0E0E;color:#F5F2EB}
+.paper{background:#F5F2EB;color:#0E0E0E}
+.grad{background:linear-gradient(168deg,#8F7128 0%,#C8A348 52%,#E0C77E 100%);color:#0E0E0E}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:300}
+.eyebrow{font-size:10px;letter-spacing:3.5px;text-transform:uppercase}
+.gold{color:#C8A348}
+.wm{font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:5px;font-size:11px;text-transform:uppercase}
+.t{font-size:34px;line-height:1.06;font-weight:300;font-family:'Cormorant Garamond',serif}
+.body{font-size:14.5px;line-height:1.62;font-weight:300}
+.rule{width:48px;height:1px;background:#C8A348;margin:18px 0}
+.num{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1;color:#C8A348}
+.stat .l{font-size:11px;letter-spacing:.5px;color:rgba(245,242,235,.7);margin-top:4px}
+.stat{margin-bottom:20px}
+</style></head><body>
+<div class="ig-frame">
+  <div class="ig-header" style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:#000;color:#fff;font-family:'Jost',sans-serif">
+    <div style="width:34px;height:34px;border-radius:50%;background:#C8A348;display:flex;align-items:center;justify-content:center;color:#0E0E0E;font-family:'Cormorant Garamond',serif;font-size:18px">♛</div>
+    <div><div style="font-size:13px;font-weight:600">reidascasas.pf</div><div style="font-size:11px;color:#888">Rei das Casas · Passo Fundo</div></div>
+  </div>
+  <div class="carousel-viewport"><div class="carousel-track" id="track">
+
+    <!-- 1 CAPA -->
+    <div class="slide dark center">
+      <div class="wm gold" style="margin-bottom:30px">♛ Rei das Casas</div>
+      <div class="eyebrow gold" style="margin-bottom:18px">O Jornal · Guia da cidade</div>
+      <h1 class="serif" style="font-size:44px;line-height:1.04;max-width:11ch">Onde morar bem em Passo Fundo</h1>
+      <div class="rule" style="margin:24px auto"></div>
+      <p class="serif" style="font-style:italic;font-size:20px;color:#C8A348;max-width:20ch">A cidade virou polo — e isso muda onde a sua família vai morar.</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(245,242,235,.12);border-radius:2px"><div style="height:100%;width:12.5%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(245,242,235,.4)">1/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(245,242,235,.06))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(245,242,235,.35)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 2 POLO (paper) -->
+    <div class="slide paper">
+      <div class="eyebrow gold" style="margin-bottom:14px">O que mudou</div>
+      <h2 class="t" style="max-width:13ch">Uma cidade que virou polo.</h2>
+      <div class="rule"></div>
+      <p class="body" style="color:#3a352c;max-width:30ch">Referência em <b style="font-weight:500">saúde</b> para toda a metade norte do estado — mais de <b style="font-weight:500">1 milhão</b> de pessoas atendidas. Polo <b style="font-weight:500">universitário</b> (UPF) e força do <b style="font-weight:500">agronegócio</b>. Hoje, entre as maiores economias do Rio Grande do Sul.</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(0,0,0,.08);border-radius:2px"><div style="height:100%;width:25%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(0,0,0,.3)">2/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(0,0,0,.05))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(0,0,0,.25)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 3 OBRAS (dark, stats) -->
+    <div class="slide dark">
+      <div class="eyebrow gold" style="margin-bottom:14px">O mercado</div>
+      <h2 class="t" style="max-width:14ch;margin-bottom:26px">Mais de 100 obras ao mesmo tempo.</h2>
+      <div class="stat"><div class="n">+100</div><div class="l">edificações em construção (~6 mil unidades)</div></div>
+      <div class="stat"><div class="n">R$ 218 mi</div><div class="l">em negócios na feira Construimóveis</div></div>
+      <div class="stat" style="margin-bottom:0"><div class="n">~R$ 20 mi</div><div class="l">captados p/ infraestrutura em 2025</div></div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(245,242,235,.12);border-radius:2px"><div style="height:100%;width:37.5%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(245,242,235,.4)">3/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(245,242,235,.06))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(245,242,235,.35)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 4 CIDADE NOVA (paper) -->
+    <div class="slide paper">
+      <div class="num gold" style="margin-bottom:6px">Cidade Nova</div>
+      <h2 class="t" style="max-width:12ch">O coração valorizado.</h2>
+      <div class="rule"></div>
+      <p class="body" style="color:#3a352c;max-width:30ch">A região mais desejada. O condomínio <b style="font-weight:500">La Barra</b>, com lago e clube, reúne as casas mais imponentes da cidade. Quando aparece uma casa boa, raramente espera.</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(0,0,0,.08);border-radius:2px"><div style="height:100%;width:50%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(0,0,0,.3)">4/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(0,0,0,.05))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(0,0,0,.25)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 5 LUCAS ARAUJO (dark) -->
+    <div class="slide dark">
+      <div class="num gold" style="margin-bottom:6px">Lucas Araújo</div>
+      <h2 class="t" style="max-width:12ch">Morar entre árvores.</h2>
+      <div class="rule"></div>
+      <p class="body" style="color:rgba(245,242,235,.78);max-width:30ch">Um dos bairros mais arborizados, com árvores de mais de <b style="font-weight:500;color:#fff">300 anos</b>. Verde e silêncio sem sair da cidade — e a avenida principal recém-revitalizada.</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(245,242,235,.12);border-radius:2px"><div style="height:100%;width:62.5%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(245,242,235,.4)">5/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(245,242,235,.06))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(245,242,235,.35)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 6 SAO JOSE / UPF (paper) -->
+    <div class="slide paper">
+      <div class="num gold" style="margin-bottom:6px">São José · entorno da UPF</div>
+      <h2 class="t" style="max-width:12ch">Perto de tudo.</h2>
+      <div class="rule"></div>
+      <p class="body" style="color:#3a352c;max-width:30ch">A minutos da universidade e dos hospitais. Atrai médicos, professores e famílias jovens. Aqui, <b style="font-weight:500">tempo é luxo</b>.</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(0,0,0,.08);border-radius:2px"><div style="height:100%;width:75%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(0,0,0,.3)">6/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(0,0,0,.05))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(0,0,0,.25)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 7 ROSELANDIA / CAMPO (dark) -->
+    <div class="slide dark">
+      <div class="num gold" style="margin-bottom:6px">Roselândia & o campo</div>
+      <h2 class="t" style="max-width:13ch">Lazer completo — e clima de campo.</h2>
+      <div class="rule"></div>
+      <p class="body" style="color:rgba(245,242,235,.78);max-width:31ch">Condomínios completos como <b style="font-weight:500;color:#fff">Morada dos Ipês</b> e <b style="font-weight:500;color:#fff">Noah</b>. E o campo dentro da cidade: <b style="font-weight:500;color:#fff">Terrano, Quinta da Serra, Villa Palladio</b> — natureza e clube a minutos do centro.</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(245,242,235,.12);border-radius:2px"><div style="height:100%;width:87.5%;background:#C8A348;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(245,242,235,.4)">7/8</span></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:46px;display:flex;align-items:center;justify-content:center;background:linear-gradient(to right,transparent,rgba(245,242,235,.06))"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="rgba(245,242,235,.35)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </div>
+
+    <!-- 8 CTA (grad) -->
+    <div class="slide grad center">
+      <div class="eyebrow" style="color:rgba(14,14,14,.6);margin-bottom:20px">O convite</div>
+      <h2 class="serif" style="font-size:30px;line-height:1.18;max-width:18ch;font-weight:400">A casa certa pode estar anunciada — ou não. Eu procuro a cidade inteira pra sua família.</h2>
+      <div style="width:46px;height:1px;background:rgba(14,14,14,.5);margin:24px auto"></div>
+      <p style="font-size:13px;letter-spacing:.5px;color:#0E0E0E">Leia a matéria completa <b>— link na bio</b></p>
+      <div class="wm" style="margin-top:30px;color:#0E0E0E">♛ Rei das Casas</div>
+      <p style="font-size:11px;letter-spacing:1px;color:rgba(14,14,14,.7);margin-top:8px">@reidascasas.pf · reidascasaspf.com.br</p>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 28px 20px;display:flex;align-items:center;gap:10px"><div style="flex:1;height:3px;background:rgba(14,14,14,.18);border-radius:2px"><div style="height:100%;width:100%;background:#0E0E0E;border-radius:2px"></div></div><span style="font-size:11px;color:rgba(14,14,14,.5)">8/8</span></div>
+    </div>
+
+  </div></div>
+  <div class="ig-dots" style="display:flex;gap:5px;justify-content:center;padding:12px;background:#000"></div>
+</div>
+<script>
+var track=document.getElementById('track'),i=0,n=8;
+var dots=document.querySelector('.ig-dots');
+for(var k=0;k<n;k++){var d=document.createElement('div');d.style.cssText='width:6px;height:6px;border-radius:50%;background:'+(k===0?'#C8A348':'#444');dots.appendChild(d);}
+function go(x){i=Math.max(0,Math.min(n-1,x));track.style.transform='translateX('+(-i*420)+'px)';[].forEach.call(dots.children,function(c,j){c.style.background=j===i?'#C8A348':'#444';});}
+var vp=document.querySelector('.carousel-viewport'),sx=0,drag=false;
+vp.addEventListener('mousedown',function(e){drag=true;sx=e.clientX;});
+window.addEventListener('mouseup',function(e){if(!drag)return;drag=false;var dx=e.clientX-sx;if(dx<-40)go(i+1);else if(dx>40)go(i-1);});
+vp.addEventListener('click',function(e){if(e.clientX> vp.getBoundingClientRect().left+210)go(i+1);else go(i-1);});
+</script>
+</body></html>
