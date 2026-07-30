@@ -219,6 +219,26 @@ if(!o){var src="";
 var s=LS.getItem("rdc_s");if(!s){s=Math.random().toString(36).slice(2,10);LS.setItem("rdc_s",s);}
 function hit(ev){new Image().src="https://vps67275.publiccloud.com.br/track?p="+encodeURIComponent(p)+"&c="+encodeURIComponent(c)+"&utm="+encodeURIComponent(u)+"&r="+encodeURIComponent(ref)+"&o="+encodeURIComponent(o)+"&s="+s+"&ev="+ev+"&_="+Date.now();}
 hit("view");
+/* ===== REF DO ANUNCIO NO PREFILL (aprovado 29/07 — identico ao testado na Shekinah) =====
+   O anuncio manda ?rdc=CODIGO. Guardamos na sessao (sobrevive a navegacao interna)
+   e acrescentamos ao final do texto do WhatsApp, de forma discreta e legivel.
+   Sem parametro (visita organica) nada muda: o prefill fica exatamente como hoje. */
+try{
+  var _rq=(q.get("rdc")||q.get("utm_content")||"").trim().toUpperCase().slice(0,12);
+  if(/^[A-Z0-9-]{3,12}$/.test(_rq)) sessionStorage.setItem("rdc_ref",_rq);
+  var _ref=sessionStorage.getItem("rdc_ref");
+  if(_ref){
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+      try{
+        var u=new URL(a.href), t=u.searchParams.get("text")||"";
+        if(t && t.indexOf("ref.")<0){
+          u.searchParams.set("text", t+" \u2014 ref. "+_ref);
+          a.href=u.toString();
+        }
+      }catch(e){}
+    });
+  }
+}catch(e){}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');if(a)hit("whatsapp");},true);
 }catch(e){}})();</script>
 </body></html>
