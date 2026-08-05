@@ -239,4 +239,20 @@ function hit(ev){new Image().src="https://vps67275.publiccloud.com.br/track?p="+
 hit("view");
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');if(a)hit("whatsapp");},true);
 }catch(e){}})();</script>
+<!-- rdc-no-whats -->
+<script>(function(){
+  // guarda a origem do anúncio pra ela sobreviver à navegação no site
+  try{
+    var u=new URLSearchParams(location.search), r=(u.get('rdc')||'').toUpperCase();
+    if(r) sessionStorage.setItem('rdc', r); else r=sessionStorage.getItem('rdc')||'';
+    if(!r) return;
+    document.querySelectorAll('a[href*="wa.me/"],a[href*="api.whatsapp.com"]').forEach(function(a){
+      var h=a.getAttribute('href')||'';
+      if(h.indexOf('RDC-')>-1) return;                      // já tem
+      var m=h.match(/([?&]text=)([^&]*)/);
+      if(m){ a.setAttribute('href', h.replace(m[0], m[1]+encodeURIComponent(decodeURIComponent(m[2])+' (RDC-'+r+')'))); }
+      else { a.setAttribute('href', h+(h.indexOf('?')>-1?'&':'?')+'text='+encodeURIComponent('Olá! Vim pelo site do Rei das Casas. (RDC-'+r+')')); }
+    });
+  }catch(e){}
+})();</script>
 </body></html>
