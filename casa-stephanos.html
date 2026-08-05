@@ -102,6 +102,12 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 .local .locgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 60px;max-width:920px;margin:0 auto}
 .local .loc .t{font-family:"Cormorant Garamond",serif;font-size:clamp(20px,2.2vw,28px);color:var(--paper)}
 .local .loc .d{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.filme{padding:16vh clamp(24px,6vw,80px);text-align:center}
+.filme .eyebrow{display:block}
+.filme h2{font-size:clamp(28px,4vw,52px);margin:16px auto 46px;max-width:22ch;line-height:1.12}
+.filme .w{max-width:1040px;margin:0 auto}
+.filme .vframe{position:relative;aspect-ratio:16/9;border:1px solid var(--line);overflow:hidden;box-shadow:0 50px 110px -60px rgba(0,0,0,.9);background:#000}
+.filme video{width:100%;height:100%;display:block;object-fit:cover}
 </style>
 </head><body>
 <nav class="nav" id="nav">
@@ -143,6 +149,14 @@ footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:v
 <section class="line"><p class="rv">O lazer inteiro,<br>dentro de <span class="gold">casa.</span></p></section>
 <section class="frame" style="background-image:url('steph-03.jpg')">
   <div class="cap"><h2 class="serif rv">Feita por quem morava aqui — e pensou em cada detalhe.</h2><div class="sub rv">arquitetura · marcenaria · acabamento</div></div>
+</section>
+<section class="filme">
+  <div class="w"><span class="eyebrow rv">O filme da casa</span>
+    <h2 class="serif rv">Veja a Stephanos em movimento.</h2>
+    <div class="vframe rv">
+      <video controls preload="metadata" playsinline poster="https://vps67275.publiccloud.com.br/midia/stephanos/stephanos-capa.jpg" src="https://vps67275.publiccloud.com.br/midia/stephanos/stephanos-web.mp4"></video>
+    </div>
+  </div>
 </section>
 <section class="local">
   <span class="eyebrow rv">A localização</span>
