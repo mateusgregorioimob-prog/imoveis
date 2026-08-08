@@ -160,6 +160,12 @@ var s=LS.getItem("rdc_s");if(!s){s=Math.random().toString(36).slice(2,10);LS.set
 function _rdcv(){try{var _s=new URLSearchParams(location.search);return (sessionStorage.getItem("rdc_ref")||_s.get("rdc")||_s.get("utm_content")||"").toUpperCase().slice(0,12)}catch(e){return ""}}
 function hit(ev){new Image().src="https://vps67275.publiccloud.com.br/track?p="+encodeURIComponent(p)+"&c="+encodeURIComponent(c)+"&utm="+encodeURIComponent(u)+"&r="+encodeURIComponent(ref)+"&o="+encodeURIComponent(o)+"&s="+s+"&ev="+ev+"&q="+encodeURIComponent(location.search)+"&rdc="+encodeURIComponent(_rdcv())+"&_="+Date.now();}
 hit("view");
+/* ROLAGEM — 08/08/2026. Sem isto eu sei onde o botão está, não onde a pessoa para. */
+(function(){try{var m={25:0,50:0,75:0,100:0};function ver(){
+ var h=document.body.scrollHeight-window.innerHeight; if(h<=0) return;
+ var pct=Math.round((window.scrollY||document.documentElement.scrollTop)/h*100);
+ [25,50,75,100].forEach(function(k){ if(!m[k]&&pct>=k){m[k]=1;hit("s"+k);} });}
+ window.addEventListener("scroll",ver,{passive:true}); setTimeout(ver,1200);}catch(e){}})();
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');if(a)hit("whatsapp");},true);
 }catch(e){}})();</script>
 <!-- rdc-no-whats -->
