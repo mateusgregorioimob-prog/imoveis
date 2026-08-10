@@ -380,7 +380,12 @@ hit("view");
  var pct=Math.round((window.scrollY||document.documentElement.scrollTop)/h*100);
  [25,50,75,100].forEach(function(k){ if(!m[k]&&pct>=k){m[k]=1;hit("s"+k);} });}
  window.addEventListener("scroll",ver,{passive:true}); setTimeout(ver,1200);}catch(e){}})();
-document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');if(a)hit("whatsapp");},true);
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');if(!a)return;hit("whatsapp");
+/* avisa o Google no MESMO clique. O rastreador nosso segue igual — este evento
+   e' so pra o Google Ads poder otimizar por CONVERSA em vez de clique. */
+try{if(typeof gtag==="function"){var _p=(location.pathname.split("/").pop()||"index").replace(/\.html?$/,"");
+gtag("event","clique_whatsapp",{imovel:_p,origem:(new URLSearchParams(location.search).get("rdc")||sessionStorage.getItem("rdc")||"organico")});}}catch(_e){}
+},true);
 }catch(e){}})();</script>
 <!-- rdc-no-whats -->
 <script>(function(){
