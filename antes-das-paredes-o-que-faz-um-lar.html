@@ -35,7 +35,16 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 footer{padding:12vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
 footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}
-</style></head><body>
+</style><!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;
+n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1000162372722507');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1000162372722507&ev=PageView&noscript=1"/></noscript>
+</head><body>
 <nav class="nav"><a class="brand" href="rei-das-casas.html"><b>Rei das Casas</b></a><div class="right"><a class="lnk" href="rei-das-casas.html">Início</a><a class="lnk" href="casas.html">Residências</a><a class="lnk" href="condominios.html">Condomínios</a><a class="lnk" href="jornal.html">Jornal</a></div>  <button class="navburger" aria-label="Abrir menu" onclick="this.closest('.nav').classList.toggle('open')">&#9776;</button>
 </nav>
 <header class="ahero"><div class="in"><div class="cat">O Jornal · Propósito</div><h1 class="serif">Antes das Paredes: O que Faz um Lar</h1><p class="dek">Uma reflexão sobre o que realmente muda quando uma família encontra a casa certa.</p></div></header>
@@ -73,7 +82,8 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 /* avisa o Google no MESMO clique. O rastreador nosso segue igual — este evento
    e' so pra o Google Ads poder otimizar por CONVERSA em vez de clique. */
 try{if(typeof gtag==="function"){var _p=(location.pathname.split("/").pop()||"index").replace(/\.html?$/,"");
-gtag("event","clique_whatsapp",{imovel:_p,origem:(new URLSearchParams(location.search).get("rdc")||sessionStorage.getItem("rdc")||"organico")});}}catch(_e){}
+gtag("event","clique_whatsapp",{imovel:_p,origem:(new URLSearchParams(location.search).get("rdc")||sessionStorage.getItem("rdc")||"organico")});}
+try{if(typeof fbq==="function"){fbq("track","Contact",{content_name:_p});}}catch(_e2){}}catch(_e){}
 },true);
 }catch(e){}})();</script>
 <!-- rdc-no-whats -->

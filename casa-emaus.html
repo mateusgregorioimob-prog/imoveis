@@ -102,6 +102,15 @@ footer{padding:13vh 0 9vh;text-align:center;border-top:1px solid var(--hair)}
 footer .b{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:15px;display:block;margin-bottom:14px}
 footer a.bk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}footer a.bk:hover{color:var(--gold)}
 </style>
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;
+n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1000162372722507');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=1000162372722507&ev=PageView&noscript=1"/></noscript>
 </head><body>
 <nav class="nav" id="nav">
   <a class="brand" href="rei-das-casas.html"><img src="crown-rei.png" alt="" loading="lazy" decoding="async"><b>Rei das Casas</b></a>
@@ -173,4 +182,51 @@ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 </script>
 <a class="wa-float" href="https://wa.me/5554999905912?text=Vim%20pelo%20site%20do%20Rei%20das%20Casas%20e%20quero%20falar%20sobre%20a%20Casa%20Emaús." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.23 8.24z"/></svg><span class="t">Quero ver por dentro</span></a>
 <style>.wa-float{position:fixed;bottom:22px;right:22px;z-index:300;display:inline-flex;align-items:center;gap:11px;height:58px;padding:0 24px;border-radius:40px;background:#C8A348;color:#0E0E0E;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 14px 38px -10px rgba(0,0,0,.65);text-decoration:none}.wa-float svg{width:27px;height:27px;fill:#0E0E0E;flex:none}</style>
+<script>(function(){try{
+var q=new URLSearchParams(location.search),p=(location.pathname.split("/").pop()||"index"),c=q.get("c")||"",u=q.get("utm_source")||q.get("utm")||"",ref=document.referrer||"",LS=window.localStorage;
+var o=LS.getItem("rdc_o");
+if(!o){var src="";
+ if(u)src=u;
+ else if(q.get("fbclid"))src="instagram/meta";
+ else if(q.get("gclid"))src="google-ads";
+ else if(ref&&ref.indexOf(location.hostname)<0){var h=ref.split("/")[2]||ref;src=h.replace(/^www\./,"");}
+ o=src||"direto";LS.setItem("rdc_o",o);LS.setItem("rdc_o_em",new Date().toISOString());}
+var s=LS.getItem("rdc_s");if(!s){s=Math.random().toString(36).slice(2,10);LS.setItem("rdc_s",s);}
+function _rdcv(){try{var _s=new URLSearchParams(location.search);return (sessionStorage.getItem("rdc_ref")||_s.get("rdc")||_s.get("utm_content")||"").toUpperCase().slice(0,12)}catch(e){return ""}}
+function hit(ev){new Image().src="https://vps67275.publiccloud.com.br/track?p="+encodeURIComponent(p)+"&c="+encodeURIComponent(c)+"&utm="+encodeURIComponent(u)+"&r="+encodeURIComponent(ref)+"&o="+encodeURIComponent(o)+"&s="+s+"&ev="+ev+"&q="+encodeURIComponent(location.search)+"&rdc="+encodeURIComponent(_rdcv())+"&_="+Date.now();}
+hit("view");
+/* ROLAGEM — 08/08/2026. Sem isto eu sei onde o botão está, não onde a pessoa para. */
+(function(){try{var m={25:0,50:0,75:0,100:0};function ver(){
+ var h=document.body.scrollHeight-window.innerHeight; if(h<=0) return;
+ var pct=Math.round((window.scrollY||document.documentElement.scrollTop)/h*100);
+ [25,50,75,100].forEach(function(k){ if(!m[k]&&pct>=k){m[k]=1;hit("s"+k);} });}
+ window.addEventListener("scroll",ver,{passive:true}); setTimeout(ver,1200);}catch(e){}})();
+/* ===== REF DO ANUNCIO NO PREFILL (aprovado 29/07 — identico ao testado na Shekinah) =====
+   O anuncio manda ?rdc=CODIGO. Guardamos na sessao (sobrevive a navegacao interna)
+   e acrescentamos ao final do texto do WhatsApp, de forma discreta e legivel.
+   Sem parametro (visita organica) nada muda: o prefill fica exatamente como hoje. */
+try{
+  var _rq=(q.get("rdc")||q.get("utm_content")||"").trim().toUpperCase().slice(0,12);
+  if(/^[A-Z0-9-]{3,12}$/.test(_rq)) sessionStorage.setItem("rdc_ref",_rq);
+  var _ref=sessionStorage.getItem("rdc_ref");
+  if(_ref){
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+      try{
+        var u=new URL(a.href), t=u.searchParams.get("text")||"";
+        if(t && t.indexOf("ref.")<0){
+          u.searchParams.set("text", t+" \u2014 ref. "+_ref);
+          a.href=u.toString();
+        }
+      }catch(e){}
+    });
+  }
+}catch(e){}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="whatsapp"]');if(!a)return;hit("whatsapp");
+/* avisa o Google no MESMO clique. O rastreador nosso segue igual — este evento
+   e' so pra o Google Ads poder otimizar por CONVERSA em vez de clique. */
+try{if(typeof gtag==="function"){var _p=(location.pathname.split("/").pop()||"index").replace(/\.html?$/,"");
+gtag("event","clique_whatsapp",{imovel:_p,origem:(new URLSearchParams(location.search).get("rdc")||sessionStorage.getItem("rdc")||"organico")});}
+try{if(typeof fbq==="function"){fbq("track","Contact",{content_name:_p});}}catch(_e2){}}catch(_e){}
+},true);
+}catch(e){}})();</script>
 </body></html>
