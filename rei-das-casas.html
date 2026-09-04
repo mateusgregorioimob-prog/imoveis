@@ -127,6 +127,17 @@ footer .navf a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color
 @media(max-width:820px){.sobre{grid-template-columns:1fr}.sobre .ph{min-height:72vw}.sobre .tx{padding:12vh 26px}}
 
 .navburger{display:none;background:none;border:0;color:#F5F2EB;font-size:25px;line-height:1;cursor:pointer;padding:4px 8px}@media(max-width:900px){.nav .right,.nav .links{position:fixed;inset:0;background:rgba(14,14,14,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .5s cubic-bezier(.19,1,.22,1);z-index:70}.nav.open .right,.nav.open .links{transform:none}.nav .lnk,.nav .ul{display:block !important;font-size:15px}.nav .spec,.nav .navcta,.nav .cta{margin-top:8px}.navburger{display:block !important;position:relative;z-index:80}.nav.open .navburger{color:#C8A348}}
+
+/* O FILME — video de marca 'Quem e o Rei das Casas' (04/09/2026).
+   Servido da VPS: 37 MB nao cabe no GitHub Pages (limite 100 MB/arquivo e repo enxuto).
+   preload=none pra nao pesar o carregamento de quem nem vai assistir. */
+.filme{padding:14vh clamp(24px,6vw,80px);text-align:center;border-top:1px solid var(--hair)}
+.filme .eyebrow{display:block;margin-bottom:18px}
+.filme h2{font-size:clamp(30px,4.4vw,58px);margin-bottom:14px}
+.filme p.sub{color:var(--dim);max-width:46ch;margin:0 auto 44px;font-size:clamp(15px,1.4vw,18px)}
+.filme video{width:100%;max-width:420px;aspect-ratio:9/16;border-radius:10px;display:block;margin:0 auto;
+  background:#000;box-shadow:0 26px 70px -18px rgba(0,0,0,.8);border:1px solid var(--line)}
+@media(max-width:600px){.filme video{max-width:100%}}
 </style>
 <!-- Meta Pixel -->
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -196,6 +207,18 @@ src="https://www.facebook.com/tr?id=1000162372722507&ev=PageView&noscript=1"/></
     <p class="rv">Sou Mateus Gregório — cristão, marido e pai. Há mais de 14 anos ajudo famílias a encontrarem o lugar onde vão viver as suas próximas histórias. Não começo pela metragem ou pelo acabamento: começo por entender como a sua família quer viver. Acredito que a casa certa não muda só o endereço — muda a forma como uma família vive.</p>
     <div class="sig rv">Mateus Gregório · Rei das Casas</div>
   </div>
+</section>
+
+
+<!-- BLOCO 4.5 — O FILME -->
+<section class="filme" id="filme">
+  <span class="eyebrow rv">Quem é o Rei das Casas</span>
+  <h2 class="serif rv">Não sou eu.</h2>
+  <p class="sub rv">Um minuto e meio sobre por que essa conta não fecha com meta do mês — e o que eu entendo por fazer isso direito.</p>
+  <video class="rv" controls playsinline preload="none" poster="quem-e-o-rei-capa.jpg">
+    <source src="https://vps67275.publiccloud.com.br/midia/quem-e-o-rei.mp4" type="video/mp4">
+    Teu navegador não abre vídeo. <a href="https://www.instagram.com/reel/Dc4EyfdiKF_/">Assiste no Instagram</a>.
+  </video>
 </section>
 
 <!-- BLOCO 5 — DEPOIMENTOS -->
