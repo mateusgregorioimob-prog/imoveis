@@ -34,6 +34,15 @@ a{color:inherit;text-decoration:none}.gold{color:var(--gold)}
 @keyframes fade{to{opacity:1}}
 .cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--warm)}
 .cue i{display:block;color:var(--gold);font-style:normal;margin-top:7px;animation:bob 2s var(--ease) infinite}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(max-width:640px){
+  .hero{height:auto;min-height:0;display:block;background:var(--ink);padding:0 0 46px}
+  .hero::before{content:"";display:block;width:100%;aspect-ratio:4/3;background:url('basa-01.webp') center/cover no-repeat;margin-bottom:32px}
+  .hero .eyebrow{opacity:1;animation:none;padding:0 24px}
+  .hero h1{opacity:1;animation:none;margin:4px 0 14px}
+  .hero .rule{opacity:1;animation:none;margin:0 auto}
+  .hero .tag{opacity:1;animation:none;margin:18px auto 0;padding:0 24px;max-width:32ch}
+  .hero .cue{display:none}
+}
 .rv{opacity:0;transform:translateY(34px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}.rv.in{opacity:1;transform:none}
 .line{padding:22vh clamp(24px,6vw,80px);text-align:center}
 .line p{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,4.2vw,58px);line-height:1.25;max-width:24ch;margin:0 auto;color:var(--paper)}
